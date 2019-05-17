@@ -1,0 +1,71 @@
+<resources>
+    <string name="app_name">BookWeGo</string>
+    <string name="signupstartingtext">Don\'t have an account?</string>
+    <string name="privacy_policy"><u>Privacy Policy</u></string>
+    <string name="term_amp_condition"><u>Term &amp; Condition</u></string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home">Home</string>
+    <string name="profile">Profile</string>
+    <string name="reservations">Reservations</string>
+    <string name="orders">Orders</string>
+    <string name="payment_history">Payment History</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
+    <string name="personal_profile">Personal Profile</string>
+    <string name="my_reservations">My Reservations</string>
+    <string name="get_in_touch">GET IN TOUCH!</string>
+    <string name="always_within_your_reach">Always within your reach</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="message">Message</string>
+    <string name="payments_history">Payment History</string>
+    <string name="track_order"><u>Track Order</u></string>
+    <string name="my_orders">My Orders</string>
+    <string name="settings">Settings</string>
+    <string name="refer">Refer &amp; Earn</string>
+    <string name="faq">FAQ</string>
+    <string name="news_amp_promotions"><![CDATA[News & Promotions]]></string>
+    <string name="recently_viewed">Recently Viewed</string>
+    <string name="payments">Payments</string>
+    <string name="change_password">Change Password</string>
+    <string name="rate_our_app">Rate our app</string>
+    <string name="receive_newsletter">Receive Newsletter</string>
+    <string name="terms_amp_conditions"><![CDATA[Terms & Conditions]]></string>
+    <string name="privacy_polices">Privacy Policy</string>
+    <string name="tell_restaurants">Tell the restaurant anything about your online food order/takeaway</string>
+    <string name="have_a_coupon_enter_here">Have a Coupon? Enter here</string>
+    <string name="more_copun"><u>More Copoun</u></string>
+    <string name="collection"><![CDATA[Book your Collection / Delivery Time & Discount]]></string>
+    <string name="order_takeaway">Order / Takeaway</string>
+    <string name="cart">Cart</string>
+    <string name="self_collection">Self-Collection</string>
+    <string name="restaurant_bill">Restaurant Bill</string>
+    <string name="delivery_fee">Delivery Fee</string>
+    <string name="this_restaurant_provides_food_devlivery_to_your_home">This restaurant provides food devlivery to your home</string>
+    <string name="to_pay">To Pay</string>
+    <string name="proceed_to_pay">Proceed to pay</string>
+    <string name="rs">\u20A8</string>
+    <string name="Rs">\u20B9</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="previous_password">Previous Password</string>
+    <string name="new_password">New Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="what_is_bookwego">What is BookWeGo?</string>
+    <string name="help">Help</string>
+
+</resources>

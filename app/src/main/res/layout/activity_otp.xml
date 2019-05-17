@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackgroundGreen"
+    tools:context=".otpActivity.OtpActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/img_applogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_dp15"
+            android:src="@drawable/top_logo" />
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img_applogo"
+            android:layout_marginLeft="@dimen/margin_dp15"
+            android:src="@drawable/back_btn" />
+
+
+        <TextView
+            android:id="@+id/tv_verifyingnumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img_back"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_dp25"
+            android:text="Verifying your number"
+            android:textColor="@color/colorTextWhite"
+            android:textSize="@dimen/textsize_sp19" />
+
+        <TextView
+            android:id="@+id/tv_sendnumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_verifyingnumber"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_dp25"
+            android:text="We have sent an OTP on your number "
+            android:textColor="@color/colorTextWhite"
+            android:textSize="@dimen/textsize_sp19" />
+
+        <TextView
+            android:id="@+id/tv_mynumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_sendnumber"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_dp5"
+            android:text="+91-9816255767"
+            android:textColor="@color/colorTextWhite"
+            android:textSize="@dimen/textsize_sp19" />
+
+        <EditText
+            android:id="@+id/edit_otp"
+            android:layout_width="@dimen/margin_dp170"
+            android:layout_height="@dimen/margin_dp50"
+            android:layout_below="@+id/tv_mynumber"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_dp60"
+            android:background="@drawable/custom_otp_bg"
+            android:gravity="center"
+            android:hint="2 5 8 9"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:paddingLeft="@dimen/padding_dp15"
+            android:paddingRight="@dimen/padding_dp25"
+            android:textColor="@color/colorTextBlack"
+            android:textColorHint="@color/colorTextBlack"
+            android:textSize="@dimen/textsize_sp21" />
+
+        <LinearLayout
+            android:layout_width="@dimen/margin_dp50"
+            android:layout_height="@dimen/margin_dp50"
+            android:layout_below="@+id/tv_mynumber"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="@dimen/margin_dp10"
+            android:layout_marginTop="@dimen/margin_dp60"
+            android:layout_toRightOf="@+id/edit_otp"
+            android:background="@drawable/custom_ovel"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/img_nextarrow" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tv_resendotp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edit_otp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_dp45"
+            android:text="Resend OTP?"
+            android:textColor="@color/colorTextWhite"
+            android:textSize="@dimen/textsize_sp19" />
+
+    </RelativeLayout>
+</RelativeLayout>

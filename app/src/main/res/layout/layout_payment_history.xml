@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_dp15"
+        android:layout_marginTop="@dimen/margin_dp25">
+
+        <ImageView
+            android:id="@+id/img_orders"
+            android:layout_width="wrap_content"
+            android:layout_height="90dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_1"
+            android:layout_marginLeft="@dimen/margin_dp15"/>
+
+        <TextView
+            android:id="@+id/tv_ordername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_dp20"
+            android:layout_marginTop="@dimen/margin_dp5"
+            android:layout_toRightOf="@+id/img_orders"
+            android:text="Ester 51"
+            android:textColor="@color/colorTextGrey"
+            android:textSize="@dimen/textsize_sp12" />
+
+        <TextView
+            android:id="@+id/tv_orderdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_ordername"
+            android:layout_alignLeft="@+id/tv_ordername"
+            android:layout_marginTop="@dimen/margin_dp2"
+            android:text="20/2/2019 10:15 pm"
+            android:textColor="@color/colorTextGrey"
+            android:textSize="@dimen/textsize_sp12" />
+
+        <TextView
+            android:id="@+id/tv_thaliname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_orderdate"
+            android:layout_alignLeft="@+id/tv_ordername"
+            android:layout_marginTop="@dimen/margin_dp2"
+            android:text="Executive Thali Combo x1"
+            android:textColor="@color/colorTextGrey"
+            android:textSize="@dimen/textsize_sp12" />
+
+        <TextView
+            android:id="@+id/tv_thalirate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_thaliname"
+            android:layout_alignLeft="@+id/tv_ordername"
+            android:layout_marginTop="@dimen/margin_dp2"
+            android:text="Rs.150"
+            android:textColor="@color/colorTextGrey"
+            android:textSize="@dimen/textsize_sp12" />
+
+        <TextView
+            android:id="@+id/tv_trans_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_thalirate"
+            android:layout_alignLeft="@+id/tv_ordername"
+            android:layout_marginTop="@dimen/margin_dp2"
+            android:text="Transaction id:5656549798745"
+            android:textColor="@color/colorTextGreen"
+            android:textSize="@dimen/textsize_sp12" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/view_size_dp0.5"
+            android:layout_below="@+id/img_orders"
+            android:layout_marginTop="@dimen/margin_dp28"
+            android:background="@color/colorTextGrey" />
+    </RelativeLayout>
+</RelativeLayout>

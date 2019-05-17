@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".reservationsActivity.ReservationsActivity">
+
+    <RelativeLayout
+        android:id="@+id/layout_actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_dp60"
+        android:background="@drawable/gradient_bg">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/padding_dp15"
+            android:src="@drawable/back_btn" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="@dimen/margin_dp5"
+            android:drawableTop="@drawable/top_logo"
+            android:text="@string/my_reservations"
+            android:textColor="@color/colorTextWhite"
+            android:textSize="@dimen/textsize_sp21" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout_actionbar">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_dp50">
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorWhitebg"
+                app:tabGravity="fill"
+                app:tabIndicatorHeight="0dp"
+                app:tabMode="fixed"
+                app:tabSelectedTextColor="@color/colorWhitebg"
+                app:tabTextAppearance="@style/CustomTextAppearanceTab"
+                app:tabTextColor="#000000"
+                >
+
+            </android.support.design.widget.TabLayout>
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/margin_dp50" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

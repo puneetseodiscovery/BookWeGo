@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_dp25">
+
+        <ImageView
+            android:id="@+id/img_orders"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_dp15"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_1" />
+
+        <TextView
+            android:id="@+id/tv_ordername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_dp20"
+            android:layout_marginTop="@dimen/margin_dp7"
+            android:layout_toRightOf="@+id/img_orders"
+            android:text="Ester 51"
+            android:textColor="@color/colorTextGrey"
+            android:textSize="@dimen/textsize_sp12" />
+
+        <TextView
+            android:id="@+id/tv_orderdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_ordername"
+            android:layout_alignLeft="@+id/tv_ordername"
+            android:layout_marginTop="@dimen/margin_dp3"
+            android:text="20/2/2019"
+            android:textColor="@color/colorTextGrey"
+            android:textSize="@dimen/textsize_sp12" />
+
+        <TextView
+            android:id="@+id/tv_thali_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_orderdate"
+            android:layout_alignLeft="@+id/tv_ordername"
+            android:layout_marginTop="@dimen/margin_dp3"
+            android:text="Executive Thali Combo X1"
+            android:textColor="@color/colorTextGrey"
+            android:textSize="@dimen/textsize_sp12" />
+
+        <TextView
+            android:id="@+id/tv_thali_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_thali_name"
+            android:layout_alignLeft="@+id/tv_ordername"
+            android:layout_marginTop="@dimen/margin_dp3"
+            android:text="Rs.250"
+            android:textColor="@color/colorTextGrey"
+            android:textSize="@dimen/textsize_sp12" />
+
+        <TextView
+            android:id="@+id/tv_reorder"
+            android:layout_width="@dimen/margin_dp120"
+            android:layout_height="@dimen/margin_dp22"
+            android:layout_below="@+id/tv_thali_price"
+            android:layout_alignLeft="@+id/tv_ordername"
+            android:layout_marginTop="@dimen/margin_dp8"
+            android:text="REORDER"
+            android:gravity="center"
+            android:background="@drawable/custom_reorder_bg"
+            android:textColor="@color/colorTextGreen"
+            android:textSize="@dimen/textsize_sp12" />
+
+        <TextView
+            android:id="@+id/tv_tack_order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_thali_name"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/margin_dp3"
+            android:layout_marginRight="@dimen/margin_dp25"
+            android:text="@string/track_order"
+            android:textColor="#56C3F3"
+            android:textSize="@dimen/textsize_sp13" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/view_size_dp0.5"
+            android:layout_below="@+id/tv_reorder"
+            android:layout_marginTop="@dimen/margin_dp28"
+            android:background="@color/colorTextGrey" />
+    </RelativeLayout>
+</RelativeLayout>

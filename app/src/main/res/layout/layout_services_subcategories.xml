@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_dp150"
+        android:layout_marginBottom="@dimen/margin_dp5">
+
+        <ImageView
+            android:id="@+id/img_resturant"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/banner" />
+
+        <TextView
+            android:id="@+id/tv_restaurant_categories"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_dp50"
+            android:text="Spa/Massage"
+            android:textColor="@color/colorWhitebg"
+            android:textSize="@dimen/textsize_sp19" />
+
+        <TextView
+            android:id="@+id/tv_total_restaurants"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_restaurant_categories"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_dp7"
+            android:text="(15 Spa Centre)"
+            android:textColor="@color/colorWhitebg"
+            android:textSize="@dimen/textsize_sp17" />
+    </RelativeLayout>
+</RelativeLayout>

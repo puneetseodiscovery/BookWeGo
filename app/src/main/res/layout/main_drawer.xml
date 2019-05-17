@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhitebg">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/gradient_bg">
+
+                <RelativeLayout
+                    android:id="@+id/relative_main"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/img_userimage"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/margin_dp25"
+                        android:src="@drawable/img_user" />
+
+                    <TextView
+                        android:id="@+id/tv_username"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/img_userimage"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/margin_dp8"
+                        android:text="Jack Jones"
+                        android:textColor="@color/colorTextWhite"
+                        android:textSize="@dimen/textsize_sp19" />
+
+                    <TextView
+                        android:id="@+id/tv_useremail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_username"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/margin_dp8"
+                        android:text="jackjones12@gmail.com"
+                        android:textColor="@color/colorTextWhite"
+                        android:textSize="@dimen/textsize_sp19" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/relative_main"
+                    android:layout_marginTop="@dimen/margin_dp35">
+
+
+                    <RelativeLayout
+                        android:id="@+id/relative_home"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_dp15"
+                        android:background="?android:attr/selectableItemBackground">
+
+                        <View
+                            android:id="@+id/view_home"
+                            android:layout_width="8dp"
+                            android:layout_height="@dimen/margin_dp45"
+                            android:background="@color/colorWhitebg"
+                            android:visibility="invisible" />
+
+                        <TextView
+                            android:id="@+id/home"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/margin_dp45"
+                            android:layout_marginLeft="@dimen/margin_dp45"
+                            android:layout_toRightOf="@+id/view_home"
+                            android:drawableLeft="@drawable/home"
+                            android:drawablePadding="@dimen/padding_dp20"
+                            android:gravity="center_vertical"
+                            android:text="@string/home"
+                            android:textColor="@color/colorTextWhite"
+                            android:textSize="@dimen/textsize_sp16" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/relative_profile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/relative_home"
+                        android:layout_marginTop="@dimen/margin_dp15"
+                        android:background="?android:attr/selectableItemBackground">
+
+                        <View
+                            android:id="@+id/view_profile"
+                            android:layout_width="8dp"
+                            android:layout_height="@dimen/margin_dp45"
+                            android:background="@color/colorWhitebg"
+                            android:visibility="invisible" />
+
+                        <TextView
+                            android:id="@+id/profile"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/margin_dp45"
+                            android:layout_marginLeft="@dimen/margin_dp45"
+                            android:layout_toRightOf="@+id/view_profile"
+                            android:drawableLeft="@drawable/user"
+                            android:drawablePadding="@dimen/padding_dp20"
+                            android:gravity="center_vertical"
+                            android:text="@string/profile"
+                            android:textColor="@color/colorTextWhite"
+                            android:textSize="@dimen/textsize_sp16" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/relative_livechat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/relative_profile"
+                        android:layout_marginTop="@dimen/margin_dp15"
+                        android:background="?android:attr/selectableItemBackground">
+
+                        <View
+                            android:id="@+id/view_livechat"
+                            android:layout_width="8dp"
+                            android:layout_height="@dimen/margin_dp45"
+                            android:background="@color/colorWhitebg"
+                            android:visibility="invisible" />
+
+                        <TextView
+                            android:id="@+id/livechat"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/margin_dp45"
+                            android:layout_marginLeft="@dimen/margin_dp45"
+                            android:layout_toRightOf="@+id/view_livechat"
+                            android:drawableLeft="@drawable/message"
+                            android:drawablePadding="@dimen/padding_dp20"
+                            android:gravity="center_vertical"
+                            android:text="Live Chat"
+                            android:textColor="@color/colorTextWhite"
+                            android:textSize="@dimen/textsize_sp16" />
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/relative_contactsus"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/relative_livechat"
+                        android:layout_marginTop="@dimen/margin_dp15"
+                        android:background="?android:attr/selectableItemBackground">
+
+                        <View
+                            android:id="@+id/view_contactsus"
+                            android:layout_width="8dp"
+                            android:layout_height="@dimen/margin_dp45"
+                            android:background="@color/colorWhitebg"
+                            android:visibility="invisible" />
+
+                        <TextView
+                            android:id="@+id/contactsus"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/margin_dp45"
+                            android:layout_marginLeft="@dimen/margin_dp45"
+                            android:layout_toRightOf="@+id/view_contactsus"
+                            android:drawableLeft="@drawable/msg"
+                            android:drawablePadding="@dimen/padding_dp20"
+                            android:gravity="center_vertical"
+                            android:text="Contacts Us"
+                            android:textColor="@color/colorTextWhite"
+                            android:textSize="@dimen/textsize_sp16" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/relative_reservations"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/relative_contactsus"
+                        android:layout_marginTop="@dimen/margin_dp15"
+                        android:background="?android:attr/selectableItemBackground">
+
+                        <View
+                            android:id="@+id/view_reservations"
+                            android:layout_width="8dp"
+                            android:layout_height="@dimen/margin_dp45"
+                            android:background="@color/colorWhitebg"
+                            android:visibility="invisible" />
+
+                        <TextView
+                            android:id="@+id/reservations"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/margin_dp45"
+                            android:layout_marginLeft="@dimen/margin_dp45"
+                            android:layout_toRightOf="@+id/view_reservations"
+                            android:drawableLeft="@drawable/path"
+                            android:drawablePadding="@dimen/padding_dp20"
+                            android:gravity="center_vertical"
+                            android:text="@string/reservations"
+                            android:textColor="@color/colorTextWhite"
+                            android:textSize="@dimen/textsize_sp16" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/relative_orders"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/relative_reservations"
+                        android:layout_marginTop="@dimen/margin_dp15"
+                        android:background="?android:attr/selectableItemBackground">
+
+                        <View
+                            android:id="@+id/view_orders"
+                            android:layout_width="8dp"
+                            android:layout_height="@dimen/margin_dp45"
+                            android:background="@color/colorWhitebg"
+                            android:visibility="invisible" />
+
+                        <TextView
+                            android:id="@+id/orders"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/margin_dp45"
+                            android:layout_marginLeft="@dimen/margin_dp45"
+                            android:layout_toRightOf="@+id/view_orders"
+                            android:drawableLeft="@drawable/icon"
+                            android:drawablePadding="@dimen/padding_dp20"
+                            android:gravity="center_vertical"
+                            android:text="@string/orders"
+                            android:textColor="@color/colorTextWhite"
+                            android:textSize="@dimen/textsize_sp16" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/relative_cart"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/relative_orders"
+                        android:layout_marginTop="@dimen/margin_dp15"
+                        android:background="?android:attr/selectableItemBackground">
+
+                        <View
+                            android:id="@+id/view_cart"
+                            android:layout_width="8dp"
+                            android:layout_height="@dimen/margin_dp45"
+                            android:background="@color/colorWhitebg"
+                            android:visibility="invisible" />
+
+                        <TextView
+                            android:id="@+id/cart"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/margin_dp45"
+                            android:layout_marginLeft="@dimen/margin_dp45"
+                            android:layout_toRightOf="@+id/view_cart"
+                            android:drawableLeft="@drawable/cart"
+                            android:drawablePadding="@dimen/padding_dp20"
+                            android:gravity="center_vertical"
+                            android:text="@string/cart"
+                            android:textColor="@color/colorTextWhite"
+                            android:textSize="@dimen/textsize_sp16" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/relative_payment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/relative_cart"
+                        android:layout_marginTop="@dimen/margin_dp15"
+                        android:background="?android:attr/selectableItemBackground">
+
+                        <View
+                            android:id="@+id/view_payment"
+                            android:layout_width="8dp"
+                            android:layout_height="@dimen/margin_dp45"
+                            android:background="@color/colorWhitebg"
+                            android:visibility="invisible" />
+
+                        <TextView
+                            android:id="@+id/payment"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/margin_dp45"
+                            android:layout_marginLeft="@dimen/margin_dp45"
+                            android:layout_toRightOf="@+id/view_payment"
+                            android:drawableLeft="@drawable/money"
+                            android:drawablePadding="@dimen/padding_dp20"
+                            android:gravity="center_vertical"
+                            android:text="@string/payment_history"
+                            android:textColor="@color/colorTextWhite"
+                            android:textSize="@dimen/textsize_sp16" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/relative_setting"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/relative_payment"
+                        android:layout_marginTop="@dimen/margin_dp15"
+                        android:layout_marginBottom="@dimen/margin_dp25"
+                        android:background="?android:attr/selectableItemBackground">
+
+                        <View
+                            android:id="@+id/view_setting"
+                            android:layout_width="8dp"
+                            android:layout_height="@dimen/margin_dp45"
+                            android:background="@color/colorWhitebg"
+                            android:visibility="invisible" />
+
+                        <TextView
+                            android:id="@+id/setting"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/margin_dp45"
+                            android:layout_marginLeft="@dimen/margin_dp45"
+                            android:layout_toRightOf="@+id/view_setting"
+                            android:drawableLeft="@drawable/setting"
+                            android:drawablePadding="@dimen/padding_dp20"
+                            android:gravity="center_vertical"
+                            android:text="Settings"
+                            android:textColor="@color/colorTextWhite"
+                            android:textSize="@dimen/textsize_sp16" />
+
+                    </RelativeLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

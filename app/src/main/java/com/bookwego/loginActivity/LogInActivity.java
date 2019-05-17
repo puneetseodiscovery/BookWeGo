@@ -49,7 +49,7 @@ public class LogInActivity extends BaseClass implements View.OnClickListener {
 
         ButterKnife.bind(this);
 
-        Initialization();
+        Initialization(); // findviewBy Id
 
         EventListner();
     }

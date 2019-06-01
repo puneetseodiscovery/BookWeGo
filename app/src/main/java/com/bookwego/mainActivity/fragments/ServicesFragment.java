@@ -1,6 +1,7 @@
 package com.bookwego.mainActivity.fragments;
 
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -8,6 +9,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AnimationUtils;
+import android.view.animation.LayoutAnimationController;
 
 import com.bookwego.R;
 import com.bookwego.mainActivity.modelClasses.CategoriesModel;
@@ -68,8 +71,19 @@ public class ServicesFragment extends Fragment {
         recycler_services_sub_categories.setLayoutManager(new
                 LinearLayoutManager(getActivity()));
         recycler_services_sub_categories.setAdapter(servicesSubCategoriesAdapter);
+        runLayoutAnimation(recycler_services_sub_categories);
 
 
+    }
+
+    private void runLayoutAnimation(final RecyclerView recyclerView) {
+        final Context context = recyclerView.getContext();
+        final LayoutAnimationController controller =
+                AnimationUtils.loadLayoutAnimation(context, R.anim.layout_animation_fall_down);
+
+        recyclerView.setLayoutAnimation(controller);
+        recyclerView.getAdapter().notifyDataSetChanged();
+        recyclerView.scheduleLayoutAnimation();
     }
 
     private void prepareCategoriesData() {

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/img_news"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_dp150"
+        android:layout_marginBottom="@dimen/margin_dp10">
+
+        <ImageView
+            android:id="@+id/img_resturant"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/banner" />
+    </RelativeLayout>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img_news"
+        android:layout_marginLeft="@dimen/margin_dp10"
+        android:layout_marginTop="-45dp"
+        android:layout_marginRight="@dimen/margin_dp10"
+        android:layout_marginBottom="@dimen/margin_dp10"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="4dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_adds"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_dp15"
+                android:layout_toLeftOf="@+id/tv_adds_time"
+                android:text="Maa ke Haathon ko thoda rest dodo!"
+                android:textColor="@color/colorTextDarkGrey"
+                android:textSize="@dimen/textsize_sp14" />
+
+            <TextView
+                android:id="@+id/tv_adds_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_margin="@dimen/margin_dp15"
+                android:text="5 Mar 2019"
+                android:textColor="@color/colorTextGrey"
+                android:textSize="@dimen/textsize_sp13" />
+
+            <TextView
+                android:id="@+id/tv_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_adds"
+                android:layout_alignLeft="@+id/tv_adds"
+                android:layout_alignRight="@+id/tv_adds_time"
+                android:layout_marginBottom="@dimen/margin_dp25"
+                android:layout_toLeftOf="@+id/tv_adds_time"
+                android:text=""
+                android:textColor="@color/colorTextGrey"
+                android:textSize="@dimen/textsize_sp15" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+</RelativeLayout>

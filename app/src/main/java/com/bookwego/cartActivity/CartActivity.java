@@ -1,6 +1,7 @@
 package com.bookwego.cartActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Vibrator;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -13,6 +14,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bookwego.R;
+import com.bookwego.applyCouponActivity.ApplyCouponActivity;
 import com.bookwego.baseClass.BaseClass;
 import com.bookwego.cartActivity.adapter.CartDiscountAdapter;
 import com.bookwego.reservationsActivity.adapters.HistoryAdapter;
@@ -64,6 +66,9 @@ public class CartActivity extends BaseClass implements View.OnClickListener {
 
     @BindView(R.id.tv_itemtotal)
     TextView tv_itemtotal;
+
+    @BindView(R.id.tv_morecopun)
+    TextView tv_morecopun;
 
     @BindView(R.id.tv_restbill)
     TextView tv_restbill;
@@ -188,6 +193,7 @@ public class CartActivity extends BaseClass implements View.OnClickListener {
         img_vegmax.setOnClickListener(this);
         img_orderMin.setOnClickListener(this);
         img_orderMax.setOnClickListener(this);
+        tv_morecopun.setOnClickListener(this);
     }
 
     @Override
@@ -269,6 +275,12 @@ public class CartActivity extends BaseClass implements View.OnClickListener {
                 _orderVal = String.valueOf(k);
                 tv_orderCount.setText(_orderVal);
 
+                break;
+
+            case R.id.tv_morecopun:
+
+                Intent intent = new Intent(CartActivity.this, ApplyCouponActivity.class);
+                startActivity(intent);
                 break;
         }
 

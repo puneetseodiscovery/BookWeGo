@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".applyCouponActivity.ApplyCouponActivity">
+
+    <RelativeLayout
+        android:id="@+id/layout_actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_dp60"
+        android:background="@drawable/gradient_bg">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/padding_dp15"
+            android:src="@drawable/back_btn" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="@dimen/margin_dp5"
+            android:drawableTop="@drawable/top_logo"
+            android:gravity="center"
+            android:text="@string/apply_coupon"
+            android:textColor="@color/colorTextWhite"
+            android:textSize="@dimen/textsize_sp19" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_actionbar">
+
+        <TextView
+            android:id="@+id/tv_abailable_coupon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F3EDED"
+            android:paddingLeft="@dimen/padding_dp20"
+            android:paddingTop="@dimen/padding_dp15"
+            android:paddingBottom="@dimen/padding_dp15"
+            android:text="@string/available_coupons"
+            android:textColor="@color/colorTextDarkGrey"
+            android:textSize="@dimen/textsize_sp19" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_coupon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_abailable_coupon">
+
+        </android.support.v7.widget.RecyclerView>
+    </RelativeLayout>
+</RelativeLayout>

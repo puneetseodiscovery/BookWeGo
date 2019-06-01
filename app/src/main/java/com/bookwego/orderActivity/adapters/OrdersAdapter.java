@@ -1,6 +1,7 @@
 package com.bookwego.orderActivity.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.bookwego.R;
+import com.bookwego.trackOrderActivity.TrackOrderActivity;
 import com.bookwego.utills.Utility;
 
 import butterknife.BindView;
@@ -35,7 +37,13 @@ public class OrdersAdapter extends RecyclerView.Adapter<OrdersAdapter.RecyclerVi
 
     @Override
     public void onBindViewHolder(final RecyclerViewHolder holder, final int position) {
-
+        holder.tv_tack_order.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, TrackOrderActivity.class);
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override

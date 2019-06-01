@@ -1,7 +1,6 @@
 package com.bookwego.settingActivity;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -11,8 +10,13 @@ import com.bookwego.R;
 import com.bookwego.baseClass.BaseClass;
 import com.bookwego.changePasswordActivity.ChangePasswordActivity;
 import com.bookwego.faqActivity.FAQActivity;
+import com.bookwego.favouriteActvity.FavouriteActivity;
 import com.bookwego.helpActivity.HelpActivity;
+import com.bookwego.newandpermotions.NewsPermotionsActivity;
+import com.bookwego.paymentActivity.PaymentActivity;
 import com.bookwego.privacypolicy.PrivacyPolicyActivity;
+import com.bookwego.recentviewedActivity.RecentlyViewedActivity;
+import com.bookwego.refferalProgramActivity.ReferEarnActivity;
 import com.bookwego.termandconditionActivity.TermConditionActivity;
 
 import butterknife.BindView;
@@ -38,6 +42,21 @@ public class SettingsActivity extends BaseClass implements View.OnClickListener 
     @BindView(R.id.tv_faq)
     TextView tv_faq;
 
+    @BindView(R.id.tv_recentviews)
+    TextView tv_recentviews;
+
+    @BindView(R.id.tv_newandpormotion)
+    TextView tv_newandpormotion;
+
+    @BindView(R.id.tv_payments)
+    TextView tv_payments;
+
+    @BindView(R.id.tv_favourite)
+    TextView tv_favourite;
+
+    @BindView(R.id.tv_referandearn)
+    TextView tv_referandearn;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,6 +80,11 @@ public class SettingsActivity extends BaseClass implements View.OnClickListener 
         tv_privacy_policy.setOnClickListener(this);
         tv_changepassword.setOnClickListener(this);
         tv_faq.setOnClickListener(this);
+        tv_recentviews.setOnClickListener(this);
+        tv_newandpormotion.setOnClickListener(this);
+        tv_payments.setOnClickListener(this);
+        tv_favourite.setOnClickListener(this);
+        tv_referandearn.setOnClickListener(this);
 
     }
 
@@ -97,6 +121,26 @@ public class SettingsActivity extends BaseClass implements View.OnClickListener 
 
             case R.id.tv_faq:
                 intent = new Intent(SettingsActivity.this, FAQActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.tv_recentviews:
+                intent = new Intent(SettingsActivity.this, RecentlyViewedActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.tv_newandpormotion:
+                intent = new Intent(SettingsActivity.this, NewsPermotionsActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.tv_payments:
+                intent = new Intent(SettingsActivity.this, PaymentActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.tv_favourite:
+                intent = new Intent(SettingsActivity.this, FavouriteActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.tv_referandearn:
+                intent = new Intent(SettingsActivity.this, ReferEarnActivity.class);
                 startActivity(intent);
                 break;
         }

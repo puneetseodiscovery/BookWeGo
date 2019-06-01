@@ -6,7 +6,7 @@
             <gradient
                 android:startColor="#7ed301"
                 android:centerColor="#67ce19"
-                android:endColor=" #4fc831"
+                android:endColor="#4fc831"
                 android:angle="0" />
 
             <!--apply a border around button-->

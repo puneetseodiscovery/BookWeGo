@@ -37,9 +37,10 @@
             android:layout_centerVertical="true"
             android:layout_marginBottom="@dimen/margin_dp5"
             android:drawableTop="@drawable/top_logo"
-            android:text=""
+            android:text="Chat"
             android:textColor="@color/colorTextWhite"
-            android:textSize="@dimen/textsize_sp21" />
+            android:textSize="@dimen/textsize_sp19"
+            android:gravity="center"/>
     </RelativeLayout>
 
     <ScrollView

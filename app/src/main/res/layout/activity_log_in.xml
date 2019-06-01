@@ -128,8 +128,9 @@
                     android:background="@drawable/gradient_button"
                     android:text="log in"
                     android:textColor="@color/colorTextWhite"
-                    android:textSize="20sp"
-                    tools:ignore="OnClick" />
+                    tools:ignore="OnClick"
+                    android:textSize="@dimen/textsize_sp19"
+                    android:gravity="center"/>
 
 
                 <RelativeLayout

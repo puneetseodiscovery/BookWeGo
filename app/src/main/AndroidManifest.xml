@@ -14,7 +14,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".faqActivity.FAQActivity"></activity>
+        <activity android:name=".cardListActivity.CardListActivity"></activity>
+        <activity android:name=".editBookingDetailsActivity.EditBookingDetailsActivity" />
+        <activity android:name=".bookingDetailsActivity.BookingDetailsActivity" />
+        <activity android:name=".addCardActivity.AddCardActivity" />
+        <activity android:name=".moreInfoActivity.MoreInfoActivity" />
+        <activity android:name=".aboutRestaurantsActivity.AboutRestaurantsActivity" />
+        <activity android:name=".menuItemDetailsActivity.MenuItemDetailsActivity" />
+        <activity android:name=".menuActivity.MenuActivity" />
+        <activity android:name=".panelListActivity.PanalListActivity" />
+        <activity android:name=".applyCouponActivity.ApplyCouponActivity" />
+        <activity android:name=".trackOrderActivity.TrackOrderActivity" />
+        <activity android:name=".refferalProgramActivity.ReferEarnActivity" />
+        <activity android:name=".favouriteActvity.FavouriteActivity" />
+        <activity android:name=".paymentActivity.PaymentActivity" />
+        <activity android:name=".newandpermotions.NewsPermotionsActivity" />
+        <activity android:name=".recommendedActivity.RecommendedActivity" />
+        <activity android:name=".recentviewedActivity.RecentlyViewedActivity" />
+        <activity android:name=".faqActivity.FAQActivity" />
         <activity android:name=".changePasswordActivity.ChangePasswordActivity" />
         <activity android:name=".helpActivity.HelpActivity" />
         <activity

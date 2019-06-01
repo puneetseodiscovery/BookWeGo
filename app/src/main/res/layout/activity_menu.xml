@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".menuActivity.MenuActivity">
+
+    <RelativeLayout
+        android:id="@+id/layout_actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_dp60"
+        android:background="@drawable/gradient_bg">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/padding_dp15"
+            android:src="@drawable/back_btn" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="@dimen/margin_dp5"
+            android:drawableTop="@drawable/top_logo"
+            android:gravity="center"
+            android:text="@string/menu"
+            android:textColor="@color/colorTextWhite"
+            android:textSize="@dimen/textsize_sp19" />
+
+        <ImageView
+            android:id="@+id/img_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/padding_dp12"
+            android:src="@drawable/ico_search" />
+
+        <ImageView
+            android:id="@+id/img_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/img_search"
+            android:padding="@dimen/padding_dp12"
+            android:src="@drawable/cart" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_restaurant"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout_actionbar">
+
+        <RelativeLayout
+            android:id="@+id/layout_restaurants"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/img_cart"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/banner_2" />
+
+            <TextView
+                android:id="@+id/tv_orderName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/img_cart"
+                android:layout_marginLeft="@dimen/margin_dp15"
+                android:layout_marginBottom="@dimen/margin_dp38"
+                android:text="Drinkery 51"
+                android:textColor="@color/colorTextWhite"
+                android:textSize="@dimen/textsize_sp19" />
+
+            <TextView
+                android:id="@+id/tv_loaction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/tv_orderName"
+                android:layout_alignBottom="@+id/img_cart"
+                android:layout_marginBottom="@dimen/margin_dp22"
+                android:layout_toLeftOf="@+id/tv_totalrating"
+                android:text="Bandra Kurla Complex - 6km"
+                android:textColor="@color/colorTextWhite"
+                android:textSize="@dimen/textsize_sp15" />
+
+            <TextView
+                android:id="@+id/tv_totalrating"
+                android:layout_width="@dimen/margin_dp60"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/img_cart"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="@dimen/margin_dp3"
+                android:layout_marginRight="@dimen/margin_dp20"
+                android:layout_marginBottom="@dimen/margin_dp20"
+                android:background="@drawable/custom_cart_bg"
+                android:gravity="center"
+                android:padding="@dimen/padding_dp5"
+                android:text="4.6"
+                android:textColor="@color/colorTextWhite"
+                android:textSize="@dimen/textsize_sp16" />
+
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_menus"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_dp50"
+            android:layout_below="@+id/layout_restaurants"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_dp15"
+            android:layout_marginRight="@dimen/margin_dp15">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <View
+            android:id="@+id/view_02"
+            android:layout_below="@+id/recycler_menus"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/view_size_dp0.5"
+            android:background="@color/colorTextDarkGrey"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_menu_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/view_02"
+            android:orientation="horizontal"
+            android:layout_margin="@dimen/margin_dp15">
+
+        </android.support.v7.widget.RecyclerView>
+    </RelativeLayout>
+
+
+</RelativeLayout>

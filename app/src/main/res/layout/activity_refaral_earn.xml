@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".refferalProgramActivity.ReferEarnActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/layout_touch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient_bg">
+
+        <RelativeLayout
+            android:id="@+id/layout_actionbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_dp60">
+
+            <ImageView
+                android:id="@+id/img_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/padding_dp15"
+                android:src="@drawable/back_btn" />
+
+            <TextView
+                android:id="@+id/tv_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="@dimen/margin_dp5"
+                android:drawableTop="@drawable/top_logo"
+                android:text="@string/referral_program"
+                android:textColor="@color/colorTextWhite"
+                android:textSize="@dimen/textsize_sp19"
+                android:gravity="center" />
+
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view01"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/view_size_dp0.5"
+            android:layout_below="@+id/layout_actionbar"
+            android:layout_marginTop="@dimen/margin_dp10"
+            android:background="@color/colorTextWhite" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view01">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/margin_dp25"
+                android:layout_marginBottom="@dimen/margin_dp25"
+                android:src="@drawable/refral" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_cashvoucher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_touch"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_dp50"
+        android:text="@string/voucher"
+        android:textColor="@color/colorTextDarkGrey"
+        android:textSize="@dimen/textsize_sp32" />
+
+    <TextView
+        android:id="@+id/tv_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_cashvoucher"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_dp50"
+        android:gravity="center"
+        android:text="@string/refer_desc"
+        android:textColor="@color/colorTextDarkGrey"
+        android:textSize="@dimen/textsize_sp13" />
+
+
+    <Button
+        android:id="@+id/btn_invite"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:layout_below="@+id/tv_desc"
+        android:layout_alignLeft="@+id/tv_cashvoucher"
+        android:layout_alignRight="@+id/tv_cashvoucher"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_dp80"
+        android:background="@drawable/gradient_button"
+        android:text="Invite and Earn"
+        android:textColor="@color/colorTextWhite"
+        android:textSize="20sp"
+        tools:ignore="OnClick" />
+</RelativeLayout>

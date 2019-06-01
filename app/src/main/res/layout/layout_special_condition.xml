@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_dp5"
+        android:layout_marginBottom="@dimen/margin_dp5">
+
+        <ImageView
+            android:id="@+id/img_dot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_dp1"
+            android:src="@drawable/ic_brightness" />
+
+        <TextView
+            android:id="@+id/tv_conditions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_dp5"
+            android:layout_toRightOf="@+id/img_dot"
+            android:text="Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generato"
+            android:textSize="@dimen/textsize_sp12" />
+    </RelativeLayout>
+</RelativeLayout>

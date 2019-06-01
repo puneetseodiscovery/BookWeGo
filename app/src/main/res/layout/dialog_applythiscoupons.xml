@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorWhitebg">
+
+        <RelativeLayout
+            android:id="@+id/layout_discount"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="#F3F1F1">
+
+            <RelativeLayout
+                android:id="@+id/layout_ordername"
+                android:layout_width="@dimen/margin_dp120"
+                android:layout_height="@dimen/margin_dp35"
+                android:layout_marginLeft="@dimen/margin_dp25"
+                android:layout_marginTop="@dimen/margin_dp25"
+                android:background="@drawable/c_bg">
+
+                <ImageView
+                    android:id="@+id/logo_b"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_dp8"
+                    android:src="@drawable/c_logo" />
+
+                <View
+                    android:id="@+id/viewCoupon"
+                    android:layout_width="@dimen/view_size_dp1"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/margin_dp8"
+                    android:layout_marginTop="@dimen/margin_dp5"
+                    android:layout_marginBottom="@dimen/margin_dp5"
+                    android:layout_toRightOf="@+id/logo_b"
+                    android:background="@color/colorTextDarkGrey" />
+
+                <TextView
+                    android:id="@+id/tv_ordername"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_dp5"
+                    android:layout_marginTop="@dimen/margin_dp5"
+                    android:layout_toRightOf="@+id/viewCoupon"
+                    android:text="FEF475"
+                    android:textColor="@color/colorTextGrey"
+                    android:textSize="@dimen/textsize_sp15" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_discount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_ordername"
+                android:layout_alignLeft="@+id/layout_ordername"
+                android:layout_marginTop="@dimen/margin_dp8"
+                android:text="Get 30% off"
+                android:textColor="@color/colorTextBlack"
+                android:textSize="@dimen/textsize_sp18" />
+
+            <TextView
+                android:id="@+id/tv_aboutdiscount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_discount"
+                android:layout_alignLeft="@+id/layout_ordername"
+                android:layout_marginTop="@dimen/margin_dp2"
+                android:layout_marginRight="@dimen/margin_dp15"
+                android:text="Loream ipsum dummy textLoream ipsum dummy text"
+                android:textColor="@color/colorTextGrey"
+                android:textSize="@dimen/textsize_sp13" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_discount">
+
+            <TextView
+                android:id="@+id/tv_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_dp15"
+                android:layout_marginTop="@dimen/margin_dp30"
+                android:drawableLeft="@drawable/ic_fiber_manual_record_black_24dp"
+                android:drawablePadding="@dimen/padding_dp15"
+                android:padding="@dimen/padding_dp10"
+                android:text="Valid on card Payment only."
+                android:textColor="@color/colorTextGrey"
+                android:textSize="@dimen/textsize_sp15" />
+
+            <TextView
+                android:id="@+id/tv_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_1"
+                android:layout_alignLeft="@+id/tv_1"
+                android:drawableLeft="@drawable/ic_fiber_manual_record_black_24dp"
+                android:drawablePadding="@dimen/padding_dp15"
+                android:padding="@dimen/padding_dp10"
+                android:text="Other T&amp;Cs apply"
+                android:textColor="@color/colorTextGrey"
+                android:textSize="@dimen/textsize_sp15" />
+
+            <Button
+                android:id="@+id/btn_login"
+                android:layout_width="match_parent"
+                android:layout_height="?android:attr/actionBarSize"
+                android:layout_below="@+id/tv_2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="@dimen/margin_dp45"
+                android:layout_marginTop="@dimen/margin_dp35"
+                android:layout_marginRight="@dimen/margin_dp45"
+                android:layout_marginBottom="@dimen/margin_dp45"
+                android:background="@drawable/gradient_button"
+                android:gravity="center"
+                android:text="apply this coupon"
+                android:textColor="@color/colorTextWhite"
+                android:textSize="@dimen/textsize_sp17" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

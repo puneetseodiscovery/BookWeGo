@@ -61,28 +61,10 @@ public class RestaurantsFragment extends Fragment {
 
         prepareCategoriesData();
 
-        int resId2 = R.anim.layout_animation_up_to_down;
-        LayoutAnimationController animation2 = AnimationUtils.loadLayoutAnimation(getActivity(), resId2);
-        recycler_restaurants_categories.setLayoutAnimation(animation2);
-
-        recycler_restaurants_categories.setLayoutAnimation(animation2);
-        recycler_restaurants_categories.getAdapter().notifyDataSetChanged();
-        recycler_restaurants_categories.scheduleLayoutAnimation();
-
-
         subCategoriesAdapter = new SubCategoriesAdapter(getActivity());
         recycler_restaurants_sub_categories.setLayoutManager(new
                 LinearLayoutManager(getActivity()));
         recycler_restaurants_sub_categories.setAdapter(subCategoriesAdapter);
-
-
-        int resId = R.anim.layout_animation_up_to_down;
-        LayoutAnimationController animation = AnimationUtils.loadLayoutAnimation(getActivity(), resId);
-        recycler_restaurants_sub_categories.setLayoutAnimation(animation);
-
-        recycler_restaurants_sub_categories.setLayoutAnimation(animation);
-        recycler_restaurants_sub_categories.getAdapter().notifyDataSetChanged();
-        recycler_restaurants_sub_categories.scheduleLayoutAnimation();
 
 
     }

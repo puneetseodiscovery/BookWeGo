@@ -9,11 +9,12 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
 import com.bookwego.R;
+import com.bookwego.baseClass.BaseClass;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class HelpActivity extends AppCompatActivity implements View.OnClickListener {
+public class HelpActivity extends BaseClass implements View.OnClickListener {
     @BindView(R.id.img_back)
     ImageView img_back;
 

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/layout_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_dp35">
+
+        <ImageView
+            android:id="@+id/img_checked"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_dp20"
+            android:src="@drawable/ic_check_circle" />
+
+        <ImageView
+            android:id="@+id/img_unchecked"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_dp20"
+            android:src="@drawable/ic_circle"
+            android:visibility="invisible" />
+
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="@dimen/margin_dp350"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/colorBackgroundGreen"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_dp35">
+
+                    <TextView
+                        android:id="@+id/name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_dp5"
+                        android:text="Name"
+                        android:textColor="@color/colorTextWhite"
+                        android:textSize="@dimen/textsize_sp12" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/name"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/visa" />
+
+                    <TextView
+                        android:id="@+id/card_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/name"
+                        android:padding="@dimen/padding_dp2"
+                        android:text="Mohit Kumar"
+                        android:textColor="@color/colorTextWhite"
+                        android:textSize="@dimen/textsize_sp16" />
+
+                    <TextView
+                        android:id="@+id/number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/card_name"
+                        android:layout_marginTop="@dimen/margin_dp15"
+                        android:text="Card Number"
+                        android:textColor="@color/colorTextWhite"
+                        android:textSize="@dimen/textsize_sp12" />
+
+
+                    <TextView
+                        android:id="@+id/card_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/number"
+                        android:padding="@dimen/padding_dp2"
+                        android:text="5123 4567 8901 2346"
+                        android:textColor="@color/colorTextWhite"
+                        android:textSize="@dimen/textsize_sp19" />
+
+                    <TextView
+                        android:id="@+id/expiration"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/card_number"
+                        android:layout_marginTop="@dimen/margin_dp15"
+                        android:text="Expiration"
+                        android:textColor="@color/colorTextWhite"
+                        android:textSize="@dimen/textsize_sp12" />
+
+                    <TextView
+                        android:id="@+id/cvv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/card_number"
+                        android:layout_marginLeft="@dimen/margin_dp50"
+                        android:layout_marginTop="@dimen/margin_dp15"
+                        android:layout_toRightOf="@+id/expiration"
+                        android:text="CVV"
+                        android:textColor="@color/colorTextWhite"
+                        android:textSize="@dimen/textsize_sp12" />
+
+                    <TextView
+                        android:id="@+id/expiration_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/expiration"
+                        android:padding="@dimen/padding_dp2"
+                        android:text="5/20"
+                        android:textColor="@color/colorTextWhite"
+                        android:textSize="@dimen/textsize_sp19" />
+
+                    <TextView
+                        android:id="@+id/cvv_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/expiration"
+                        android:layout_alignLeft="@+id/cvv"
+                        android:padding="@dimen/padding_dp2"
+                        android:text="123"
+                        android:textColor="@color/colorTextWhite"
+                        android:textSize="@dimen/textsize_sp19" />
+
+
+                </RelativeLayout>
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+    </RelativeLayout>
+
+</RelativeLayout>

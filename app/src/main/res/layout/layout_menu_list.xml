@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img_orders"
+            android:layout_width="@dimen/margin_dp220"
+            android:layout_height="@dimen/margin_dp100"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_1"
+            android:layout_marginRight="@dimen/margin_dp20"/>
+
+        <TextView
+            android:id="@+id/tv_nonveg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img_orders"
+            android:layout_marginLeft="@dimen/margin_dp5"
+            android:layout_marginTop="@dimen/margin_dp8"
+            android:drawableLeft="@drawable/non_veg"
+            android:drawablePadding="@dimen/padding_dp12"
+            android:text="Tandori Chicken"
+            android:visibility="visible"
+            android:textColor="@color/colorTextDarkGrey"
+            android:textSize="@dimen/textsize_sp13" />
+
+        <TextView
+            android:id="@+id/tv_veg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img_orders"
+            android:layout_marginLeft="@dimen/margin_dp5"
+            android:layout_marginTop="@dimen/margin_dp8"
+            android:drawableLeft="@drawable/veg"
+            android:drawablePadding="@dimen/padding_dp12"
+            android:text="Veg. Sub wrap"
+            android:visibility="invisible"
+            android:textColor="@color/colorTextDarkGrey"
+            android:textSize="@dimen/textsize_sp13" />
+
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_nonveg"
+            android:layout_marginLeft="@dimen/margin_dp32"
+            android:layout_marginTop="@dimen/margin_dp10"
+            android:text="Rs.260"
+            android:textSize="@dimen/textsize_sp15" />
+
+        <LinearLayout
+            android:id="@+id/layout_noveg"
+            android:layout_width="@dimen/margin_dp80"
+            android:layout_height="@dimen/margin_dp30"
+            android:layout_below="@+id/tv_nonveg"
+            android:layout_alignRight="@+id/img_orders"
+            android:layout_marginTop="@dimen/margin_dp5"
+            android:layout_marginBottom="@dimen/margin_dp15"
+            android:background="@drawable/custom_order_count_bg"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <ImageView
+                android:id="@+id/img_nonveg_min"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="@dimen/margin_dp2"
+                android:layout_weight="1"
+                android:padding="@dimen/padding_dp3"
+                android:src="@drawable/img_min" />
+
+            <TextView
+                android:id="@+id/tv_nonvegCount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_dp3"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="@dimen/padding_dp3"
+                android:text="0"
+                android:textColor="@color/colorTextGreen" />
+
+            <ImageView
+                android:id="@+id/img_nonveg_max"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="@dimen/margin_dp2"
+                android:layout_weight="1"
+                android:padding="@dimen/padding_dp3"
+                android:src="@drawable/img_add" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</RelativeLayout>

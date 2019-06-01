@@ -29,8 +29,9 @@
             android:layout_marginBottom="@dimen/margin_dp5"
             android:drawableTop="@drawable/top_logo"
             android:text="@string/faq"
+            android:gravity="center"
             android:textColor="@color/colorTextWhite"
-            android:textSize="@dimen/textsize_sp21" />
+            android:textSize="@dimen/textsize_sp19" />
     </RelativeLayout>
 
 
@@ -42,7 +43,8 @@
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recycler_faq"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layoutAnimation="@anim/layout_animation_slide_right">
 
         </android.support.v7.widget.RecyclerView>
     </RelativeLayout>

@@ -67,5 +67,31 @@
     <string name="confirm_password">Confirm Password</string>
     <string name="what_is_bookwego">What is BookWeGo?</string>
     <string name="help">Help</string>
+    <string name="restaurants">Restaurants</string>
+    <string name="services">Services</string>
+    <string name="payment">Payment</string>
+    <string name="you_saved_card">You saved card</string>
+    <string name="referral_program">Referral Program</string>
+    <string name="voucher">Earn Cash &amp; Vouchers</string>
+    <string name="refer_desc">If you invite each friend (whom registers &amp; book his/her\n 1st reservation) to BookWeGo, both you and your friend\n will earn cash voucher $5 each.</string>
+    <string name="news_promotions">News &amp; Promotions</string>
+    <string name="order_status">Order Status</string>
+    <string name="order_sta">ORDER STATUS</string>
+    <string name="order_recived">Order Recived</string>
+    <string name="food_being_prepared">Food Being Prepared</string>
+    <string name="food_packed">Food Packed</string>
+    <string name="food_out_for_delivery">Food out for Delivery</string>
+    <string name="food_delivered">Food Delivered</string>
+    <string name="apply_coupon">Apply Coupon</string>
+    <string name="available_coupons">AVAILABLE COUPONS</string>
+    <string name="more_details">MORE DETAILS</string>
+    <string name="apply">APPLY</string>
+    <string name="filter">Filter</string>
+    <string name="menu">Menu</string>
+    <string name="view_on_map"><u>View on map</u></string>
+    <string name="reviews"><u>35 reviews</u></string>
+    <string name="booking_details">Booking Details</string>
+    <string name="book_a_table">BOOK A TABLE</string>
+    <string name="edit_booking_details">Edit Booking Details</string>
 
 </resources>

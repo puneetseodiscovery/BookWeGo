@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".bookingDetailsActivity.BookingDetailsActivity">
+
+    <RelativeLayout
+        android:id="@+id/layout_actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_dp60"
+        android:background="@drawable/gradient_bg">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/padding_dp15"
+            android:src="@drawable/back_btn" />
+
+        <ImageView
+            android:id="@+id/img_edit"
+            android:layout_width="@dimen/margin_dp35"
+            android:layout_height="@dimen/margin_dp35"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_dp15"
+            android:src="@drawable/edit" />
+
+        <TextView
+            android:id="@+id/tv_tv_product_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="@dimen/margin_dp5"
+            android:drawableTop="@drawable/top_logo"
+            android:gravity="center"
+            android:text="@string/booking_details"
+            android:textColor="@color/colorTextWhite"
+            android:textSize="@dimen/textsize_sp19" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout_actionbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/layout_restaurants"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/img_cart"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/banner_2" />
+
+                <TextView
+                    android:id="@+id/tv_orderName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/img_cart"
+                    android:layout_marginLeft="@dimen/margin_dp15"
+                    android:layout_marginBottom="@dimen/margin_dp38"
+                    android:text="Drinkery 51"
+                    android:textColor="@color/colorTextWhite"
+                    android:textSize="@dimen/textsize_sp19" />
+
+                <TextView
+                    android:id="@+id/tv_loaction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/tv_orderName"
+                    android:layout_alignBottom="@+id/img_cart"
+                    android:layout_marginBottom="@dimen/margin_dp22"
+                    android:layout_toLeftOf="@+id/tv_totalrating"
+                    android:text="Bandra Kurla Complex - 6km"
+                    android:textColor="@color/colorTextWhite"
+                    android:textSize="@dimen/textsize_sp15" />
+
+                <TextView
+                    android:id="@+id/tv_totalrating"
+                    android:layout_width="@dimen/margin_dp60"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/img_cart"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="@dimen/margin_dp3"
+                    android:layout_marginRight="@dimen/margin_dp20"
+                    android:layout_marginBottom="@dimen/margin_dp20"
+                    android:background="@drawable/custom_cart_bg"
+                    android:gravity="center"
+                    android:padding="@dimen/padding_dp5"
+                    android:text="4.6"
+                    android:textColor="@color/colorTextWhite"
+                    android:textSize="@dimen/textsize_sp16" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_book_a_table"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/layout_restaurants"
+                android:layout_marginLeft="@dimen/margin_dp15"
+                android:layout_marginTop="@dimen/margin_dp20"
+                android:layout_marginRight="@dimen/margin_dp15">
+
+                <TextView
+                    android:id="@+id/tv_booktable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_dp8"
+                    android:text="@string/book_a_table"
+                    android:textColor="@color/colorTextGrey"
+                    android:textSize="@dimen/textsize_sp18" />
+
+                <TextView
+                    android:id="@+id/tv_timer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/margin_dp8"
+                    android:drawableLeft="@drawable/ic_access_time"
+                    android:drawablePadding="@dimen/padding_dp10"
+                    android:text="2:48"
+                    android:textColor="@color/colorTextGreen"
+                    android:textSize="@dimen/textsize_sp15" />
+
+                <TextView
+                    android:id="@+id/tv_booktablefor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_booktable"
+                    android:layout_alignLeft="@+id/tv_booktable"
+                    android:layout_marginTop="@dimen/margin_dp15"
+                    android:layout_marginRight="@dimen/margin_dp8"
+                    android:text="Table For"
+                    android:textColor="@color/colorTextDarkGrey"
+                    android:textSize="@dimen/textsize_sp17" />
+
+
+                <RelativeLayout
+                    android:id="@+id/relative_table"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/tv_booktablefor"
+                    android:layout_alignRight="@+id/tv_timer">
+
+
+                    <LinearLayout
+                        android:id="@+id/layout_count"
+                        android:layout_width="@dimen/margin_dp80"
+                        android:layout_height="@dimen/margin_dp30"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/custom_order_count_bg"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <ImageView
+                            android:id="@+id/img_min"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="@dimen/margin_dp2"
+                            android:layout_weight="1"
+                            android:padding="@dimen/padding_dp3"
+                            android:src="@drawable/img_min" />
+
+                        <TextView
+                            android:id="@+id/tv_Count"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_dp3"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:padding="@dimen/padding_dp3"
+                            android:text="0"
+                            android:textColor="@color/colorTextGreen" />
+
+                        <ImageView
+                            android:id="@+id/img_max"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="@dimen/margin_dp2"
+                            android:layout_weight="1"
+                            android:padding="@dimen/padding_dp3"
+                            android:src="@drawable/img_add" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_packing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/relative_table"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="@dimen/margin_dp3"
+                    android:layout_marginRight="@dimen/margin_dp15"
+                    android:text="(No. of Pak)"
+                    android:textColor="@color/colorTextDarkGrey"
+                    android:textSize="@dimen/textsize_sp12" />
+
+
+                <View
+                    android:id="@+id/view_Book1"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/view_size_dp0.5"
+                    android:layout_below="@+id/tv_packing"
+                    android:layout_marginTop="@dimen/margin_dp5"
+                    android:background="@color/colorTextGrey" />
+
+
+                <TextView
+                    android:id="@+id/tv_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view_Book1"
+                    android:layout_alignLeft="@+id/tv_booktable"
+                    android:layout_marginTop="@dimen/margin_dp20"
+                    android:text="Date"
+                    android:textColor="@color/colorTextDarkGrey"
+                    android:textSize="@dimen/textsize_sp17" />
+
+                <TextView
+                    android:id="@+id/tv_datepiker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view_Book1"
+                    android:layout_alignRight="@+id/tv_timer"
+                    android:layout_marginTop="@dimen/margin_dp20"
+                    android:drawableRight="@drawable/img_down"
+                    android:drawablePadding="@dimen/padding_dp5"
+                    android:text="19/06/2018"
+                    android:textColor="@color/colorTextGrey"
+                    android:textSize="@dimen/textsize_sp15" />
+
+
+                <View
+                    android:id="@+id/view_Book2"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/view_size_dp0.5"
+                    android:layout_below="@+id/tv_datepiker"
+                    android:layout_marginTop="@dimen/margin_dp20"
+                    android:background="@color/colorTextGrey" />
+
+
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view_Book2"
+                    android:layout_alignLeft="@+id/tv_booktable"
+                    android:layout_marginTop="@dimen/margin_dp20"
+                    android:text="Time"
+                    android:textColor="@color/colorTextDarkGrey"
+                    android:textSize="@dimen/textsize_sp17" />
+
+                <TextView
+                    android:id="@+id/tv_timepiker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view_Book2"
+                    android:layout_alignRight="@+id/tv_timer"
+                    android:layout_marginTop="@dimen/margin_dp20"
+                    android:drawableRight="@drawable/img_down"
+                    android:drawablePadding="@dimen/padding_dp5"
+                    android:text="Today,7:00pm"
+                    android:textColor="@color/colorTextGrey"
+                    android:textSize="@dimen/textsize_sp15" />
+
+
+                <View
+                    android:id="@+id/view_Book3"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/view_size_dp0.5"
+                    android:layout_below="@+id/tv_time"
+                    android:layout_marginTop="@dimen/margin_dp20"
+                    android:background="@color/colorTextGrey" />
+
+                <TextView
+                    android:id="@+id/tv_discount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view_Book3"
+                    android:layout_alignLeft="@+id/tv_booktable"
+                    android:layout_marginTop="@dimen/margin_dp20"
+                    android:text="Discount"
+                    android:textColor="@color/colorTextDarkGrey"
+                    android:textSize="@dimen/textsize_sp17" />
+
+                <TextView
+                    android:id="@+id/tv_discountPercentage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view_Book3"
+                    android:layout_alignRight="@+id/tv_timer"
+                    android:layout_marginTop="@dimen/margin_dp20"
+                    android:text="40% off"
+                    android:textColor="@color/colorTextGrey"
+                    android:textSize="@dimen/textsize_sp15" />
+
+
+                <View
+                    android:id="@+id/view_Book4"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/view_size_dp0.5"
+                    android:layout_below="@+id/tv_discount"
+                    android:layout_marginTop="@dimen/margin_dp20"
+                    android:background="@color/colorTextGrey" />
+
+                <TextView
+                    android:id="@+id/tv_extranote"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view_Book4"
+                    android:layout_alignLeft="@+id/tv_booktable"
+                    android:layout_marginTop="@dimen/margin_dp20"
+                    android:text="Extra Note"
+                    android:textColor="@color/colorTextDarkGrey"
+                    android:textSize="@dimen/textsize_sp17" />
+
+                <TextView
+                    android:id="@+id/tv_notesto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view_Book4"
+                    android:layout_alignRight="@+id/tv_timer"
+                    android:layout_marginTop="@dimen/margin_dp20"
+                    android:text="Notes to Merchant"
+                    android:textColor="@color/colorTextGrey"
+                    android:textSize="@dimen/textsize_sp13" />
+
+
+                <View
+                    android:id="@+id/view_Book5"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/view_size_dp0.5"
+                    android:layout_below="@+id/tv_extranote"
+                    android:layout_marginTop="@dimen/margin_dp20"
+                    android:background="@color/colorTextGrey" />
+
+
+
+                <TextView
+                    android:id="@+id/tv_havecopun"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view_Book5"
+                    android:layout_alignLeft="@+id/tv_booktable"
+                    android:layout_marginTop="@dimen/margin_dp20"
+                    android:text="@string/have_a_coupon_enter_here"
+                    android:textColor="@color/colorTextDarkGrey"
+                    android:textSize="@dimen/textsize_sp15" />
+
+
+                <EditText
+                    android:id="@+id/edit_writehere"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_havecopun"
+                    android:layout_alignLeft="@+id/tv_booktable"
+                    android:layout_alignRight="@+id/tv_havecopun"
+                    android:layout_marginTop="@dimen/margin_dp5"
+                    android:layout_weight="1"
+                    android:background="@drawable/copun_bg"
+                    android:hint=""
+                    android:inputType="textMultiLine"
+                    android:maxLength="150"
+                    android:padding="@dimen/padding_dp5"
+                    android:textColor="@color/colorTextGreen"
+                    android:textColorHint="@color/colorTextGreen" />
+
+                <TextView
+                    android:id="@+id/tv_applyuhere"
+                    android:layout_width="@dimen/margin_dp70"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_havecopun"
+                    android:layout_marginLeft="@dimen/margin_dp25"
+                    android:layout_marginTop="@dimen/margin_dp5"
+                    android:layout_toRightOf="@+id/edit_writehere"
+                    android:background="@drawable/custom_cart_bg"
+                    android:gravity="center"
+                    android:padding="@dimen/padding_dp5"
+                    android:text="Apply"
+                    android:textColor="@color/colorTextWhite"
+                    android:textSize="@dimen/textsize_sp15" />
+
+
+                <TextView
+                    android:id="@+id/tv_morecopun"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edit_writehere"
+                    android:layout_alignLeft="@+id/tv_booktable"
+                    android:drawableRight="@drawable/arrow_green_right"
+                    android:drawablePadding="@dimen/padding_dp5"
+                    android:padding="@dimen/margin_dp3"
+                    android:text="@string/more_copun"
+                    android:textColor="@color/colorTextGreen"
+                    android:textSize="@dimen/textsize_sp12" />
+
+                <Button
+                    android:id="@+id/btn_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="?android:attr/actionBarSize"
+                    android:layout_below="@+id/tv_morecopun"
+                    android:layout_marginRight="@dimen/margin_dp60"
+                    android:layout_marginLeft="@dimen/margin_dp60"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/margin_dp35"
+                    android:background="@drawable/gradient_button"
+                    android:text="Book"
+                    android:textColor="@color/colorTextWhite"
+                    android:textSize="@dimen/textsize_sp19"
+                    android:gravity="center"
+                    android:layout_marginBottom="@dimen/margin_dp25"/>
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".moreInfoActivity.MoreInfoActivity">
+
+    <RelativeLayout
+        android:id="@+id/layout_actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_dp60"
+        android:background="@drawable/gradient_bg">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/padding_dp15"
+            android:src="@drawable/back_btn" />
+
+        <ImageView
+            android:id="@+id/img_cart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/padding_dp15"
+            android:src="@drawable/cart" />
+
+        <TextView
+            android:id="@+id/tv_tv_product_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="@dimen/margin_dp5"
+            android:drawableTop="@drawable/top_logo"
+            android:gravity="center"
+            android:text="More Information"
+            android:textColor="@color/colorTextWhite"
+            android:textSize="@dimen/textsize_sp19" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout_actionbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/layout_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/img_resturant"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_dp220"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/banner" />
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/img_resturant"
+                    android:layout_marginBottom="@dimen/margin_dp15">
+
+                    <TextView
+                        android:id="@+id/tv_orderName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_dp15"
+                        android:layout_marginTop="@dimen/margin_dp5"
+                        android:text="Drinkery 51"
+                        android:textColor="@color/colorTextWhite"
+                        android:textSize="@dimen/textsize_sp19" />
+
+                    <TextView
+                        android:id="@+id/tv_loaction"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_orderName"
+                        android:layout_alignLeft="@+id/tv_orderName"
+                        android:layout_toLeftOf="@+id/tv_totalrating"
+                        android:text="Bandra Kurla Complex - 6km"
+                        android:textColor="@color/colorTextWhite"
+                        android:textSize="@dimen/textsize_sp15" />
+
+                    <TextView
+                        android:id="@+id/tv_totalrating"
+                        android:layout_width="@dimen/margin_dp60"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="@dimen/margin_dp3"
+                        android:layout_marginTop="@dimen/margin_dp5"
+                        android:layout_marginRight="@dimen/margin_dp20"
+                        android:background="@drawable/custom_cart_bg"
+                        android:gravity="center"
+                        android:padding="@dimen/padding_dp5"
+                        android:text="4.6"
+                        android:textColor="@color/colorTextWhite"
+                        android:textSize="@dimen/textsize_sp16" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/img_resturant"
+                    android:layout_margin="@dimen/margin_dp20">
+
+                    <TextView
+                        android:id="@+id/tv_openingHours"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Opening Hours:"
+                        android:textColor="@color/colorTextDarkGrey"
+                        android:textSize="@dimen/textsize_sp19" />
+
+                    <TextView
+                        android:id="@+id/tv_Hours"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_openingHours"
+                        android:layout_marginTop="@dimen/margin_dp5"
+                        android:text="12:00 - 03:00"
+                        android:textColor="@color/colorTextGrey"
+                        android:textSize="@dimen/textsize_sp17" />
+
+                    <View
+                        android:id="@+id/view_info1"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_size_dp0.5"
+                        android:layout_below="@+id/tv_Hours"
+                        android:layout_marginTop="@dimen/margin_dp12"
+                        android:background="@color/colorTextGrey" />
+
+                    <TextView
+                        android:id="@+id/atmosphere"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/view_info1"
+                        android:layout_marginTop="@dimen/margin_dp15"
+                        android:text="Atmosphere:"
+                        android:textColor="@color/colorTextDarkGrey"
+                        android:textSize="@dimen/textsize_sp19" />
+
+                    <TextView
+                        android:id="@+id/tv_atmosphere"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/atmosphere"
+                        android:layout_marginTop="@dimen/margin_dp5"
+                        android:text="Family Friendly"
+                        android:textColor="@color/colorTextGrey"
+                        android:textSize="@dimen/textsize_sp17" />
+
+                    <View
+                        android:id="@+id/view_info2"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_size_dp0.5"
+                        android:layout_below="@+id/tv_atmosphere"
+                        android:layout_marginTop="@dimen/margin_dp12"
+                        android:background="@color/colorTextGrey" />
+
+
+                    <TextView
+                        android:id="@+id/facilities_services"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/view_info2"
+                        android:layout_marginTop="@dimen/margin_dp15"
+                        android:text="Facilities/Services:"
+                        android:textColor="@color/colorTextDarkGrey"
+                        android:textSize="@dimen/textsize_sp19" />
+
+                    <TextView
+                        android:id="@+id/tv_facilities_services"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/facilities_services"
+                        android:layout_marginTop="@dimen/margin_dp5"
+                        android:text="Air-Conditions"
+                        android:textColor="@color/colorTextGrey"
+                        android:textSize="@dimen/textsize_sp17" />
+
+                    <View
+                        android:id="@+id/view_info3"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_size_dp0.5"
+                        android:layout_below="@+id/tv_facilities_services"
+                        android:layout_marginTop="@dimen/margin_dp12"
+                        android:background="@color/colorTextGrey" />
+
+
+                    <TextView
+                        android:id="@+id/spoken_english"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/view_info3"
+                        android:layout_marginTop="@dimen/margin_dp15"
+                        android:text="Spoken English:"
+                        android:textColor="@color/colorTextDarkGrey"
+                        android:textSize="@dimen/textsize_sp19" />
+
+                    <TextView
+                        android:id="@+id/tv_language"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/spoken_english"
+                        android:layout_marginTop="@dimen/margin_dp5"
+                        android:text="English,Hindi"
+                        android:textColor="@color/colorTextGrey"
+                        android:textSize="@dimen/textsize_sp17" />
+
+                    <View
+                        android:id="@+id/view_info4"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_size_dp0.5"
+                        android:layout_below="@+id/tv_language"
+                        android:layout_marginTop="@dimen/margin_dp12"
+                        android:background="@color/colorTextGrey" />
+
+                    <TextView
+                        android:id="@+id/credit_card"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/view_info4"
+                        android:layout_marginTop="@dimen/margin_dp15"
+                        android:text="Credit Card"
+                        android:textColor="@color/colorTextDarkGrey"
+                        android:textSize="@dimen/textsize_sp19" />
+
+                    <TextView
+                        android:id="@+id/tv_credit_card"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/credit_card"
+                        android:layout_marginTop="@dimen/margin_dp5"
+                        android:text="Master Card,Visa"
+                        android:textColor="@color/colorTextGrey"
+                        android:textSize="@dimen/textsize_sp17" />
+
+                    <View
+                        android:id="@+id/view_info5"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_size_dp0.5"
+                        android:layout_below="@+id/tv_credit_card"
+                        android:layout_marginTop="@dimen/margin_dp12"
+                        android:background="@color/colorTextGrey" />
+
+
+                    <TextView
+                        android:id="@+id/others_miscinfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/view_info5"
+                        android:layout_marginTop="@dimen/margin_dp15"
+                        android:text="Other/Misc. Info:"
+                        android:textColor="@color/colorTextDarkGrey"
+                        android:textSize="@dimen/textsize_sp19" />
+
+                    <TextView
+                        android:id="@+id/tv_others_miscinfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/others_miscinfo"
+                        android:layout_marginTop="@dimen/margin_dp5"
+                        android:text="Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs"
+                        android:textColor="@color/colorTextGrey"
+                        android:textSize="@dimen/textsize_sp15" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

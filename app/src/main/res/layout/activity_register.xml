@@ -22,7 +22,8 @@
             android:drawableTop="@drawable/top_logo"
             android:text="Register"
             android:textColor="@color/colorTextWhite"
-            android:textSize="@dimen/textsize_sp21" />
+            android:textSize="@dimen/textsize_sp19"
+            android:gravity="center" />
     </RelativeLayout>
 
     <ScrollView

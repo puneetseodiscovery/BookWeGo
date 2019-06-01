@@ -4,8 +4,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.bookwego.R;
+import com.bookwego.baseClass.BaseClass;
 
-public class OtpActivity extends AppCompatActivity {
+public class OtpActivity extends BaseClass {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

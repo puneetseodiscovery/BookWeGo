@@ -9,12 +9,13 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bookwego.R;
+import com.bookwego.baseClass.BaseClass;
 import com.bookwego.faqActivity.adapter.FAQAdapter;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class FAQActivity extends AppCompatActivity implements View.OnClickListener {
+public class FAQActivity extends BaseClass implements View.OnClickListener {
 
     @BindView(R.id.recycler_faq)
     RecyclerView recycler_faq;

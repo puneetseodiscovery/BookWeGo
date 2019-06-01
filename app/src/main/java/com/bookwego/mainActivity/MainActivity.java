@@ -119,8 +119,6 @@ public class MainActivity extends BaseClass implements View.OnClickListener {
         tabLayout = (TabLayout) findViewById(R.id.tabLayout);
         tabLayout.setupWithViewPager(viewPager);
 
-        view_home.setVisibility(View.VISIBLE);
-
 
     }
 
@@ -361,7 +359,7 @@ public class MainActivity extends BaseClass implements View.OnClickListener {
     @Override
     protected void onResume() {
         super.onResume();
-        view_home.setVisibility(View.VISIBLE);
+       // view_home.setVisibility(View.VISIBLE);
 
     }
 }

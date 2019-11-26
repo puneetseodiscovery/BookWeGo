@@ -1,7 +1,10 @@
 package com.bookwego.paymentActivity.adapters;
 
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Color;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.text.Html;
@@ -12,10 +15,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bookwego.R;
+import com.bookwego.addCardActivity.AddCardActivity;
+import com.bookwego.loginActivity.LogInActivity;
 import com.bookwego.newandpermotions.MySpannableClass.MySpannable;
+import com.bookwego.settingActivity.SettingsActivity;
 import com.bookwego.utills.Utility;
 
 import butterknife.BindView;
@@ -47,7 +54,7 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.RecyclerViewHo
     @Override
     public void onBindViewHolder(final RecyclerViewHolder holder, final int position) {
 
-        String color = "#" + mColors[position];
+        final String color = "#" + mColors[position];
 
         for (int c = 1; c < mColors.length; c++) {
 
@@ -57,12 +64,47 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.RecyclerViewHo
                 c = 1;
             }
         }
+
+        holder.delete_Card.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertLogoutDialog();
+            }
+        });
+
+        holder.edit_Card.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(context, AddCardActivity.class);
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override
     public int getItemCount() {
 
         return 4;
+    }
+
+    private void AlertLogoutDialog() {
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(context);
+        builder.setTitle("BookWeGo");
+        builder.setMessage("Are you sure you want to Delete?")
+                .setCancelable(false)
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        dialog.dismiss();
+                    }
+                })
+                .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        dialog.cancel();
+                    }
+                });
+        AlertDialog alert = builder.create();
+        alert.show();
     }
 
     public class RecyclerViewHolder extends RecyclerView.ViewHolder {
@@ -93,6 +135,12 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.RecyclerViewHo
 
         @BindView(R.id.cardView)
         CardView cardView;
+
+        @BindView(R.id.edit_Card)
+        ImageView edit_Card;
+
+        @BindView(R.id.delete_Card)
+        ImageView delete_Card;
 
         public RecyclerViewHolder(View view) {
             super(view);

@@ -1,7 +1,9 @@
 package com.bookwego.reservationsActivity.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
+import android.support.v7.view.menu.MenuView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +12,7 @@ import android.widget.TextView;
 
 import com.bookwego.R;
 import com.bookwego.mainActivity.modelClasses.CategoriesModel;
+import com.bookwego.reservationDetails.ReservationDetailsActivity;
 import com.bookwego.utills.Utility;
 
 import java.util.List;
@@ -39,6 +42,15 @@ public class UpcomingAdapter extends RecyclerView.Adapter<UpcomingAdapter.Recycl
 
     @Override
     public void onBindViewHolder(final RecyclerViewHolder holder, final int position) {
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(context, ReservationDetailsActivity.class);
+                context.startActivity(intent);
+            }
+        });
 
     }
 

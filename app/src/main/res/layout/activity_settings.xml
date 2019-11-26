@@ -18,8 +18,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="@dimen/margin_dp10"
-            android:padding="@dimen/padding_dp8"
+            android:padding="@dimen/padding_dp10"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
             android:src="@drawable/back_btn" />
 
         <ImageView
@@ -29,7 +30,9 @@
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="@dimen/margin_dp15"
-            android:padding="@dimen/padding_dp8"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:padding="@dimen/padding_dp5"
             android:src="@drawable/swt" />
 
 
@@ -42,7 +45,7 @@
             android:drawableTop="@drawable/top_logo"
             android:text="@string/settings"
             android:textColor="@color/colorTextWhite"
-            android:textSize="@dimen/textsize_sp19"
+            android:textSize="@dimen/textsize_sp17"
             android:gravity="center" />
     </RelativeLayout>
 
@@ -146,7 +149,7 @@
                 android:gravity="center_vertical"
                 android:paddingLeft="@dimen/padding_dp20"
                 android:paddingRight="@dimen/padding_dp20"
-                android:text="favourite"
+                android:text="Favourite"
                 android:textColor="@color/colorTextGrey"
                 android:textSize="@dimen/textsize_sp17" />
 

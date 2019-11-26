@@ -17,7 +17,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:padding="@dimen/padding_dp15"
+            android:padding="@dimen/padding_dp10"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
             android:src="@drawable/back_btn" />
 
 
@@ -31,7 +33,7 @@
             android:gravity="center"
             android:text="@string/cart"
             android:textColor="@color/colorTextWhite"
-            android:textSize="@dimen/textsize_sp19" />
+            android:textSize="@dimen/textsize_sp17" />
     </RelativeLayout>
 
     <ScrollView
@@ -65,7 +67,7 @@
                     android:layout_marginBottom="@dimen/margin_dp38"
                     android:text="Drinkery 51"
                     android:textColor="@color/colorTextWhite"
-                    android:textSize="@dimen/textsize_sp19" />
+                    android:textSize="@dimen/textsize_sp17" />
 
                 <TextView
                     android:id="@+id/tv_loaction"
@@ -270,7 +272,7 @@
                     android:layout_marginTop="@dimen/margin_dp20"
                     android:text="@string/tell_restaurants"
                     android:textColor="@color/colorTextGrey"
-                    android:textSize="@dimen/textsize_sp10" />
+                    android:textSize="@dimen/textsize_sp11" />
 
 
                 <View
@@ -318,7 +320,7 @@
                     android:layout_width="@dimen/margin_dp70"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/tv_havecopun"
-                    android:layout_marginLeft="@dimen/margin_dp25"
+                    android:layout_marginLeft="@dimen/margin_dp15"
                     android:layout_marginTop="@dimen/margin_dp5"
                     android:layout_toRightOf="@+id/edit_writehere"
                     android:background="@drawable/custom_cart_bg"
@@ -339,7 +341,7 @@
                     android:drawablePadding="@dimen/padding_dp5"
                     android:padding="@dimen/margin_dp3"
                     android:text="@string/more_copun"
-                    android:textColor="@color/colorTextGreen"
+                    android:textColor="@drawable/green_color_selectors"
                     android:textSize="@dimen/textsize_sp10" />
 
                 <View
@@ -362,7 +364,7 @@
                     android:layout_marginTop="@dimen/margin_dp20"
                     android:text="@string/collection"
                     android:textColor="@color/colorTextDarkGrey"
-                    android:textSize="@dimen/textsize_sp17" />
+                    android:textSize="@dimen/textsize_sp15" />
 
                 <RelativeLayout
                     android:id="@+id/layout_recyclerview"
@@ -405,7 +407,7 @@
                     android:layout_height="@dimen/view_size_dp0.5"
                     android:layout_below="@+id/layout_recyclerview"
                     android:layout_marginLeft="@dimen/margin_dp12"
-                    android:layout_marginTop="@dimen/margin_dp20"
+                    android:layout_marginTop="@dimen/margin_dp10"
                     android:layout_marginRight="@dimen/margin_dp12"
                     android:background="@color/colorTextGrey" />
 
@@ -416,7 +418,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/view03"
                     android:layout_alignLeft="@+id/tv_orderName"
-                    android:layout_marginTop="@dimen/margin_dp25">
+                    android:layout_marginTop="@dimen/margin_dp5">
 
                     <TextView
                         android:id="@+id/tv_order_takeaway"
@@ -565,7 +567,7 @@
                     android:layout_marginTop="@dimen/margin_dp15"
                     android:layout_marginRight="@dimen/margin_dp25"
                     android:text="Change Address"
-                    android:textColor="@color/colorTextGreen"
+                    android:textColor="@drawable/green_color_selectors"
                     android:textSize="@dimen/textsize_sp13" />
 
                 <View

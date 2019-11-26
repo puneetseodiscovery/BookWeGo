@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/layout_reviews"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_dp8"
+        android:layout_marginBottom="@dimen/margin_dp15">
+
+        <ImageView
+            android:id="@+id/img_user"
+            android:layout_width="@dimen/margin_dp60"
+            android:layout_height="@dimen/margin_dp60"
+            android:src="@drawable/ic_account" />
+
+        <TextView
+            android:id="@+id/tv_userName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_dp18"
+            android:layout_marginTop="@dimen/margin_dp5"
+            android:layout_toRightOf="@+id/img_user"
+            android:text="Alic"
+            android:textColor="@color/colorTextDarkGrey"
+            android:textSize="@dimen/textsize_sp17" />
+
+        <TextView
+            android:id="@+id/tv_reviews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_userName"
+            android:layout_alignLeft="@+id/tv_userName"
+            android:layout_marginTop="@dimen/margin_dp3"
+            android:layout_marginRight="@dimen/margin_dp45"
+            android:layout_toRightOf="@+id/img_user"
+            android:text="Great Expericence.Thank you eatigo for such a wounderfull offer."
+            android:textColor="@color/colorTextGrey"
+            android:textSize="@dimen/textsize_sp12" />
+
+        <RatingBar
+            android:id="@+id/tv_recommending"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            style="?android:attr/ratingBarStyleSmall"
+            android:rating="3.5"
+            android:layout_alignTop="@+id/tv_userName"
+            android:layout_alignParentRight="true"/>
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_reviews"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/margin_dp25"
+            android:layout_marginTop="@dimen/margin_dp10"
+            android:text="1 month ago"
+            android:textColor="@color/colorTextGrey"
+            android:textSize="@dimen/textsize_sp12" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_below="@+id/layout_reviews"
+        android:layout_width="match_parent"
+        android:background="@color/colorTextGrey"
+        android:layout_height="@dimen/view_size_dp1"/>
+</RelativeLayout>

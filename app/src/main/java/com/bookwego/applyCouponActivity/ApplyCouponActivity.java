@@ -1,15 +1,11 @@
 package com.bookwego.applyCouponActivity;
-
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.ImageView;
-
 import com.bookwego.R;
 import com.bookwego.applyCouponActivity.adapter.CouponAdapter;
-import com.bookwego.cartActivity.adapter.CartDiscountAdapter;
-
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;

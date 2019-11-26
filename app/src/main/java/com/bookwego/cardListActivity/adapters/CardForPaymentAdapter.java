@@ -17,7 +17,7 @@ import butterknife.ButterKnife;
 
 public class CardForPaymentAdapter extends RecyclerView.Adapter<CardForPaymentAdapter.RecyclerViewHolder> {
 
-    Context context;
+    Context context; // context
     LayoutInflater inflater;
     public String[] mColors = {
             "3F51B5", "FF9800", "009688", "673AB7"

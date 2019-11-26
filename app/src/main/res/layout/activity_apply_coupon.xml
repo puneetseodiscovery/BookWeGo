@@ -17,7 +17,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:padding="@dimen/padding_dp15"
+            android:padding="@dimen/padding_dp10"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
             android:src="@drawable/back_btn" />
 
 
@@ -31,7 +33,7 @@
             android:gravity="center"
             android:text="@string/apply_coupon"
             android:textColor="@color/colorTextWhite"
-            android:textSize="@dimen/textsize_sp19" />
+            android:textSize="@dimen/textsize_sp17" />
     </RelativeLayout>
 
     <RelativeLayout

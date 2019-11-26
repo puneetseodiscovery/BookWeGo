@@ -17,14 +17,15 @@
 
             <TextView
                 android:id="@+id/tv_bookwego"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/margin_dp15"
-                android:gravity="center"
                 android:layout_centerVertical="true"
                 android:text="@string/what_is_bookwego"
                 android:textColor="@color/colorTextDarkGrey"
-                android:textSize="@dimen/textsize_sp17" />
+                android:textSize="@dimen/textsize_sp17"
+                android:layout_marginRight="@dimen/margin_dp5"
+                android:layout_toLeftOf="@+id/img_down"/>
 
             <ImageView
                 android:id="@+id/img_down"
@@ -32,8 +33,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
-                android:layout_marginRight="@dimen/margin_dp20"
-                android:layout_toLeftOf="@+id/tv_bookwego"
+                android:layout_marginRight="@dimen/margin_dp10"
                 android:padding="@dimen/padding_dp5"
                 android:src="@drawable/img_down"
                 android:visibility="visible" />
@@ -45,6 +45,8 @@
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="@dimen/margin_dp20"
                 android:padding="@dimen/padding_dp5"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
                 android:src="@drawable/img_up"
                 android:layout_centerVertical="true"
                 android:visibility="invisible" />
@@ -65,7 +67,7 @@
 
         <com.codesgood.views.JustifiedTextView
             android:id="@+id/tv_answer"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/view_faq"
             android:layout_marginLeft="@dimen/margin_dp15"

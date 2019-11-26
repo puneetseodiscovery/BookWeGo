@@ -1,19 +1,13 @@
 package com.bookwego.orderActivity;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
-
 import com.bookwego.R;
 import com.bookwego.baseClass.BaseClass;
 import com.bookwego.orderActivity.adapters.OrdersAdapter;
-import com.bookwego.reservationsActivity.adapters.HistoryAdapter;
-
-import java.util.EventListener;
-
 import butterknife.BindView;
 import butterknife.ButterKnife;
 

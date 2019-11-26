@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".yourCodeActivity.YourCodeActivity">
+
+    <RelativeLayout
+        android:id="@+id/layout_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient_bg">
+
+        <RelativeLayout
+            android:id="@+id/layout_refferprogram"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_dp60">
+
+            <ImageView
+                android:id="@+id/img_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/padding_dp10"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:src="@drawable/back_btn" />
+
+            <TextView
+                android:id="@+id/tv_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="@dimen/margin_dp5"
+                android:drawableTop="@drawable/top_logo"
+                android:text="@string/referral_program"
+                android:textColor="@color/colorTextWhite"
+                android:textSize="@dimen/textsize_sp17"
+                android:gravity="center" />
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/layout_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_refferprogram">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/margin_dp25"
+                android:layout_marginBottom="@dimen/margin_dp25"
+                android:src="@drawable/refral" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_below="@id/layout_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/yourCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="YOUR CODE"
+            android:textColor="@color/colorTextDarkGrey"
+            android:textSize="@dimen/textsize_sp19"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/margin_dp25"/>
+
+        <TextView
+            android:id="@+id/tv_yourCode"
+            android:layout_width="@dimen/margin_dp200"
+            android:layout_height="?actionBarSize"
+            android:layout_below="@+id/yourCode"
+            android:layout_centerHorizontal="true"
+            android:text="DFCQT47HGJ5GH"
+            android:background="@drawable/dotted_bg"
+            android:textColor="@color/colorTextGreen"
+            android:textSize="@dimen/textsize_sp19"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/margin_dp25"/>
+
+        <TextView
+            android:id="@+id/aboutCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/tv_yourCode"
+            android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+            android:textColor="@color/colorTextDarkGrey"
+            android:textSize="@dimen/textsize_sp19"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/margin_dp25"
+            android:layout_marginRight="@dimen/margin_dp20"
+            android:layout_marginLeft="@dimen/margin_dp20"/>
+
+    </RelativeLayout>
+</RelativeLayout>

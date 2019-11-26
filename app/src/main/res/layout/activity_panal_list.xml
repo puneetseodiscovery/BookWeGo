@@ -9,7 +9,7 @@
     <RelativeLayout
         android:id="@+id/layout_actionbar"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/margin_dp60"
+        android:layout_height="@dimen/margin_dp65"
         android:background="@drawable/gradient_bg">
 
         <ImageView
@@ -17,7 +17,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:padding="@dimen/padding_dp15"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:padding="@dimen/padding_dp10"
             android:src="@drawable/back_btn" />
 
         <ImageView
@@ -26,7 +28,9 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:padding="@dimen/padding_dp12"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:padding="@dimen/padding_dp8"
             android:src="@drawable/ico_search" />
 
         <ImageView
@@ -35,7 +39,9 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_toLeftOf="@+id/img_search"
-            android:padding="@dimen/padding_dp12"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:padding="@dimen/padding_dp8"
             android:src="@drawable/ic_filter" />
 
         <ImageView
@@ -51,7 +57,7 @@
             android:layout_height="@dimen/margin_dp30"
             android:layout_below="@+id/img_appLogo"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="@dimen/margin_dp2"
+            android:layout_marginTop="@dimen/margin_dp5"
             android:background="@drawable/custom_pannel_list_bg"
             android:weightSum="2">
 
@@ -59,113 +65,148 @@
                 android:id="@+id/tv_panel"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="Panel"
-                android:gravity="center"
-                android:textColor="@color/colorWhitebg"
-                android:background="@drawable/pannel_bg"
                 android:layout_margin="@dimen/margin_dp1"
-                android:textSize="@dimen/textsize_sp15"/>
+                android:layout_weight="1"
+                android:background="@drawable/pannel_bg"
+                android:gravity="center"
+                android:text="Panel"
+                android:textColor="@color/colorWhitebg"
+                android:textSize="@dimen/textsize_sp15" />
 
             <TextView
                 android:id="@+id/tv_list"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="List"
-                android:gravity="center"
-                android:background="@drawable/list_bg"
                 android:layout_margin="@dimen/margin_dp1"
-                android:textSize="@dimen/textsize_sp15"
-                android:textColor="@color/colorTextGreen"/>
+                android:layout_weight="1"
+                android:background="@color/colorWhitebg"
+                android:gravity="center"
+                android:text="List"
+                android:textColor="@color/colorTextGreen"
+                android:textSize="@dimen/textsize_sp15" />
 
         </LinearLayout>
 
 
     </RelativeLayout>
 
-    <RelativeLayout
-        android:id="@+id/layoyt_restaurants_name"
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="@dimen/margin_dp180"
+        android:layout_height="match_parent"
         android:layout_below="@+id/layout_actionbar">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <ImageView
-                android:id="@+id/img_resturant"
+            <RelativeLayout
+                android:id="@+id/layoyt_restaurants_name"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_dp200">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/img_resturant"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop" />
+
+                    <TextView
+                        android:id="@+id/tv_restaurant_categories"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/margin_dp25"
+                        android:shadowColor="#A90A0A0A"
+                        android:shadowDx="2"
+                        android:shadowDy="2"
+                        android:shadowRadius="3"
+                        android:text=""
+                        android:textColor="@color/colorWhitebg"
+                        android:textSize="@dimen/textsize_sp19" />
+
+                    <TextView
+                        android:id="@+id/tv_popular_place"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_restaurant_categories"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/margin_dp5"
+                        android:gravity="center"
+                        android:shadowColor="#A90A0A0A"
+                        android:shadowDx="2"
+                        android:shadowDy="2"
+                        android:shadowRadius="3"
+                        android:text=""
+                        android:textColor="@color/colorWhitebg"
+                        android:textSize="@dimen/textsize_sp13" />
+
+                    <TextView
+                        android:id="@+id/tv_total_restaurants"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/view_White"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/margin_dp7"
+                        android:shadowColor="#A90A0A0A"
+                        android:shadowDx="2"
+                        android:shadowDy="2"
+                        android:shadowRadius="3"
+                        android:text=""
+                        android:textColor="@color/colorWhitebg"
+                        android:textSize="@dimen/textsize_sp19" />
+
+                    <View
+                        android:id="@+id/view_White"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_size_dp1.5"
+                        android:layout_below="@+id/tv_popular_place"
+                        android:layout_marginLeft="@dimen/margin_dp45"
+                        android:layout_marginTop="@dimen/margin_dp10"
+                        android:layout_marginRight="@dimen/margin_dp45"
+                        android:background="@color/colorWhitebg" />
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:scaleType="fitXY"
-                android:src="@drawable/banner" />
+                android:layout_below="@+id/view_space">
 
-            <TextView
-                android:id="@+id/tv_restaurant_categories"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="@dimen/margin_dp25"
-                android:text="Tranding"
-                android:textColor="@color/colorWhitebg"
-                android:textSize="@dimen/textsize_sp19" />
+                <RelativeLayout
+                    android:id="@+id/layout_empty"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible">
 
-            <TextView
-                android:id="@+id/tv_popular_place"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/tv_restaurant_categories"
-                android:layout_centerHorizontal="true"
-                android:gravity="center"
-                android:text="Find out What\'s hot on BookWeGo and dig up your most\npopular place"
-                android:textColor="@color/colorWhitebg"
-                android:textSize="@dimen/textsize_sp13" />
+                    <include layout="@layout/layout_empty"></include>
+                </RelativeLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/restaurantsList_recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:nestedScrollingEnabled="false"
+                    android:visibility="visible">
+
+                </android.support.v7.widget.RecyclerView>
+            </RelativeLayout>
 
             <View
-                android:id="@+id/view_White"
+                android:id="@+id/view_space"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/view_size_dp1.5"
-                android:layout_below="@+id/tv_popular_place"
-                android:layout_marginLeft="@dimen/margin_dp45"
-                android:layout_marginTop="@dimen/margin_dp10"
-                android:layout_marginRight="@dimen/margin_dp45"
+                android:layout_height="15sp"
+                android:layout_below="@+id/layoyt_restaurants_name"
                 android:background="@color/colorWhitebg" />
-
-            <TextView
-                android:id="@+id/tv_total_restaurants"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/view_White"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="@dimen/margin_dp7"
-                android:text="(45 Restaurants)"
-                android:textColor="@color/colorWhitebg"
-                android:textSize="@dimen/textsize_sp19" />
-
         </RelativeLayout>
+    </ScrollView>
 
 
-    </RelativeLayout>
-
-    <View
-        android:id="@+id/view_space"
-        android:layout_width="match_parent"
-        android:layout_height="15sp"
-        android:layout_below="@+id/layoyt_restaurants_name"
-        android:background="@color/colorWhitebg" />
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/view_space">
-
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/restaurantsList_recyclerview"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:nestedScrollingEnabled="false">
-
-        </android.support.v7.widget.RecyclerView>
-    </RelativeLayout>
 </RelativeLayout>

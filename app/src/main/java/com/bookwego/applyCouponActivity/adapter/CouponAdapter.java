@@ -39,6 +39,7 @@ public class CouponAdapter extends RecyclerView.Adapter<CouponAdapter.RecyclerVi
 
     @Override
     public void onBindViewHolder(final RecyclerViewHolder holder, final int position) {
+
         holder.tv_apply.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

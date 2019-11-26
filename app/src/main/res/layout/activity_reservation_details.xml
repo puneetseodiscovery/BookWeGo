@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".reservationDetails.ReservationDetailsActivity">
+
+    <RelativeLayout
+        android:id="@+id/layout_actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_dp60"
+        android:background="@drawable/gradient_bg">
+
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/padding_dp10"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:src="@drawable/back_btn" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="@dimen/margin_dp5"
+            android:drawableTop="@drawable/top_logo"
+            android:gravity="center"
+            android:text="Reseveration Details"
+            android:textColor="@color/colorTextWhite"
+            android:textSize="@dimen/textsize_sp17" />
+
+        <TextView
+            android:id="@+id/tv_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="@dimen/margin_dp5"
+            android:drawableTop="@drawable/ic_share"
+            android:gravity="center"
+            android:text="Share"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/colorTextWhite"
+            android:textSize="@dimen/textsize_sp15"
+            android:layout_marginRight="@dimen/margin_dp15"/>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout_actionbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/img_banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_dp100"
+                    android:layout_marginLeft="@dimen/margin_dp15"
+                    android:layout_marginTop="@dimen/margin_dp10"
+                    android:src="@drawable/reservation_banner"
+                    android:layout_marginRight="@dimen/margin_dp15" />
+
+
+                <TextView
+                    android:id="@+id/tv_reservation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/img_banner"
+                    android:layout_alignLeft="@+id/img_banner"
+                    android:layout_marginTop="@dimen/margin_dp20"
+                    android:text="Reservation Code"
+                    android:textColor="@color/colorTextBlack"
+                    android:textSize="@dimen/textsize_sp17" />
+
+                <TextView
+                    android:id="@+id/tv_datepiker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/img_banner"
+                    android:layout_alignRight="@+id/img_banner"
+                    android:layout_marginLeft="@dimen/margin_dp45"
+                    android:layout_marginTop="@dimen/margin_dp20"
+                    android:layout_toRightOf="@+id/tv_reservation"
+                    android:drawablePadding="@dimen/padding_dp5"
+                    android:text="HJH78Jm"
+                    android:textColor="@color/colorTextBlack"
+                    android:textSize="@dimen/textsize_sp17" />
+
+                <View
+                    android:id="@+id/view_Book1"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/view_size_dp0.5"
+                    android:layout_below="@+id/tv_reservation"
+                    android:layout_alignLeft="@+id/img_banner"
+                    android:layout_alignRight="@+id/img_banner"
+                    android:layout_marginTop="@dimen/margin_dp10"
+                    android:background="@color/colorTextGrey" />
+
+                <TextView
+                    android:id="@+id/resturant"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view_Book1"
+                    android:layout_alignLeft="@+id/img_banner"
+                    android:layout_marginTop="@dimen/margin_dp10"
+                    android:text="Restaturants"
+                    android:textColor="@color/colorTextGrey"
+                    android:textSize="@dimen/textsize_sp15" />
+
+                <TextView
+                    android:id="@+id/tv_resturantsName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view_Book1"
+                    android:layout_alignLeft="@+id/tv_datepiker"
+                    android:layout_alignRight="@+id/img_banner"
+                    android:layout_marginTop="@dimen/margin_dp10"
+                    android:drawablePadding="@dimen/padding_dp5"
+                    android:text="Food plazza @for fun"
+                    android:textColor="@color/colorTextGrey"
+                    android:textSize="@dimen/textsize_sp15" />
+
+                <View
+                    android:id="@+id/view_Book2"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/view_size_dp0.5"
+                    android:layout_below="@+id/resturant"
+                    android:layout_alignLeft="@+id/img_banner"
+                    android:layout_alignRight="@+id/img_banner"
+                    android:layout_marginTop="@dimen/margin_dp10"
+                    android:background="@color/colorTextGrey" />
+
+                <TextView
+                    android:id="@+id/resturantno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view_Book2"
+                    android:layout_alignLeft="@+id/img_banner"
+                    android:layout_marginTop="@dimen/margin_dp10"
+                    android:text="Restaturant No."
+                    android:textColor="@color/colorTextGrey"
+                    android:textSize="@dimen/textsize_sp15" />
+
+                <TextView
+                    android:id="@+id/tv_resturantsno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view_Book2"
+                    android:layout_alignLeft="@+id/tv_datepiker"
+                    android:layout_alignRight="@+id/img_banner"
+                    android:layout_marginTop="@dimen/margin_dp10"
+                    android:drawablePadding="@dimen/padding_dp5"
+                    android:text="+919816255767"
+                    android:textColor="@color/colorTextGrey"
+                    android:textSize="@dimen/textsize_sp15" />
+
+                <View
+                    android:id="@+id/view_Book3"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/view_size_dp0.5"
+                    android:layout_below="@+id/resturantno"
+                    android:layout_alignLeft="@+id/img_banner"
+                    android:layout_alignRight="@+id/img_banner"
+                    android:layout_marginTop="@dimen/margin_dp10"
+                    android:background="@color/colorTextGrey" />
+
+                <TextView
+                    android:id="@+id/date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view_Book3"
+                    android:layout_alignLeft="@+id/img_banner"
+                    android:layout_marginTop="@dimen/margin_dp10"
+                    android:text="Date"
+                    android:textColor="@color/colorTextGrey"
+                    android:textSize="@dimen/textsize_sp15" />
+
+                <TextView
+                    android:id="@+id/tv_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view_Book3"
+                    android:layout_alignLeft="@+id/tv_datepiker"
+                    android:layout_alignRight="@+id/img_banner"
+                    android:layout_marginTop="@dimen/margin_dp10"
+                    android:drawablePadding="@dimen/padding_dp5"
+                    android:text="Friday,12/12/12"
+                    android:textColor="@color/colorTextGrey"
+                    android:textSize="@dimen/textsize_sp15" />
+
+                <View
+                    android:id="@+id/view_Book4"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/view_size_dp0.5"
+                    android:layout_below="@+id/date"
+                    android:layout_alignLeft="@+id/img_banner"
+                    android:layout_alignRight="@+id/img_banner"
+                    android:layout_marginTop="@dimen/margin_dp10"
+                    android:background="@color/colorTextGrey" />
+
+                <TextView
+                    android:id="@+id/timediscount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view_Book4"
+                    android:layout_alignLeft="@+id/img_banner"
+                    android:layout_marginTop="@dimen/margin_dp10"
+                    android:text="Time &amp; Discount"
+                    android:textColor="@color/colorTextGrey"
+                    android:textSize="@dimen/textsize_sp15" />
+
+                <TextView
+                    android:id="@+id/tv_timediscount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view_Book4"
+                    android:layout_alignLeft="@+id/tv_datepiker"
+                    android:layout_alignRight="@+id/img_banner"
+                    android:layout_marginTop="@dimen/margin_dp10"
+                    android:drawablePadding="@dimen/padding_dp5"
+                    android:text="16.00,40%"
+                    android:textColor="@color/colorTextGrey"
+                    android:textSize="@dimen/textsize_sp15" />
+
+                <View
+                    android:id="@+id/view_Book5"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/view_size_dp0.5"
+                    android:layout_below="@+id/timediscount"
+                    android:layout_alignLeft="@+id/img_banner"
+                    android:layout_alignRight="@+id/img_banner"
+                    android:layout_marginTop="@dimen/margin_dp10"
+                    android:background="@color/colorTextGrey" />
+
+                <TextView
+                    android:id="@+id/pax"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view_Book5"
+                    android:layout_alignLeft="@+id/img_banner"
+                    android:layout_marginTop="@dimen/margin_dp10"
+                    android:text="No. of Pax"
+                    android:textColor="@color/colorTextGrey"
+                    android:textSize="@dimen/textsize_sp15" />
+
+                <TextView
+                    android:id="@+id/tv_noofpax"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view_Book5"
+                    android:layout_alignLeft="@+id/tv_datepiker"
+                    android:layout_alignRight="@+id/img_banner"
+                    android:layout_marginTop="@dimen/margin_dp10"
+                    android:drawablePadding="@dimen/padding_dp5"
+                    android:text="2 People"
+                    android:textColor="@color/colorTextGrey"
+                    android:textSize="@dimen/textsize_sp15" />
+
+
+                <View
+                    android:id="@+id/view_Book6"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/view_size_dp0.5"
+                    android:layout_below="@+id/pax"
+                    android:layout_alignLeft="@+id/img_banner"
+                    android:layout_alignRight="@+id/img_banner"
+                    android:layout_marginTop="@dimen/margin_dp10"
+                    android:background="@color/colorTextGrey" />
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view_Book6"
+                    android:layout_alignLeft="@+id/img_banner"
+                    android:layout_marginTop="@dimen/margin_dp10"
+                    android:text="Name"
+                    android:textColor="@color/colorTextGrey"
+                    android:textSize="@dimen/textsize_sp15" />
+
+                <TextView
+                    android:id="@+id/tv_username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view_Book6"
+                    android:layout_alignLeft="@+id/tv_datepiker"
+                    android:layout_alignRight="@+id/img_banner"
+                    android:layout_marginTop="@dimen/margin_dp10"
+                    android:drawablePadding="@dimen/padding_dp5"
+                    android:text="Mohit Kumar"
+                    android:textColor="@color/colorTextGrey"
+                    android:textSize="@dimen/textsize_sp15" />
+
+                <View
+                    android:id="@+id/view_Book7"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/view_size_dp0.5"
+                    android:layout_below="@+id/name"
+                    android:layout_alignLeft="@+id/img_banner"
+                    android:layout_alignRight="@+id/img_banner"
+                    android:layout_marginTop="@dimen/margin_dp10"
+                    android:background="@color/colorTextGrey" />
+
+                <TextView
+                    android:id="@+id/email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view_Book7"
+                    android:layout_alignLeft="@+id/img_banner"
+                    android:layout_marginTop="@dimen/margin_dp10"
+                    android:text="Name"
+                    android:textColor="@color/colorTextGrey"
+                    android:textSize="@dimen/textsize_sp15" />
+
+                <TextView
+                    android:id="@+id/tv_useremail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view_Book7"
+                    android:layout_alignLeft="@+id/tv_datepiker"
+                    android:layout_alignRight="@+id/img_banner"
+                    android:layout_marginTop="@dimen/margin_dp10"
+                    android:drawablePadding="@dimen/padding_dp5"
+                    android:text="mohit4012@gmail.com"
+                    android:textColor="@color/colorTextGrey"
+                    android:textSize="@dimen/textsize_sp15" />
+
+                <RelativeLayout
+                    android:id="@+id/layout_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_useremail"
+                    android:layout_alignLeft="@+id/img_banner"
+                    android:layout_alignRight="@+id/img_banner">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="?actionBarSize"
+                        android:layout_marginTop="@dimen/margin_dp25"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <Button
+                            android:id="@+id/btn_editReservation"
+                            android:layout_width="0dp"
+                            android:layout_height="?android:attr/actionBarSize"
+                            android:layout_below="@+id/tv_useremail"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginRight="@dimen/margin_dp25"
+                            android:layout_weight="1"
+                            android:background="@drawable/gradient_button"
+                            android:text="Edit Reservation"
+                            android:textColor="@color/colorTextWhite"
+                            android:textSize="@dimen/textsize_sp13"
+                            tools:ignore="OnClick" />
+
+                        <Button
+                            android:id="@+id/btn_cancelReservation"
+                            android:layout_width="0dp"
+                            android:layout_height="?android:attr/actionBarSize"
+                            android:layout_below="@+id/tv_useremail"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginLeft="@dimen/margin_dp15"
+                            android:layout_weight="1"
+                            android:background="@drawable/gradient_button"
+                            android:text="Cancel Reservation"
+                            android:textColor="@color/colorTextWhite"
+                            android:textSize="@dimen/textsize_sp13"
+                            tools:ignore="OnClick" />
+                    </LinearLayout>
+                </RelativeLayout>
+                <android.support.v7.widget.CardView
+                    android:id="@+id/card_policy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/layout_button"
+                    android:layout_margin="@dimen/margin_dp15"
+                    android:elevation="@dimen/textsize_sp4"
+                    app:cardCornerRadius="@dimen/margin_dp8">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_dp12">
+
+                        <TextView
+                            android:id="@+id/tv_policy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Restaurant Policies"
+                            android:textColor="@color/colorTextDarkGrey"
+                            android:textSize="@dimen/textsize_sp17" />
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/recycler_specialConditions"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_policy"
+                            android:layout_marginTop="@dimen/margin_dp5"
+                            android:nestedScrollingEnabled="false">
+
+                        </android.support.v7.widget.RecyclerView>
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/card_termconditions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/card_policy"
+                    android:layout_margin="@dimen/margin_dp15"
+                    android:elevation="@dimen/textsize_sp4"
+                    app:cardCornerRadius="@dimen/margin_dp8">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_dp12">
+
+                        <TextView
+                            android:id="@+id/tv_termconditions"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="BookWeGo Terms &amp; Conditions"
+                            android:textColor="@color/colorTextDarkGrey"
+                            android:textSize="@dimen/textsize_sp17" />
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/recycler_termconditionds"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_termconditions"
+                            android:layout_marginTop="@dimen/margin_dp5"
+                            android:nestedScrollingEnabled="false">
+
+                        </android.support.v7.widget.RecyclerView>
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+              <!--  <RelativeLayout
+                    android:id="@+id/relative_map"
+                    android:layout_below="@+id/card_termconditions"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_dp250">
+                    <fragment
+                        android:id="@+id/map"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+                </RelativeLayout>
+-->
+
+
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

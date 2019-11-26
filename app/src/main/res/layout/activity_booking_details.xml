@@ -17,7 +17,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:padding="@dimen/padding_dp15"
+            android:padding="@dimen/padding_dp10"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
             android:src="@drawable/back_btn" />
 
         <ImageView
@@ -27,6 +29,8 @@
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="@dimen/margin_dp15"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
             android:src="@drawable/edit" />
 
         <TextView
@@ -40,7 +44,7 @@
             android:gravity="center"
             android:text="@string/booking_details"
             android:textColor="@color/colorTextWhite"
-            android:textSize="@dimen/textsize_sp19" />
+            android:textSize="@dimen/textsize_sp17" />
 
     </RelativeLayout>
 
@@ -414,7 +418,7 @@
                     android:textSize="@dimen/textsize_sp12" />
 
                 <Button
-                    android:id="@+id/btn_login"
+                    android:id="@+id/btn_book"
                     android:layout_width="match_parent"
                     android:layout_height="?android:attr/actionBarSize"
                     android:layout_below="@+id/tv_morecopun"

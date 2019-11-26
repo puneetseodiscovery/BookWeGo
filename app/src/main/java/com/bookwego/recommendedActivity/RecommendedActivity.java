@@ -1,17 +1,12 @@
 package com.bookwego.recommendedActivity;
-
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
-
 import com.bookwego.R;
 import com.bookwego.baseClass.BaseClass;
-import com.bookwego.faqActivity.adapter.FAQAdapter;
-import com.bookwego.menuItemDetailsActivity.adapters.ReviewsAdapter;
-
+import com.bookwego.restaurantsDetailsActivity.adapters.ReviewsAdapter;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -35,11 +30,11 @@ public class RecommendedActivity extends BaseClass implements View.OnClickListen
 
 
     private void Initialization() {
-
+/*
         ReviewsAdapter reviewsAdapter = new ReviewsAdapter(this);
         recycler_recommanded.setLayoutManager(new LinearLayoutManager(this,
                 LinearLayoutManager.VERTICAL, false));
-        recycler_recommanded.setAdapter(reviewsAdapter);
+        recycler_recommanded.setAdapter(reviewsAdapter);*/
 
     }
 

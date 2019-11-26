@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/relative_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_bg">
+
+        <TextView
+            android:id="@+id/tv_taptorate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_dp25"
+            android:text="Tap to Rate"
+            android:textColor="@color/colorTextDarkGrey"
+            android:textSize="@dimen/textsize_sp19" />
+
+        <RatingBar
+            android:id="@+id/ratingbar"
+            android:layout_below="@+id/tv_taptorate"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:rating="0.0"
+            android:stepSize="1"
+            android:layout_marginTop="@dimen/margin_dp15"
+            android:theme="@style/CustomRatingBar"/>
+
+        <EditText
+            android:id="@+id/edit_comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ratingbar"
+            android:hint="Leave a comment"
+            android:inputType="textMultiLine"
+            android:textColorHint="@color/colorTextDarkGrey"
+            android:textColor="@color/colorTextDarkGrey"
+            android:textSize="@dimen/textsize_sp18"
+            android:background="@android:color/transparent"
+            android:layout_marginLeft="@dimen/margin_dp25"
+            android:layout_marginRight="@dimen/margin_dp25"
+            android:layout_marginTop="@dimen/margin_dp25"/>
+
+        <View
+            android:id="@+id/view_comment"
+            android:layout_below="@+id/edit_comment"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/margin_dp8"
+            android:layout_height="@dimen/view_size_dp1"
+            android:layout_alignRight="@+id/edit_comment"
+            android:layout_alignLeft="@+id/edit_comment"
+            android:background="@android:color/darker_gray"/>
+
+        <TextView
+            android:id="@+id/tv_optional"
+            android:layout_below="@+id/view_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_dp5"
+            android:text="Write a review (Optional)"
+            android:textColor="@color/colorTextGrey"
+            android:textSize="@dimen/textsize_sp12"
+            android:layout_alignLeft="@+id/edit_comment"/>
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:layout_below="@+id/tv_optional"
+            android:layout_marginLeft="@dimen/margin_dp70"
+            android:layout_marginRight="@dimen/margin_dp70"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_dp35"
+            android:background="@drawable/gradient_button"
+            android:text="Submit"
+            android:layout_marginBottom="@dimen/margin_dp50"
+            android:textColor="@color/colorTextWhite"
+            tools:ignore="OnClick"
+            android:textSize="@dimen/textsize_sp19"
+            android:gravity="center"/>
+
+    </RelativeLayout>
+</RelativeLayout>

@@ -5,19 +5,13 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
-
 import com.bookwego.R;
 import com.bookwego.baseClass.BaseClass;
-import com.bookwego.mainActivity.MainActivity;
-import com.bookwego.mainActivity.fragments.RestaurantsFragment;
-import com.bookwego.mainActivity.fragments.ServicesFragment;
 import com.bookwego.reservationsActivity.fragments.HistoryFragment;
 import com.bookwego.reservationsActivity.fragments.UpComingFragment;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -100,6 +94,5 @@ public class ReservationsActivity extends BaseClass implements View.OnClickListe
             return mFragmentTitleList.get(position);
         }
     }
-
 
 }

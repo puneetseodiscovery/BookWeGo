@@ -17,7 +17,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:padding="@dimen/padding_dp15"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:padding="@dimen/padding_dp10"
             android:src="@drawable/back_btn" />
 
 
@@ -32,7 +34,7 @@
             android:gravity="center"
             android:text="About"
             android:textColor="@color/colorTextWhite"
-            android:textSize="@dimen/textsize_sp19" />
+            android:textSize="@dimen/textsize_sp17" />
 
     </RelativeLayout>
 
@@ -50,25 +52,28 @@
                 android:layout_height="wrap_content">
 
                 <ImageView
-                    android:id="@+id/img_cart"
+                    android:id="@+id/img_resturant"
                     android:layout_width="match_parent"
                     android:layout_height="220dp"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/banner_2" />
+                    android:scaleType="fitXY" />
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_alignBottom="@+id/img_cart"
+                    android:layout_alignBottom="@+id/img_resturant"
                     android:layout_marginBottom="@dimen/margin_dp15">
 
                     <TextView
-                        android:id="@+id/tv_orderName"
+                        android:id="@+id/tv_restaurantName"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/margin_dp15"
                         android:layout_marginTop="@dimen/margin_dp5"
-                        android:text="Drinkery 51"
+                        android:shadowColor="#A90A0A0A"
+                        android:shadowDx="2"
+                        android:shadowDy="2"
+                        android:shadowRadius="3"
+                        android:text=""
                         android:textColor="@color/colorTextWhite"
                         android:textSize="@dimen/textsize_sp19" />
 
@@ -76,10 +81,14 @@
                         android:id="@+id/tv_loaction"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/tv_orderName"
-                        android:layout_alignLeft="@+id/tv_orderName"
+                        android:layout_below="@+id/tv_restaurantName"
+                        android:layout_alignLeft="@+id/tv_restaurantName"
                         android:layout_toLeftOf="@+id/tv_totalrating"
-                        android:text="Bandra Kurla Complex - 6km"
+                        android:shadowColor="#A90A0A0A"
+                        android:shadowDx="2"
+                        android:shadowDy="2"
+                        android:shadowRadius="3"
+                        android:text=""
                         android:textColor="@color/colorTextWhite"
                         android:textSize="@dimen/textsize_sp15" />
 
@@ -91,22 +100,45 @@
                         android:layout_marginLeft="@dimen/margin_dp3"
                         android:layout_marginTop="@dimen/margin_dp5"
                         android:layout_marginRight="@dimen/margin_dp20"
-                        android:background="@drawable/custom_cart_bg"
                         android:gravity="center"
                         android:padding="@dimen/padding_dp5"
-                        android:text="4.6"
+                        android:text=""
                         android:textColor="@color/colorTextWhite"
                         android:textSize="@dimen/textsize_sp16" />
                 </RelativeLayout>
 
                 <com.codesgood.views.JustifiedTextView
+                    android:id="@+id/tv_about"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/img_cart"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/img_resturant"
                     android:layout_margin="@dimen/margin_dp10"
-                    android:text="Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum comes from a line in section 1.10.32.The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham." />
+                    android:text="" />
 
             </RelativeLayout>
         </RelativeLayout>
     </ScrollView>
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/layout_shimmer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout_actionbar"
+        android:layout_gravity="center"
+        android:visibility="visible"
+        android:orientation="vertical"
+        app:shimmer_duration="1200">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/restautrants_placeholder_item" />
+
+            <include layout="@layout/restautrants_placeholder_item2" />
+
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
 </RelativeLayout>

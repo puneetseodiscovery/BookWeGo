@@ -25,7 +25,7 @@
             android:layout_marginTop="@dimen/margin_dp7"
             android:layout_toRightOf="@+id/img_orders"
             android:text="Ester 51"
-            android:textColor="@color/colorTextGrey"
+            android:textColor="@color/colorTextDarkGrey"
             android:textSize="@dimen/textsize_sp12" />
 
         <TextView
@@ -36,7 +36,7 @@
             android:layout_alignLeft="@+id/tv_ordername"
             android:layout_marginTop="@dimen/margin_dp3"
             android:text="20/2/2019"
-            android:textColor="@color/colorTextGrey"
+            android:textColor="@color/colorTextDarkGrey"
             android:textSize="@dimen/textsize_sp12" />
 
         <TextView
@@ -47,7 +47,7 @@
             android:layout_alignLeft="@+id/tv_ordername"
             android:layout_marginTop="@dimen/margin_dp3"
             android:text="12:00 am  3 People"
-            android:textColor="@color/colorTextGrey"
+            android:textColor="@color/colorTextDarkGrey"
             android:textSize="@dimen/textsize_sp12" />
 
         <TextView
@@ -69,6 +69,8 @@
             android:layout_marginRight="@dimen/margin_dp10"
             android:padding="@dimen/padding_dp5"
             android:layout_marginTop="-20dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
             android:src="@drawable/arow_next_grey" />
 
         <View

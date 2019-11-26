@@ -55,7 +55,7 @@
             android:layout_marginTop="@dimen/margin_dp7"
             android:layout_marginRight="@dimen/margin_dp15"
             android:text="@string/apply"
-            android:textColor="@color/colorTextGreen"
+            android:textColor="@drawable/green_color_selectors"
             android:textSize="@dimen/textsize_sp17" />
 
         <TextView

@@ -3,12 +3,14 @@ package com.bookwego.cartActivity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Vibrator;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -16,8 +18,8 @@ import android.widget.Toast;
 import com.bookwego.R;
 import com.bookwego.applyCouponActivity.ApplyCouponActivity;
 import com.bookwego.baseClass.BaseClass;
+import com.bookwego.cardListActivity.CardListActivity;
 import com.bookwego.cartActivity.adapter.CartDiscountAdapter;
-import com.bookwego.reservationsActivity.adapters.HistoryAdapter;
 import com.bookwego.utills.Utility;
 
 import butterknife.BindView;
@@ -31,6 +33,9 @@ public class CartActivity extends BaseClass implements View.OnClickListener {
 
     @BindView(R.id.tv_orderName)
     TextView tv_orderName;
+
+    @BindView(R.id.btn_proceed_to_pay)
+    Button btn_proceed_to_pay;
 
     @BindView(R.id.img_back)
     ImageView img_back;
@@ -112,8 +117,17 @@ public class CartActivity extends BaseClass implements View.OnClickListener {
     @BindView(R.id.tv_vegCount)
     TextView tv_vegCount;
 
+    @BindView(R.id.tv_totalrating)
+    TextView tv_totalrating;
+
     @BindView(R.id.tv_orderCount)
     TextView tv_orderCount;
+
+    @BindView(R.id.tv_nonveg)
+    TextView tv_nonveg;
+
+    @BindView(R.id.tv_veg)
+    TextView tv_veg;
 
 
     @BindView(R.id.img_vegmin)
@@ -156,6 +170,9 @@ public class CartActivity extends BaseClass implements View.OnClickListener {
         tv_havecopun.setTypeface(Utility.typeFaceForProximaNovaSemiboldText(this));
         tv_bookcollection.setTypeface(Utility.typeFaceForProximaNovaSemiboldText(this));
         tv_ordertype.setTypeface(Utility.typeFaceForProximaNovaSemiboldText(this));
+        tv_nonveg.setTypeface(Utility.typeFaceForProximaNovaSemiboldText(this));
+        tv_veg.setTypeface(Utility.typeFaceForProximaNovaSemiboldText(this));
+        tv_totalrating.setTypeface(Utility.typeFaceForProximaNovaSemiboldText(this));
         tv_SelfCollection.setTypeface(Utility.typeFaceForProximaNovaSemiboldText(this));
         tv_address.setTypeface(Utility.typeFaceForProximaNovaSemiboldText(this));
         tv_myaddress.setTypeface(Utility.typeFaceForProximaNovaSemiboldText(this));
@@ -194,6 +211,7 @@ public class CartActivity extends BaseClass implements View.OnClickListener {
         img_orderMin.setOnClickListener(this);
         img_orderMax.setOnClickListener(this);
         tv_morecopun.setOnClickListener(this);
+        btn_proceed_to_pay.setOnClickListener(this);
     }
 
     @Override
@@ -281,6 +299,12 @@ public class CartActivity extends BaseClass implements View.OnClickListener {
 
                 Intent intent = new Intent(CartActivity.this, ApplyCouponActivity.class);
                 startActivity(intent);
+                break;
+
+            case R.id.btn_proceed_to_pay:
+
+                Intent intentpay = new Intent(CartActivity.this, CardListActivity.class);
+                startActivity(intentpay);
                 break;
         }
 

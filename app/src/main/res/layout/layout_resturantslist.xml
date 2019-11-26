@@ -9,19 +9,22 @@
         android:layout_marginTop="@dimen/margin_dp5">
 
         <ImageView
-            android:id="@+id/img_cart"
+            android:id="@+id/img_resturant"
             android:layout_width="match_parent"
             android:layout_height="220dp"
-            android:scaleType="fitXY"
-            android:src="@drawable/banner_2" />
+            android:scaleType="fitXY" />
 
         <TextView
-            android:id="@+id/tv_orderName"
+            android:id="@+id/tv_resturantsName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/margin_dp15"
             android:layout_marginTop="@dimen/margin_dp5"
-            android:text="Drinkery 51"
+            android:text=""
+            android:shadowColor="#A90A0A0A"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="3"
             android:textColor="@color/colorTextWhite"
             android:textSize="@dimen/textsize_sp19" />
 
@@ -29,10 +32,14 @@
             android:id="@+id/tv_loaction"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/tv_orderName"
-            android:layout_alignLeft="@+id/tv_orderName"
+            android:layout_below="@+id/tv_resturantsName"
+            android:layout_alignLeft="@+id/tv_resturantsName"
             android:layout_toLeftOf="@+id/tv_totalrating"
-            android:text="Bandra Kurla Complex - 6km"
+            android:text=""
+            android:shadowColor="#A90A0A0A"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="3"
             android:textColor="@color/colorTextWhite"
             android:textSize="@dimen/textsize_sp15" />
 
@@ -43,18 +50,18 @@
             android:layout_alignParentRight="true"
             android:layout_marginLeft="@dimen/margin_dp3"
             android:layout_marginTop="@dimen/margin_dp5"
-            android:layout_marginRight="@dimen/margin_dp20"
+            android:layout_marginRight="@dimen/margin_dp10"
             android:background="@drawable/custom_cart_bg"
             android:gravity="center"
             android:padding="@dimen/padding_dp5"
-            android:text="4.6"
+            android:text=""
             android:textColor="@color/colorTextWhite"
             android:textSize="@dimen/textsize_sp16" />
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/img_cart">
+            android:layout_alignBottom="@+id/img_resturant">
 
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/recycler_discounts"

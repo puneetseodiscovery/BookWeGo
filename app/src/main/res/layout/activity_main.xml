@@ -29,8 +29,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
+                    android:padding="@dimen/padding_dp10"
                     android:background="?attr/selectableItemBackgroundBorderless"
-                    android:padding="@dimen/padding_dp15"
+                    android:clickable="true"
                     android:src="@drawable/menu" />
 
                 <ImageView
@@ -56,14 +57,16 @@
                     android:id="@+id/tv_cityName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/img_topLogo"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:drawableRight="@drawable/img_smalldrop"
-                    android:drawablePadding="@dimen/padding_dp5"
                     android:padding="@dimen/padding_dp10"
-                    android:text="Mumbai"
+                    android:text="Select"
+                    android:maxLines="1"
+                    android:ellipsize="end"
                     android:textColor="@color/colorTextWhite"
-                    android:textSize="@dimen/textsize_sp12" />
+                    android:textSize="@dimen/textsize_sp10" />
 
             </RelativeLayout>
 
@@ -110,7 +113,6 @@
             android:layout_gravity="start|left">
 
             <include
-
                 layout="@layout/main_drawer"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
@@ -118,7 +120,5 @@
             </include>
 
         </RelativeLayout>
-
     </android.support.v4.widget.DrawerLayout>
-
 </LinearLayout>

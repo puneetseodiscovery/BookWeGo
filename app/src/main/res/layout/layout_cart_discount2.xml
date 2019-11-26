@@ -11,29 +11,31 @@
             android:layout_width="@dimen/margin_dp100"
             android:layout_height="@dimen/margin_dp100"
             android:layout_margin="@dimen/margin_dp5"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
             android:layout_centerHorizontal="true"
             android:src="@drawable/book" />
 
         <TextView
-            android:id="@+id/tv_upto"
+            android:id="@+id/tv_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="@dimen/margin_dp40"
-            android:text="19.00"
+            android:text=""
             android:textColor="@color/colorTextWhite"
-            android:textSize="@dimen/textsize_sp15" />
+            android:textSize="@dimen/textsize_sp10" />
 
         <TextView
             android:id="@+id/tv_discount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/tv_upto"
-            android:layout_alignRight="@+id/tv_upto"
+            android:layout_below="@+id/tv_time"
+            android:layout_centerHorizontal="true"
             android:layout_marginTop="-5dp"
-            android:text="-60%"
+            android:text=""
             android:textColor="@color/colorTextWhite"
-            android:textSize="@dimen/textsize_sp17" />
+            android:textSize="@dimen/textsize_sp15" />
 
     </RelativeLayout>
 </RelativeLayout>

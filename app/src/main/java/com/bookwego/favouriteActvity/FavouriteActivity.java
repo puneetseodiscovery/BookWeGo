@@ -1,22 +1,28 @@
 package com.bookwego.favouriteActvity;
 
-import android.support.v7.app.AppCompatActivity;
+import android.app.Dialog;
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 
 import com.bookwego.R;
 import com.bookwego.baseClass.BaseClass;
 import com.bookwego.favouriteActvity.adapters.FavouriteAdapter;
-import com.bookwego.recentviewedActivity.adapters.RestaurantsAdapter;
-import com.bookwego.recentviewedActivity.adapters.ServicesAdapter;
+import com.bookwego.favouriteActvity.interfaces.IFavouriteActivity;
+import com.bookwego.favouriteActvity.interfaces.IPFavouriteActivity;
+import com.bookwego.favouriteActvity.presenter.PFavouriteActivity;
+import com.bookwego.favouriteActvity.responseModel.FavrouitListingResponseModel;
+import com.bookwego.utills.SavePref;
+import com.bookwego.utills.Utility;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class FavouriteActivity extends BaseClass implements View.OnClickListener {
+public class FavouriteActivity extends BaseClass implements IFavouriteActivity, View.OnClickListener {
 
     @BindView(R.id.img_back)
     ImageView img_back;
@@ -24,7 +30,15 @@ public class FavouriteActivity extends BaseClass implements View.OnClickListener
     @BindView(R.id.recycler_favourite)
     RecyclerView recycler_favourite;
 
+    @BindView(R.id.layout_empty)
+    RelativeLayout layout_empty;
+
     FavouriteAdapter favouriteAdapter;
+
+    Context context;
+    SavePref savePref;
+    Dialog progressDialog;
+    IPFavouriteActivity ipFavouriteActivity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,9 +52,16 @@ public class FavouriteActivity extends BaseClass implements View.OnClickListener
 
     private void Initialization() {
 
-        favouriteAdapter = new FavouriteAdapter(this);
-        recycler_favourite.setLayoutManager(new LinearLayoutManager(this));
-        recycler_favourite.setAdapter(favouriteAdapter);
+        context=FavouriteActivity.this;
+        savePref=new SavePref(this);
+        ipFavouriteActivity=new PFavouriteActivity(this);
+
+        if (Utility.isNetworkConnectionAvailable(context)){
+            progressDialog=Utility.ShowDialog(context);
+            /*api call for get all listing of favrouite restaurants*/
+            ipFavouriteActivity.getFavrouiteListing(savePref.get_id());
+        }
+
 
     }
 
@@ -57,4 +78,32 @@ public class FavouriteActivity extends BaseClass implements View.OnClickListener
         }
     }
 
+    @Override
+    public void onSuccessResponseFromPresenter(FavrouitListingResponseModel favrouitListingResponseModel) {
+        progressDialog.dismiss();
+        if (favrouitListingResponseModel!=null && favrouitListingResponseModel.getData().size()>0){
+            layout_empty.setVisibility(View.INVISIBLE);
+            recycler_favourite.setVisibility(View.VISIBLE);
+            favouriteAdapter = new FavouriteAdapter(this,favrouitListingResponseModel.getData());
+            recycler_favourite.setLayoutManager(new LinearLayoutManager(this));
+            recycler_favourite.setAdapter(favouriteAdapter);
+
+        }else {
+
+        }
+
+        
+    }
+
+    @Override
+    public void onFailedResponseFromPresenter(String message) {
+        progressDialog.dismiss();
+    }
+
+    @Override
+    public void onEmptyResponseFromPresenter(String message) {
+        progressDialog.dismiss();
+        layout_empty.setVisibility(View.VISIBLE);
+        recycler_favourite.setVisibility(View.INVISIBLE);
+    }
 }

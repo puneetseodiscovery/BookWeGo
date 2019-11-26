@@ -14,8 +14,7 @@
             android:id="@+id/recycler_services_categories"
             android:layout_width="match_parent"
             android:layout_height="@dimen/margin_dp50"
-            android:layout_centerVertical="true"
-            android:layoutAnimation="@anim/layout_animation_fall_down">
+            android:layout_centerVertical="true">
 
         </android.support.v7.widget.RecyclerView>
     </RelativeLayout>
@@ -26,15 +25,25 @@
         android:layout_height="match_parent"
         android:layout_below="@+id/layout_main"
         android:layout_marginTop="@dimen/margin_dp8"
-        >
+        android:background="@color/colorGrey">
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recycler_services_sub_categories"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal"
-            android:layoutAnimation="@anim/layout_animation_fall_down">
+            android:visibility="visible">
 
         </android.support.v7.widget.RecyclerView>
+
+        <RelativeLayout
+            android:id="@+id/layout_empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible">
+            <include
+                layout="@layout/layout_empty"></include>
+        </RelativeLayout>
+
     </RelativeLayout>
 </RelativeLayout>

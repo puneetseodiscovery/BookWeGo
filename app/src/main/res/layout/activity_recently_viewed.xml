@@ -18,7 +18,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:padding="@dimen/padding_dp15"
+            android:padding="@dimen/padding_dp10"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
             android:src="@drawable/back_btn" />
 
 
@@ -31,7 +33,7 @@
             android:drawableTop="@drawable/top_logo"
             android:text="@string/recently_viewed"
             android:textColor="@color/colorTextWhite"
-            android:textSize="@dimen/textsize_sp19"
+            android:textSize="@dimen/textsize_sp17"
             android:gravity="center" />
     </RelativeLayout>
 
@@ -67,8 +69,7 @@
                     android:id="@+id/recycler_restaurants"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="@dimen/margin_dp10"
-                    android:layoutAnimation="@anim/layout_animation_slide_right">
+                    android:layout_marginTop="@dimen/margin_dp10">
 
                 </android.support.v7.widget.RecyclerView>
             </LinearLayout>
@@ -93,8 +94,7 @@
                     android:id="@+id/recycler_services"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="@dimen/margin_dp10"
-                    android:layoutAnimation="@anim/layout_animation_slide_right">
+                    android:layout_marginTop="@dimen/margin_dp10">
 
                 </android.support.v7.widget.RecyclerView>
             </LinearLayout>

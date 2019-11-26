@@ -18,7 +18,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:padding="@dimen/padding_dp15"
+            android:padding="@dimen/padding_dp10"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
             android:src="@drawable/back_btn"/>
 
 
@@ -29,9 +31,9 @@
             android:layout_centerVertical="true"
             android:layout_marginBottom="@dimen/margin_dp5"
             android:drawableTop="@drawable/top_logo"
-            android:text="Register"
+            android:text="@string/register"
             android:textColor="@color/colorTextWhite"
-            android:textSize="@dimen/textsize_sp19"
+            android:textSize="@dimen/textsize_sp17"
             android:gravity="center" />
     </RelativeLayout>
 
@@ -58,11 +60,14 @@
                     android:layout_marginRight="@dimen/margin_dp40"
                     android:background="@android:color/transparent"
                     android:drawableRight="@drawable/botton_icon"
-                    android:hint="Employment"
+                    android:hint="@string/employment"
+                    android:inputType="none"
+                    android:clickable="true"
+                    android:focusable="false"
                     android:imeOptions="actionNext"
-                    android:inputType="text"
-                    android:textColor="@color/colorTextGreen"
                     android:textColorHint="@color/colorTextGreen"
+                    android:textColor="@color/colorTextGrey"
+                    android:gravity="center_vertical"
                     android:textSize="@dimen/textsize_sp17" />
 
                 <View
@@ -83,12 +88,15 @@
                     android:layout_marginLeft="@dimen/margin_dp40"
                     android:layout_marginTop="@dimen/margin_dp20"
                     android:layout_marginRight="@dimen/margin_dp40"
+                    android:gravity="center_vertical"
                     android:background="@android:color/transparent"
-                    android:hint="Income Level"
-                    android:imeOptions="actionNext"
-                    android:inputType="number"
-                    android:textColor="@color/colorTextGreen"
+                    android:hint="@string/income_level"
+                    android:inputType="none"
+                    android:clickable="true"
+                    android:focusable="false"
                     android:textColorHint="@color/colorTextGreen"
+                    android:textColor="@color/colorTextGrey"
+                    android:imeOptions="actionNext"
                     android:textSize="@dimen/textsize_sp17" />
 
                 <View
@@ -110,11 +118,14 @@
                     android:layout_marginTop="@dimen/margin_dp20"
                     android:layout_marginRight="@dimen/margin_dp40"
                     android:background="@android:color/transparent"
-                    android:hint="Date Joined"
+                    android:hint="@string/date_joined"
+                    android:inputType="none"
+                    android:clickable="true"
+                    android:focusable="false"
                     android:imeOptions="actionNext"
-                    android:inputType="textEmailAddress"
-                    android:textColor="@color/colorTextGreen"
                     android:textColorHint="@color/colorTextGreen"
+                    android:textColor="@color/colorTextGrey"
+                    android:gravity="center_vertical"
                     android:textSize="@dimen/textsize_sp17" />
 
                 <View
@@ -137,11 +148,14 @@
                     android:layout_marginRight="@dimen/margin_dp40"
                     android:background="@android:color/transparent"
                     android:drawableRight="@drawable/botton_icon"
-                    android:hint="2 food cuisines do you like best?"
+                    android:hint="@string/_2_food_cuisines_do_you_like_best"
+                    android:gravity="center_vertical"
+                    android:inputType="none"
+                    android:clickable="true"
+                    android:focusable="false"
                     android:imeOptions="actionNext"
-                    android:inputType="text"
-                    android:textColor="@color/colorTextGreen"
                     android:textColorHint="@color/colorTextGreen"
+                    android:textColor="@color/colorTextGrey"
                     android:textSize="@dimen/textsize_sp17" />
 
                 <View
@@ -164,11 +178,14 @@
                     android:layout_marginRight="@dimen/margin_dp40"
                     android:background="@android:color/transparent"
                     android:drawableRight="@drawable/botton_icon"
-                    android:hint="Service do you like best?"
+                    android:hint="@string/service_do_you_like_best"
+                    android:gravity="center_vertical"
+                    android:inputType="none"
+                    android:clickable="true"
+                    android:focusable="false"
                     android:imeOptions="actionNext"
-                    android:inputType="text"
-                    android:textColor="@color/colorTextGreen"
                     android:textColorHint="@color/colorTextGreen"
+                    android:textColor="@color/colorTextGrey"
                     android:textSize="@dimen/textsize_sp17" />
 
                 <View
@@ -190,11 +207,10 @@
                     android:layout_marginTop="@dimen/margin_dp20"
                     android:layout_marginRight="@dimen/margin_dp40"
                     android:background="@android:color/transparent"
-                    android:hint="Password"
+                    android:hint="@string/password"
                     android:imeOptions="actionNext"
                     android:inputType="textPassword"
-
-                    android:textColor="@color/colorTextGreen"
+                    android:textColor="@color/colorTextGrey"
                     android:textColorHint="@color/colorTextGreen"
                     android:textSize="@dimen/textsize_sp17" />
 
@@ -217,10 +233,10 @@
                     android:layout_marginTop="@dimen/margin_dp20"
                     android:layout_marginRight="@dimen/margin_dp40"
                     android:background="@android:color/transparent"
-                    android:hint="Confirm Password"
+                    android:hint="@string/confirm_password"
                     android:imeOptions="actionNext"
-                    android:inputType="text"
-                    android:textColor="@color/colorTextGreen"
+                    android:inputType="textPassword"
+                    android:textColor="@color/colorTextGrey"
                     android:textColorHint="@color/colorTextGreen"
                     android:textSize="@dimen/textsize_sp17" />
 
@@ -246,7 +262,7 @@
                     android:layout_marginTop="@dimen/margin_dp35"
                     android:layout_marginBottom="@dimen/margin_dp25"
                     android:background="@drawable/gradient_button"
-                    android:text="Register"
+                    android:text="@string/register"
                     android:textColor="@color/colorTextWhite"
                     android:textSize="20sp"
                     tools:ignore="OnClick" />
@@ -261,10 +277,10 @@
                     android:gravity="center">
 
                     <TextView
-                        android:id="@+id/signUp"
+                        android:id="@+id/haveanaccount"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Already have an account?"
+                        android:text="@string/already_have_an_account_r"
                         android:textColor="@color/colorTextGrey"
                         android:textSize="@dimen/textsize_sp17" />
 
@@ -273,9 +289,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/margin_dp5"
-                        android:layout_toRightOf="@+id/signUp"
-                        android:text="Login"
-                        android:textColor="@color/colorTextGreen"
+                        android:layout_toRightOf="@+id/haveanaccount"
+                        android:text="@string/log_in"
+                        android:textColor="@drawable/green_color_selectors"
                         android:textSize="@dimen/textsize_sp17" />
 
                 </RelativeLayout>
@@ -294,7 +310,7 @@
                         android:id="@+id/tv_bylogin"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="By Login you are agerring to the"
+                        android:text="@string/by_login_you_are_agerring_to_the"
                         android:textColor="@color/colorTextGrey"
                         android:textSize="@dimen/textsize_sp12" />
 
@@ -305,7 +321,7 @@
                         android:layout_marginLeft="@dimen/margin_dp5"
                         android:layout_toRightOf="@+id/tv_bylogin"
                         android:text="@string/term_amp_condition"
-                        android:textColor="@color/colorTextGrey"
+                        android:textColor="@drawable/grey_text_selectors"
                         android:textSize="@dimen/textsize_sp12" />
 
 
@@ -323,7 +339,7 @@
                         android:id="@+id/tv_andthe"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="and the"
+                        android:text="@string/and_the"
                         android:textColor="@color/colorTextGrey"
                         android:textSize="@dimen/textsize_sp12" />
 
@@ -335,7 +351,7 @@
                         android:layout_marginLeft="@dimen/margin_dp5"
                         android:layout_toRightOf="@+id/tv_andthe"
                         android:text="@string/privacy_policy"
-                        android:textColor="@color/colorTextGrey"
+                        android:textColor="@drawable/grey_text_selectors"
                         android:textSize="@dimen/textsize_sp12" />
 
                 </RelativeLayout>

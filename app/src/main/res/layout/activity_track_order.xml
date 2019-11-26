@@ -17,7 +17,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:padding="@dimen/padding_dp15"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:padding="@dimen/padding_dp10"
             android:src="@drawable/back_btn" />
 
 
@@ -31,7 +33,7 @@
             android:gravity="center"
             android:text="@string/order_status"
             android:textColor="@color/colorTextWhite"
-            android:textSize="@dimen/textsize_sp19" />
+            android:textSize="@dimen/textsize_sp17" />
     </RelativeLayout>
 
     <ScrollView
@@ -68,8 +70,8 @@
                         android:layout_marginTop="@dimen/margin_dp7"
                         android:layout_toRightOf="@+id/img_orders"
                         android:text="Ester 51"
-                        android:textColor="@color/colorTextGrey"
-                        android:textSize="@dimen/textsize_sp12" />
+                        android:textColor="@color/colorTextDarkGrey"
+                        android:textSize="@dimen/textsize_sp15" />
 
                     <TextView
                         android:id="@+id/tv_orderdate"
@@ -124,7 +126,7 @@
                         android:layout_marginTop="@dimen/margin_dp15"
                         android:text="@string/order_sta"
                         android:textColor="@color/colorTextDarkGrey"
-                        android:textSize="@dimen/textsize_sp19" />
+                        android:textSize="@dimen/textsize_sp17" />
 
                     <View
                         android:id="@+id/view_st"
@@ -154,7 +156,7 @@
                         android:layout_width="200dp"
                         android:layout_height="@dimen/margin_dp70"
                         android:layout_below="@+id/tv_orderrecived"
-                        android:layout_marginLeft="@dimen/margin_dp57"
+                        android:layout_marginLeft="@dimen/margin_dp48"
                         android:layout_marginTop="@dimen/margin_dp5"
                         android:background="@drawable/vertical_dashed_line"
                         android:orientation="vertical"></RelativeLayout>
@@ -177,7 +179,7 @@
                         android:layout_width="200dp"
                         android:layout_height="@dimen/margin_dp70"
                         android:layout_below="@+id/tv_orderprepared"
-                        android:layout_marginLeft="@dimen/margin_dp57"
+                        android:layout_marginLeft="@dimen/margin_dp48"
                         android:layout_marginTop="@dimen/margin_dp5"
                         android:background="@drawable/vertical_dashed_line"
                         android:orientation="vertical"></RelativeLayout>
@@ -200,7 +202,7 @@
                         android:layout_width="200dp"
                         android:layout_height="@dimen/margin_dp70"
                         android:layout_below="@+id/tv_orderpacked"
-                        android:layout_marginLeft="@dimen/margin_dp57"
+                        android:layout_marginLeft="@dimen/margin_dp48"
                         android:layout_marginTop="@dimen/margin_dp5"
                         android:background="@drawable/vertical_dashed_line"
                         android:orientation="vertical"></RelativeLayout>
@@ -223,7 +225,7 @@
                         android:layout_width="200dp"
                         android:layout_height="@dimen/margin_dp70"
                         android:layout_below="@+id/tv_orderdelivery"
-                        android:layout_marginLeft="@dimen/margin_dp57"
+                        android:layout_marginLeft="@dimen/margin_dp48"
                         android:layout_marginTop="@dimen/margin_dp5"
                         android:background="@drawable/vertical_dashed_line"
                         android:orientation="vertical"></RelativeLayout>

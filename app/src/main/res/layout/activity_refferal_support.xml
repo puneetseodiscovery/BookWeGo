@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".supportActivity.RefferalSupportActivity">
+
+    <RelativeLayout
+        android:id="@+id/layout_touch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient_bg">
+
+        <RelativeLayout
+            android:id="@+id/layout_actionbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_dp60">
+
+            <ImageView
+                android:id="@+id/img_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/padding_dp10"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:src="@drawable/back_btn" />
+
+            <TextView
+                android:id="@+id/tv_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="@dimen/margin_dp5"
+                android:drawableTop="@drawable/top_logo"
+                android:gravity="center"
+                android:text="@string/referral_program"
+                android:textColor="@color/colorTextWhite"
+                android:textSize="@dimen/textsize_sp17" />
+
+            <TextView
+                android:id="@+id/tv_support"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/margin_dp15"
+                android:gravity="center"
+                android:text="Support"
+                android:textColor="@color/colorTextWhite"
+                android:textSize="@dimen/textsize_sp19" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view01"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/view_size_dp0.5"
+            android:layout_below="@+id/layout_actionbar"
+            android:layout_marginTop="@dimen/margin_dp10"
+            android:background="@color/colorTextWhite" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view01">
+            <TextView
+                android:id="@+id/tv_join_earn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Friends joins,friend earns A$20"
+                android:textColor="@color/colorWhitebg"
+                android:layout_centerHorizontal="true"
+                android:textSize="@dimen/textsize_sp20"
+                android:layout_marginTop="@dimen/margin_dp25"/>
+            <ImageView
+                android:id="@+id/img_happy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/tv_join_earn"
+                android:layout_marginTop="@dimen/margin_dp25"
+                android:src="@drawable/refral" />
+
+            <TextView
+                android:id="@+id/tv_shareyou_Code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_happy"
+                android:text="Share your referal code"
+                android:textColor="@color/colorWhitebg"
+                android:layout_centerHorizontal="true"
+                android:textSize="@dimen/textsize_sp15"
+                android:layout_marginTop="@dimen/margin_dp15"/>
+
+            <TextView
+                android:id="@+id/tv_myCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_shareyou_Code"
+                android:text="SHJDUI78CAF"
+                android:textColor="@color/colorWhitebg"
+                android:layout_centerHorizontal="true"
+                android:textSize="@dimen/textsize_sp20"
+                android:layout_marginTop="@dimen/margin_dp15"
+                android:layout_marginBottom="@dimen/margin_dp25"/>
+
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,7 +1,7 @@
 package com.bookwego.paymentActivity;
 
 import android.content.Context;
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -9,12 +9,13 @@ import android.view.View;
 import android.view.animation.AnimationUtils;
 import android.view.animation.LayoutAnimationController;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.bookwego.R;
+import com.bookwego.addCardActivity.AddCardActivity;
 import com.bookwego.baseClass.BaseClass;
 import com.bookwego.paymentActivity.adapters.CardAdapter;
-import com.bookwego.recentviewedActivity.adapters.RestaurantsAdapter;
-import com.bookwego.recentviewedActivity.adapters.ServicesAdapter;
+import com.bookwego.utills.Utility;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -23,6 +24,12 @@ public class PaymentActivity extends BaseClass implements View.OnClickListener {
 
     @BindView(R.id.img_back)
     ImageView img_back;
+
+    @BindView(R.id.img_addCard)
+    ImageView img_addCard;
+
+    @BindView(R.id.tv_savedcard)
+    TextView tv_savedcard;
 
     @BindView(R.id.recycler_cards)
     RecyclerView recycler_cards;
@@ -40,17 +47,10 @@ public class PaymentActivity extends BaseClass implements View.OnClickListener {
     }
 
     private void Initialization() {
-
+        tv_savedcard.setTypeface(Utility.typeFaceForProximaNovaSemiboldText(this));
         cardAdapter = new CardAdapter(this);
         recycler_cards.setLayoutManager(new LinearLayoutManager(this));
         recycler_cards.setAdapter(cardAdapter);
-
-       /* int resId = R.anim.layout_animation_fall_down;
-        LayoutAnimationController animation = AnimationUtils.loadLayoutAnimation(this, resId);
-        recycler_cards.setLayoutAnimation(animation);
-*/
-       // runLayoutAnimation(recycler_cards);
-
     }
 
     private void runLayoutAnimation(final RecyclerView recyclerView) {
@@ -65,6 +65,7 @@ public class PaymentActivity extends BaseClass implements View.OnClickListener {
 
     private void EventListner() {
         img_back.setOnClickListener(this);
+        img_addCard.setOnClickListener(this);
     }
 
     @Override
@@ -72,6 +73,11 @@ public class PaymentActivity extends BaseClass implements View.OnClickListener {
         switch (v.getId()) {
             case R.id.img_back:
                 finish();
+                break;
+
+            case R.id.img_addCard:
+                Intent intent = new Intent(PaymentActivity.this, AddCardActivity.class);
+                startActivity(intent);
                 break;
         }
     }

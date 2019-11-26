@@ -5,10 +5,15 @@
     <color name="colorAccent">#69C730</color>
 
     <color name="colorTextGreen">#69C730</color>
+    <color name="colorTextGreenLight">#8DF75E</color>
     <color name="colorBackgroundGreen">#69C730</color>
     <color name="colorTextWhite">#ffffff</color>
     <color name="colorWhitebg">#ffffff</color>
     <color name="colorTextBlack">#000000</color>
     <color name="colorTextGrey">#848484</color>
     <color name="colorTextDarkGrey">#353535</color>
+    <color name="colorShadow">#BB000000</color>
+    <color name="colorLightGrey">#f6f6f6</color>
+    <color name="colorGrey">#11C5C3C3</color>
+
 </resources>

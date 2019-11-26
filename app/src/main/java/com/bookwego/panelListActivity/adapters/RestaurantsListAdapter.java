@@ -7,12 +7,18 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bookwego.R;
 import com.bookwego.menuActivity.MenuActivity;
-import com.bookwego.trackOrderActivity.TrackOrderActivity;
+import com.bookwego.panelListActivity.responseModel.responseRestaurantsCategoriesModel;
+import com.bookwego.utills.CommonMethods;
+import com.bookwego.utills.Constant;
 import com.bookwego.utills.Utility;
+import com.bumptech.glide.Glide;
+
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -21,12 +27,12 @@ public class RestaurantsListAdapter extends RecyclerView.Adapter<RestaurantsList
 
     Context context;
     LayoutInflater inflater;
+    List<responseRestaurantsCategoriesModel.Datum> data;
 
-
-    public RestaurantsListAdapter(Context context) {
+    public RestaurantsListAdapter(Context context, List<responseRestaurantsCategoriesModel.Datum> data) {
 
         this.context = context;
-
+        this.data = data;
         inflater = LayoutInflater.from(context);
     }
 
@@ -41,11 +47,31 @@ public class RestaurantsListAdapter extends RecyclerView.Adapter<RestaurantsList
     @Override
     public void onBindViewHolder(final RecyclerViewHolder holder, final int position) {
 
+        Glide.with(context).load(Constant.IMAGE_URL + data.get(position).getImage()).placeholder(R.drawable.placeholder)
+                .error(R.drawable.no_image_placeholder).into(holder.img_resturant);
+        holder.tv_resturantsName.setText(CommonMethods.upperCase(data.get(position).getName()));
+        holder.tv_loaction.setText(CommonMethods.upperCase(data.get(position).getAddress()));
+        holder.tv_totalrating.setText(CommonMethods.upperCase(data.get(position).getAvgRating()));
+
+
+        ListDiscountAdapter listDiscountAdapter = new ListDiscountAdapter(context, data.get(position).getTimeSlots());
+        holder.recycler_discounts.setLayoutManager(new LinearLayoutManager(context,
+                LinearLayoutManager.HORIZONTAL, false));
+        holder.recycler_discounts.setAdapter(listDiscountAdapter);
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(context, MenuActivity.class);
+
+                intent.putExtra("restaurantsId", data.get(position).getId());
+                intent.putExtra("restaurants_Image", data.get(position).getImage());
+                intent.putExtra("restaurants_Name", data.get(position).getName());
+                intent.putExtra("restaurants_Address", data.get(position).getAddress());
+                intent.putExtra("restaurants_AvrageRating", data.get(position).getAvgRating());
+
+               /* intent.putExtra("position", String.valueOf(position));
+                intent.putParcelableArrayListExtra("data", (ArrayList<? extends Parcelable>) data);*/
                 context.startActivity(intent);
             }
         });
@@ -54,19 +80,22 @@ public class RestaurantsListAdapter extends RecyclerView.Adapter<RestaurantsList
     @Override
     public int getItemCount() {
 
-        return 4;
+        return data.size();
     }
 
     public class RecyclerViewHolder extends RecyclerView.ViewHolder {
 
-        @BindView(R.id.tv_orderName)
-        TextView tv_orderName;
+        @BindView(R.id.tv_resturantsName)
+        TextView tv_resturantsName;
 
         @BindView(R.id.tv_loaction)
         TextView tv_loaction;
 
         @BindView(R.id.tv_totalrating)
         TextView tv_totalrating;
+
+        @BindView(R.id.img_resturant)
+        ImageView img_resturant;
 
 
         @BindView(R.id.recycler_discounts)
@@ -77,18 +106,11 @@ public class RestaurantsListAdapter extends RecyclerView.Adapter<RestaurantsList
 
             ButterKnife.bind(this, view);
 
-            tv_orderName.setTypeface(Utility.typeFaceForProximaNovaBoldText(context));
-            tv_loaction.setTypeface(Utility.typeFaceForProximaNovaSemiboldText(context));
+            tv_resturantsName.setTypeface(Utility.typeFaceForProximaNovaSemiboldText(context));
+            tv_loaction.setTypeface(Utility.typeFaceForPoppinsRegulerText(context));
             tv_totalrating.setTypeface(Utility.typeFaceForProximaNovaSemiboldText(context));
-
-            CartDiscountAdapter cartDiscountAdapter = new CartDiscountAdapter(context);
-            recycler_discounts.setLayoutManager(new LinearLayoutManager(context,
-                    LinearLayoutManager.HORIZONTAL, false));
-            recycler_discounts.setAdapter(cartDiscountAdapter);
 
 
         }
     }
-
-
 }

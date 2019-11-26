@@ -8,7 +8,11 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.bookwego.R;
+import com.bookwego.mainActivity.fragments.responseModel.ResturantsResponseModel;
 import com.bookwego.utills.Utility;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -17,10 +21,12 @@ public class CartDiscountAdapter extends RecyclerView.Adapter<CartDiscountAdapte
 
     Context context;
     LayoutInflater inflater;
+    List<ResturantsResponseModel.TimeSlot> timeSlots;
 
-    public CartDiscountAdapter(Context context) {
+    public CartDiscountAdapter(Context context,List<ResturantsResponseModel.TimeSlot> timeSlots) {
 
         this.context = context;
+        this.timeSlots = timeSlots;
 
         inflater = LayoutInflater.from(context);
     }
@@ -36,18 +42,20 @@ public class CartDiscountAdapter extends RecyclerView.Adapter<CartDiscountAdapte
     @Override
     public void onBindViewHolder(final RecyclerViewHolder holder, final int position) {
 
+        holder.tv_time.setText(timeSlots.get(0).getTimeSlot());
+        holder.tv_discount.setText("-"+timeSlots.get(0).getDiscount()+"%");
     }
 
     @Override
     public int getItemCount() {
 
-        return 10;
+        return timeSlots.size();
     }
 
     public class RecyclerViewHolder extends RecyclerView.ViewHolder {
 
-        @BindView(R.id.tv_upto)
-        TextView tv_upto;
+        @BindView(R.id.tv_time)
+        TextView tv_time;
 
         @BindView(R.id.tv_discount)
         TextView tv_discount;
@@ -57,11 +65,8 @@ public class CartDiscountAdapter extends RecyclerView.Adapter<CartDiscountAdapte
 
             ButterKnife.bind(this, view);
 
-            tv_upto.setTypeface(Utility.typeFaceForProximaNovaSemiboldText(context));
+            tv_time.setTypeface(Utility.typeFaceForProximaNovaSemiboldText(context));
             tv_discount.setTypeface(Utility.typeFaceForPoppinsBoldText(context));
-
         }
     }
-
-
 }

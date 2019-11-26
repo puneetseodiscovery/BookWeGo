@@ -22,6 +22,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/margin_dp5"
             android:layout_toRightOf="@+id/img_dot"
+            android:textColor="@color/colorTextGrey"
             android:text="Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generato"
             android:textSize="@dimen/textsize_sp12" />
     </RelativeLayout>

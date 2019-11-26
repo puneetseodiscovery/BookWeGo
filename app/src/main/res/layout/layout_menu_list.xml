@@ -8,58 +8,42 @@
         android:layout_height="wrap_content">
 
         <ImageView
-            android:id="@+id/img_orders"
+            android:id="@+id/img_menu_item"
             android:layout_width="@dimen/margin_dp220"
             android:layout_height="@dimen/margin_dp100"
-            android:scaleType="fitXY"
-            android:src="@drawable/img_1"
-            android:layout_marginRight="@dimen/margin_dp20"/>
+            android:layout_marginRight="@dimen/margin_dp20"
+            android:background="@drawable/rounded_outline"
+            android:scaleType="fitXY" />
 
         <TextView
-            android:id="@+id/tv_nonveg"
+            android:id="@+id/tv_dishName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/img_orders"
+            android:layout_below="@+id/img_menu_item"
             android:layout_marginLeft="@dimen/margin_dp5"
             android:layout_marginTop="@dimen/margin_dp8"
-            android:drawableLeft="@drawable/non_veg"
-            android:drawablePadding="@dimen/padding_dp12"
-            android:text="Tandori Chicken"
-            android:visibility="visible"
+            android:drawablePadding="@dimen/padding_dp8"
+            android:text=""
             android:textColor="@color/colorTextDarkGrey"
-            android:textSize="@dimen/textsize_sp13" />
-
-        <TextView
-            android:id="@+id/tv_veg"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/img_orders"
-            android:layout_marginLeft="@dimen/margin_dp5"
-            android:layout_marginTop="@dimen/margin_dp8"
-            android:drawableLeft="@drawable/veg"
-            android:drawablePadding="@dimen/padding_dp12"
-            android:text="Veg. Sub wrap"
-            android:visibility="invisible"
-            android:textColor="@color/colorTextDarkGrey"
-            android:textSize="@dimen/textsize_sp13" />
-
+            android:textSize="@dimen/textsize_sp13"
+            android:visibility="visible" />
 
         <TextView
             android:id="@+id/tv_price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/tv_nonveg"
+            android:layout_below="@+id/tv_dishName"
             android:layout_marginLeft="@dimen/margin_dp32"
             android:layout_marginTop="@dimen/margin_dp10"
-            android:text="Rs.260"
-            android:textSize="@dimen/textsize_sp15" />
+            android:text=""
+            android:textSize="@dimen/textsize_sp12" />
 
         <LinearLayout
             android:id="@+id/layout_noveg"
-            android:layout_width="@dimen/margin_dp80"
-            android:layout_height="@dimen/margin_dp30"
-            android:layout_below="@+id/tv_nonveg"
-            android:layout_alignRight="@+id/img_orders"
+            android:layout_width="@dimen/margin_dp60"
+            android:layout_height="@dimen/margin_dp20"
+            android:layout_below="@+id/tv_dishName"
+            android:layout_alignRight="@+id/img_menu_item"
             android:layout_marginTop="@dimen/margin_dp5"
             android:layout_marginBottom="@dimen/margin_dp15"
             android:background="@drawable/custom_order_count_bg"
@@ -67,39 +51,52 @@
             android:weightSum="3">
 
             <ImageView
-                android:id="@+id/img_nonveg_min"
+                android:id="@+id/img_item_min"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:layout_marginTop="@dimen/margin_dp2"
                 android:layout_weight="1"
-                android:padding="@dimen/padding_dp3"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
                 android:src="@drawable/img_min" />
 
             <TextView
-                android:id="@+id/tv_nonvegCount"
+                android:id="@+id/tv_item_Count"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin_dp3"
+                android:layout_gravity="center_vertical"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:padding="@dimen/padding_dp3"
                 android:text="0"
-                android:textColor="@color/colorTextGreen" />
+                android:textColor="@color/colorTextGreen"
+                android:textSize="@dimen/margin_dp10" />
 
             <ImageView
-                android:id="@+id/img_nonveg_max"
+                android:id="@+id/img_item_max"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_gravity="center_vertical"
-                android:layout_marginTop="@dimen/margin_dp2"
                 android:layout_weight="1"
-                android:padding="@dimen/padding_dp3"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
                 android:src="@drawable/img_add" />
 
         </LinearLayout>
 
+        <Button
+            android:id="@+id/btn_addtocart"
+            android:layout_width="@dimen/margin_dp60"
+            android:layout_height="@dimen/margin_dp22"
+            android:layout_below="@+id/layout_noveg"
+            android:layout_alignRight="@+id/img_menu_item"
+            android:background="@drawable/gradient_button"
+            android:text="Add to cart"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhitebg"
+            android:textSize="@dimen/margin_dp8">
+
+        </Button>
 
     </RelativeLayout>
 </RelativeLayout>

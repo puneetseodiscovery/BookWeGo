@@ -14,7 +14,6 @@ public class CategoriesModel {
         return false;
     }
 
-
     public CategoriesModel(String categoriesName) {
         this.categoriesName = categoriesName;
     }

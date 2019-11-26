@@ -17,7 +17,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:padding="@dimen/padding_dp15"
+            android:padding="@dimen/padding_dp10"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
             android:src="@drawable/back_btn" />
 
         <TextView
@@ -30,7 +32,7 @@
             android:gravity="center"
             android:text="@string/menu"
             android:textColor="@color/colorTextWhite"
-            android:textSize="@dimen/textsize_sp19" />
+            android:textSize="@dimen/textsize_sp17" />
 
         <ImageView
             android:id="@+id/img_search"
@@ -38,16 +40,20 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:padding="@dimen/padding_dp12"
+            android:padding="@dimen/padding_dp8"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
             android:src="@drawable/ico_search" />
 
         <ImageView
-            android:id="@+id/img_filter"
+            android:id="@+id/img_carts"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_toLeftOf="@+id/img_search"
-            android:padding="@dimen/padding_dp12"
+            android:padding="@dimen/padding_dp8"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
             android:src="@drawable/cart" />
 
     </RelativeLayout>
@@ -64,20 +70,23 @@
             android:layout_height="wrap_content">
 
             <ImageView
-                android:id="@+id/img_cart"
+                android:id="@+id/img_resturant"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
-                android:scaleType="fitXY"
-                android:src="@drawable/banner_2" />
+                android:scaleType="centerCrop"/>
 
             <TextView
-                android:id="@+id/tv_orderName"
+                android:id="@+id/tv_restaurantsName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignBottom="@+id/img_cart"
+                android:layout_alignBottom="@+id/img_resturant"
                 android:layout_marginLeft="@dimen/margin_dp15"
                 android:layout_marginBottom="@dimen/margin_dp38"
-                android:text="Drinkery 51"
+                android:text=""
+                android:shadowColor="#A90A0A0A"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="3"
                 android:textColor="@color/colorTextWhite"
                 android:textSize="@dimen/textsize_sp19" />
 
@@ -85,11 +94,15 @@
                 android:id="@+id/tv_loaction"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/tv_orderName"
-                android:layout_alignBottom="@+id/img_cart"
+                android:layout_alignLeft="@+id/tv_restaurantsName"
+                android:layout_alignBottom="@+id/img_resturant"
                 android:layout_marginBottom="@dimen/margin_dp22"
                 android:layout_toLeftOf="@+id/tv_totalrating"
-                android:text="Bandra Kurla Complex - 6km"
+                android:text=""
+                android:shadowColor="#A90A0A0A"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="3"
                 android:textColor="@color/colorTextWhite"
                 android:textSize="@dimen/textsize_sp15" />
 
@@ -97,7 +110,7 @@
                 android:id="@+id/tv_totalrating"
                 android:layout_width="@dimen/margin_dp60"
                 android:layout_height="wrap_content"
-                android:layout_alignBottom="@+id/img_cart"
+                android:layout_alignBottom="@+id/img_resturant"
                 android:layout_alignParentRight="true"
                 android:layout_marginLeft="@dimen/margin_dp3"
                 android:layout_marginRight="@dimen/margin_dp20"
@@ -105,7 +118,7 @@
                 android:background="@drawable/custom_cart_bg"
                 android:gravity="center"
                 android:padding="@dimen/padding_dp5"
-                android:text="4.6"
+                android:text=""
                 android:textColor="@color/colorTextWhite"
                 android:textSize="@dimen/textsize_sp16" />
 
@@ -114,11 +127,11 @@
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recycler_menus"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/margin_dp50"
+            android:layout_height="@dimen/margin_dp40"
             android:layout_below="@+id/layout_restaurants"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="@dimen/margin_dp15"
-            android:layout_marginRight="@dimen/margin_dp15">
+            android:layout_marginLeft="@dimen/margin_dp8"
+            android:layout_marginRight="@dimen/margin_dp8">
 
         </android.support.v7.widget.RecyclerView>
 
@@ -127,6 +140,7 @@
             android:layout_below="@+id/recycler_menus"
             android:layout_width="match_parent"
             android:layout_height="@dimen/view_size_dp0.5"
+            android:layout_marginTop="@dimen/margin_dp10"
             android:background="@color/colorTextDarkGrey"/>
 
         <android.support.v7.widget.RecyclerView
@@ -134,11 +148,21 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@+id/view_02"
-            android:orientation="horizontal"
-            android:layout_margin="@dimen/margin_dp15">
+            android:visibility="visible"
+            android:layout_marginRight="@dimen/margin_dp15"
+            android:layout_marginLeft="@dimen/margin_dp15"
+            android:layout_marginTop="@dimen/margin_dp15">
 
         </android.support.v7.widget.RecyclerView>
+        <RelativeLayout
+            android:id="@+id/layout_empty"
+            android:layout_below="@+id/view_02"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible"
+            android:layout_margin="@dimen/margin_dp15">
+            <include
+                layout="@layout/layout_empty"></include>
+        </RelativeLayout>
     </RelativeLayout>
-
-
 </RelativeLayout>

@@ -8,7 +8,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_dp5">
 
-        <ImageView
+        <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/img_user"
             android:layout_width="@dimen/margin_dp60"
             android:layout_height="@dimen/margin_dp60"
@@ -21,9 +21,9 @@
             android:layout_marginLeft="@dimen/margin_dp18"
             android:layout_marginTop="@dimen/margin_dp5"
             android:layout_toRightOf="@+id/img_user"
-            android:text="Alic"
+            android:text=""
             android:textColor="@color/colorTextDarkGrey"
-            android:textSize="@dimen/textsize_sp19" />
+            android:textSize="@dimen/textsize_sp14" />
 
         <TextView
             android:id="@+id/tv_reviews"
@@ -33,10 +33,10 @@
             android:layout_alignLeft="@+id/tv_userName"
             android:layout_marginTop="@dimen/margin_dp3"
             android:layout_marginRight="@dimen/margin_dp45"
+            android:text=""
             android:layout_toRightOf="@+id/img_user"
-            android:text="Great Expericence.Thank you eatigo for such a wounderfull offer."
-            android:textColor="@color/colorTextDarkGrey"
-            android:textSize="@dimen/textsize_sp14" />
+            android:textColor="@color/colorTextGrey"
+            android:textSize="@dimen/textsize_sp12" />
 
         <TextView
             android:id="@+id/tv_recommending"
@@ -58,15 +58,68 @@
             android:layout_alignParentRight="true"
             android:layout_marginLeft="@dimen/margin_dp25"
             android:layout_marginTop="@dimen/margin_dp10"
+            android:text=""
+            android:textColor="@color/colorTextGrey"
+            android:textSize="@dimen/textsize_sp12" />
+
+        <TextView
+            android:id="@+id/tv_thumb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_time"
+            android:layout_alignLeft="@+id/tv_userName"
+            android:layout_marginTop="@dimen/margin_dp10"
+            android:drawableLeft="@drawable/img_thumb"
+            android:drawablePadding="@dimen/padding_dp5"
+            android:text="1"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:textColor="@color/colorTextGrey"
+            android:textSize="@dimen/textsize_sp12" />
+
+        <TextView
+            android:id="@+id/tv_ownerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_thumb"
+            android:layout_marginLeft="@dimen/margin_dp18"
+            android:layout_marginTop="@dimen/margin_dp5"
+            android:layout_toRightOf="@+id/img_user"
+            android:text="Response from the owner"
+            android:textColor="@color/colorTextBlack"
+            android:textSize="@dimen/textsize_sp13" />
+
+        <TextView
+            android:id="@+id/tv_ownerReviews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_ownerName"
+            android:layout_alignLeft="@+id/tv_userName"
+            android:layout_marginTop="@dimen/margin_dp3"
+            android:layout_marginRight="@dimen/margin_dp45"
+            android:layout_toRightOf="@+id/img_user"
+            android:text="Great Expericence.Thank you eatigo for such a wounderfull offer."
+            android:textColor="@color/colorTextDarkGrey"
+            android:textSize="@dimen/textsize_sp12" />
+
+        <TextView
+            android:id="@+id/tv_times"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_ownerReviews"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/margin_dp15"
+            android:layout_marginTop="@dimen/margin_dp10"
             android:text="1 month ago"
             android:textColor="@color/colorTextGrey"
             android:textSize="@dimen/textsize_sp12" />
 
         <View
-            android:layout_below="@+id/tv_time"
             android:layout_width="match_parent"
-            android:layout_marginTop="@dimen/margin_dp10"
             android:layout_height="@dimen/view_size_dp0.5"
-            android:background="@color/colorTextGrey"/>
+            android:layout_below="@+id/tv_times"
+            android:layout_marginTop="@dimen/margin_dp10"
+            android:background="@color/colorTextGrey" />
+
     </RelativeLayout>
 </RelativeLayout>

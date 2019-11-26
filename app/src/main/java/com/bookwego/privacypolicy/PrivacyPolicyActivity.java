@@ -1,28 +1,39 @@
 package com.bookwego.privacypolicy;
 
+import android.app.Dialog;
+import android.content.Context;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
+
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.bookwego.R;
 import com.bookwego.baseClass.BaseClass;
-import com.bookwego.forgotPassword.ForgotPasswordActivity;
-import com.bookwego.loginActivity.LogInActivity;
-import com.bookwego.registerActivity.RegisterActivity;
-import com.bookwego.termandconditionActivity.TermConditionActivity;
+import com.bookwego.privacypolicy.interfaces.IPPrivacy_Policy;
+import com.bookwego.privacypolicy.interfaces.IPrivacy_Policy;
+import com.bookwego.privacypolicy.presenter.PPrivacy_Policy;
+import com.bookwego.privacypolicy.responseModel.PirvacyPolicyResponseModel;
 import com.bookwego.utills.Utility;
+import com.codesgood.views.JustifiedTextView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class PrivacyPolicyActivity extends BaseClass implements View.OnClickListener {
+public class PrivacyPolicyActivity extends BaseClass implements IPrivacy_Policy, View.OnClickListener {
 
     @BindView(R.id.img_back)
     ImageView img_back;
+
+    @BindView(R.id.tv_privacy_policy)
+    JustifiedTextView tv_privacy_policy;
+
+    Context context;
+    IPPrivacy_Policy ipPrivacy_policy;
+    Dialog progressDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +41,8 @@ public class PrivacyPolicyActivity extends BaseClass implements View.OnClickList
         setContentView(R.layout.activity_privacy_policy);
 
         ButterKnife.bind(this);
+        context = PrivacyPolicyActivity.this;
+        ipPrivacy_policy = new PPrivacy_Policy(this);
 
         Initialization();
         EventListner();
@@ -38,7 +51,11 @@ public class PrivacyPolicyActivity extends BaseClass implements View.OnClickList
 
 
     private void Initialization() {
-
+        if (Utility.isNetworkConnectionAvailable(context)) {
+            progressDialog = Utility.ShowDialog(context);
+            /*Api call for get privacy polciy*/
+            ipPrivacy_policy.doPrivacyPolicy();
+        }
     }
 
     private void EventListner() {
@@ -56,14 +73,21 @@ public class PrivacyPolicyActivity extends BaseClass implements View.OnClickList
         switch (v.getId()) {
 
             case R.id.img_back:
-
-                Animation animation01 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.button_click);
-                img_back.startAnimation(animation01);
                 finish();
-                overridePendingTransition(R.anim.main_faidin, R.anim.main_faidout);
                 break;
 
         }
 
+    }
+
+    @Override
+    public void onPrivacyPolicySuccessFormPresenter(PirvacyPolicyResponseModel pirvacyPolicyResponseModel) {
+        progressDialog.dismiss();
+        tv_privacy_policy.setText(pirvacyPolicyResponseModel.getData().getPrivacyPolicy());
+    }
+
+    @Override
+    public void onPrivacyPolicyFailedFormPresenter(String message) {
+        progressDialog.dismiss();
     }
 }

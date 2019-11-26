@@ -10,11 +10,19 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bookwego.R;
 import com.bookwego.newandpermotions.MySpannableClass.MySpannable;
+import com.bookwego.newandpermotions.NewsPermotionsActivity;
+import com.bookwego.newandpermotions.responseModel.PromotionNewsResponseModel;
+import com.bookwego.utills.CommonMethods;
+import com.bookwego.utills.Constant;
 import com.bookwego.utills.Utility;
+import com.bumptech.glide.Glide;
+
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -23,11 +31,13 @@ public class NewsPermotionsAdapter extends RecyclerView.Adapter<NewsPermotionsAd
 
     Context context;
     LayoutInflater inflater;
+    List<PromotionNewsResponseModel.Datum> data;
 
 
-    public NewsPermotionsAdapter(Context context) {
+    public NewsPermotionsAdapter(Context context,List<PromotionNewsResponseModel.Datum> data) {
 
         this.context = context;
+        this.data = data;
         inflater = LayoutInflater.from(context);
     }
 
@@ -42,23 +52,36 @@ public class NewsPermotionsAdapter extends RecyclerView.Adapter<NewsPermotionsAd
     @Override
     public void onBindViewHolder(final RecyclerViewHolder holder, final int position) {
 
+        Glide.with(context).load(Constant.IMAGE_URL+data.get(position).getBanner())
+        .placeholder(R.drawable.placeholder)
+        .error(R.drawable.no_image_placeholder)
+        .into(holder.img_resturant);
+
+        holder.tv_adds.setText(CommonMethods.upperCase(data.get(position).getTitle()));
+        holder.tv_desc.setText(CommonMethods.upperCase(data.get(position).getDescription()));
+        //holder.tv_adds_time.setText(data.get(position).getCreatedAt());
 
     }
 
     @Override
     public int getItemCount() {
 
-        return 2;
+        return data.size();
     }
 
     public class RecyclerViewHolder extends RecyclerView.ViewHolder {
 
         @BindView(R.id.tv_adds)
         TextView tv_adds;
+
         @BindView(R.id.tv_adds_time)
         TextView tv_adds_time;
+
         @BindView(R.id.tv_desc)
         TextView tv_desc;
+
+        @BindView(R.id.img_resturant)
+        ImageView img_resturant;
 
         public RecyclerViewHolder(View view) {
             super(view);
@@ -67,8 +90,6 @@ public class NewsPermotionsAdapter extends RecyclerView.Adapter<NewsPermotionsAd
             tv_adds.setTypeface(Utility.typeFaceForProximaNovaRegulerText(context));
             tv_adds_time.setTypeface(Utility.typeFaceForProximaNovaRegulerText(context));
             tv_desc.setTypeface(Utility.typeFaceForProximaNovaRegulerText(context));
-
-            tv_desc.setText("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.");
             makeTextViewResizable(tv_desc, 3, "See More", true);
 
         }

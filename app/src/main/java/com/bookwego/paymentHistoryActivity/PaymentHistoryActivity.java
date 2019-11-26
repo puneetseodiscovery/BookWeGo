@@ -1,20 +1,13 @@
 package com.bookwego.paymentHistoryActivity;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
-
 import com.bookwego.R;
 import com.bookwego.baseClass.BaseClass;
 import com.bookwego.paymentHistoryActivity.adapters.PaymentHistoryAdapter;
-import com.bookwego.reservationsActivity.adapters.HistoryAdapter;
-import com.bookwego.reservationsActivity.adapters.UpcomingAdapter;
-
-import java.util.EventListener;
-
 import butterknife.BindView;
 import butterknife.ButterKnife;
 

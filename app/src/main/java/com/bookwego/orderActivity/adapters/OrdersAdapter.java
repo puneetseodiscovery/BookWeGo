@@ -44,6 +44,12 @@ public class OrdersAdapter extends RecyclerView.Adapter<OrdersAdapter.RecyclerVi
                 context.startActivity(intent);
             }
         });
+        holder.tv_reorder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
     }
 
     @Override

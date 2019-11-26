@@ -6,7 +6,6 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginLeft="@dimen/margin_dp50"
         android:background="@color/colorWhitebg">
 
         <TextView
@@ -25,6 +24,8 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:padding="@dimen/padding_dp8"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
             android:src="@drawable/ic_close" />
 
         <View
@@ -269,7 +270,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginLeft="@dimen/margin_dp50"
         android:background="@drawable/gradient_bg"
         android:gravity="center"
         android:padding="@dimen/padding_dp25"

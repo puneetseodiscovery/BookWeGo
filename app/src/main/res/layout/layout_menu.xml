@@ -5,6 +5,7 @@
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/layout_background"
         android:layout_marginTop="@dimen/margin_dp5">
 
         <TextView
@@ -14,7 +15,7 @@
             android:padding="@dimen/margin_dp8"
             android:text="Categories"
             android:textColor="@color/colorTextGreen"
-            android:textSize="@dimen/textsize_sp17" />
+            android:textSize="@dimen/textsize_sp15" />
 
         <View
             android:id="@+id/view_tab"

@@ -3,13 +3,18 @@ package com.bookwego.mainActivity.adapters;
 import android.content.Context;
 import android.graphics.Color;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bookwego.R;
-import com.bookwego.mainActivity.modelClasses.CategoriesModel;
+import com.bookwego.mainActivity.fragments.RestaurantsFragment;
+import com.bookwego.mainActivity.fragments.responseModel.TitleResponseModel;
+import com.bookwego.utills.CommonMethods;
+import com.bookwego.utills.Constant;
 import com.bookwego.utills.Utility;
 
 import java.util.List;
@@ -21,14 +26,20 @@ public class CategoriesAdapter extends RecyclerView.Adapter<CategoriesAdapter.Re
 
     Context context;
     LayoutInflater inflater;
-    List<CategoriesModel> categoriesModelArrayList;
+    List<TitleResponseModel.Datum> data;
+    RestaurantsFragment restaurantsFragment;
+    int selectedPosition;
 
-    public CategoriesAdapter(Context context, List<CategoriesModel> categoriesModelArrayList) {
+
+    public CategoriesAdapter(Context context, List<TitleResponseModel.Datum> data,RestaurantsFragment restaurantsFragment,int pos) {
 
         this.context = context;
-        this.categoriesModelArrayList = categoriesModelArrayList;
+        this.data = data;
+        this.restaurantsFragment = restaurantsFragment;
         inflater = LayoutInflater.from(context);
-    }
+        this.selectedPosition = pos;
+}
+
 
     @Override
     public RecyclerViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -40,22 +51,34 @@ public class CategoriesAdapter extends RecyclerView.Adapter<CategoriesAdapter.Re
 
     @Override
     public void onBindViewHolder(final RecyclerViewHolder holder, final int position) {
-        holder.tv_Categories.setText(categoriesModelArrayList.get(position).getCategoriesName());
 
-        if (position == 0) {
-            holder.view_tab.setVisibility(View.VISIBLE);
+        if(selectedPosition==position) {
+            Constant.SELECTED_ITEM="0";
             holder.tv_Categories.setTextColor(Color.parseColor("#69C730"));
-        } else {
-            holder.view_tab.setVisibility(View.INVISIBLE);
-            holder.tv_Categories.setTextColor(Color.parseColor("#848484"));
+            holder.view_tab.setVisibility(View.VISIBLE);
         }
+        else {
+            holder.tv_Categories.setTextColor(Color.parseColor("#848484"));
+            holder.view_tab.setVisibility(View.INVISIBLE);
+        }
+        holder.tv_Categories.setText(CommonMethods.upperCase(data.get(position).getName()));
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                selectedPosition=position;
+                notifyDataSetChanged();
+
+                ((RestaurantsFragment)restaurantsFragment).OnTitleClick(data.get(position).getId());
+
+            }
+        });
 
     }
 
     @Override
     public int getItemCount() {
 
-        return categoriesModelArrayList.size();
+        return data.size();
     }
 
     public class RecyclerViewHolder extends RecyclerView.ViewHolder {
@@ -70,8 +93,7 @@ public class CategoriesAdapter extends RecyclerView.Adapter<CategoriesAdapter.Re
             super(view);
 
             ButterKnife.bind(this, view);
-            tv_Categories.setTypeface(Utility.typeFaceForProximaNovaRegulerText(context));
-
+            tv_Categories.setTypeface(Utility.typeFaceForProximaNovaSemiboldText(context));
 
         }
     }

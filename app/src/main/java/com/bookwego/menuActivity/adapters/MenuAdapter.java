@@ -1,16 +1,19 @@
 package com.bookwego.menuActivity.adapters;
 
 import android.content.Context;
-import android.graphics.Color;
+
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bookwego.R;
-import com.bookwego.mainActivity.modelClasses.CategoriesModel;
-import com.bookwego.menuActivity.ModelClasses.MenuModel;
+import com.bookwego.menuActivity.MenuActivity;
+import com.bookwego.menuActivity.responseModel.MenuResponseModel;
+import com.bookwego.utills.CommonMethods;
 import com.bookwego.utills.Utility;
 
 import java.util.List;
@@ -22,12 +25,16 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.RecyclerViewHo
 
     Context context;
     LayoutInflater inflater;
-    MenuModel[] menuModelList;
+    List<MenuResponseModel.Datum> data;
+    int selectedPosition=-1;
+    MenuActivity menuActivity;
 
-    public MenuAdapter(Context context, MenuModel[] menuModelList) {
+    public MenuAdapter(Context context, List<MenuResponseModel.Datum> data, MenuActivity menuActivity, int pos) {
 
         this.context = context;
-        this.menuModelList = menuModelList;
+        this.data = data;
+        this.menuActivity = menuActivity;
+        this.selectedPosition = pos;
         inflater = LayoutInflater.from(context);
     }
 
@@ -41,22 +48,33 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.RecyclerViewHo
 
     @Override
     public void onBindViewHolder(final RecyclerViewHolder holder, final int position) {
-        holder.tv_Categories.setText(menuModelList[position].getMenuName());
 
-        if (position == 0) {
-
-            holder.tv_Categories.setTextColor(Color.parseColor("#69C730"));
-        } else {
-
-            holder.tv_Categories.setTextColor(Color.parseColor("#848484"));
+        if(selectedPosition==position) {
+            holder.tv_Categories.setTextColor(context.getResources().getColor(R.color.colorTextWhite));
+            holder.layout_background.setBackground(context.getResources().getDrawable(R.drawable.green_bg));
         }
+        else {
+            holder.tv_Categories.setTextColor(context.getResources().getColor(R.color.colorTextDarkGrey));
+            holder.layout_background.setBackgroundResource(android.R.color.transparent);
+
+        }
+        holder.tv_Categories.setText(CommonMethods.upperCase(data.get(position).getCategoryName()));
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                selectedPosition=position;
+                notifyDataSetChanged();
+                ((MenuActivity)menuActivity).onMenuItemClick(data.get(position).getId());
+                Toast.makeText(context, "Menu id="+data.get(position).getId(), Toast.LENGTH_SHORT).show();
+            }
+        });
 
     }
 
     @Override
     public int getItemCount() {
 
-        return menuModelList.length;
+        return data.size();
     }
 
     public class RecyclerViewHolder extends RecyclerView.ViewHolder {
@@ -64,11 +82,13 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.RecyclerViewHo
         @BindView(R.id.tv_Categories)
         TextView tv_Categories;
 
+        @BindView(R.id.layout_background)
+        RelativeLayout layout_background;
+
         public RecyclerViewHolder(View view) {
             super(view);
-
             ButterKnife.bind(this, view);
-            tv_Categories.setTypeface(Utility.typeFaceForProximaNovaRegulerText(context));
+            tv_Categories.setTypeface(Utility.typeFaceForProximaNovaSemiboldText(context));
 
 
         }

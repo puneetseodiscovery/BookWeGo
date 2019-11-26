@@ -1,8 +1,6 @@
-package com.bookwego.menuItemDetailsActivity.adapters;
+package com.bookwego.matrixActivity.adapters;
 
 import android.content.Context;
-import android.graphics.Color;
-import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,12 +13,12 @@ import com.bookwego.utills.Utility;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class SpecialConditionsAdapter extends RecyclerView.Adapter<SpecialConditionsAdapter.RecyclerViewHolder> {
+public class ReviewAdapters extends RecyclerView.Adapter<ReviewAdapters.RecyclerViewHolder> {
 
     Context context;
     LayoutInflater inflater;
 
-    public SpecialConditionsAdapter(Context context) {
+    public ReviewAdapters(Context context) {
 
         this.context = context;
         inflater = LayoutInflater.from(context);
@@ -29,7 +27,7 @@ public class SpecialConditionsAdapter extends RecyclerView.Adapter<SpecialCondit
     @Override
     public RecyclerViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
-        View v = inflater.inflate(R.layout.layout_special_condition, parent, false);
+        View v = inflater.inflate(R.layout.row_review_rating, parent, false);
         RecyclerViewHolder viewHolder = new RecyclerViewHolder(v);
         return viewHolder;
     }
@@ -48,14 +46,22 @@ public class SpecialConditionsAdapter extends RecyclerView.Adapter<SpecialCondit
 
     public class RecyclerViewHolder extends RecyclerView.ViewHolder {
 
-        @BindView(R.id.tv_conditions)
-        TextView tv_conditions;
+        @BindView(R.id.tv_userName)
+        TextView tv_userName;
+
+        @BindView(R.id.tv_reviews)
+        TextView tv_reviews;
+
+        @BindView(R.id.tv_time)
+        TextView tv_time;
 
         public RecyclerViewHolder(View view) {
             super(view);
 
             ButterKnife.bind(this, view);
-            tv_conditions.setTypeface(Utility.typeFaceForProximaNovaRegulerText(context));
+            tv_userName.setTypeface(Utility.typeFaceForProximaNovaSemiboldText(context));
+            tv_reviews.setTypeface(Utility.typeFaceForProximaNovaSemiboldText(context));
+            tv_time.setTypeface(Utility.typeFaceForProximaNovaRegulerText(context));
         }
     }
 }

@@ -20,13 +20,13 @@
             android:layout_centerVertical="true"
             android:layout_marginBottom="@dimen/margin_dp5"
             android:drawableTop="@drawable/top_logo"
-            android:text="Register"
+            android:text="@string/register_new"
             android:textColor="@color/colorTextWhite"
-            android:textSize="@dimen/textsize_sp19"
+            android:textSize="@dimen/textsize_sp17"
             android:gravity="center" />
     </RelativeLayout>
-
     <ScrollView
+        android:id="@+id/scrollview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/layout_actionbar">
@@ -39,6 +39,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
+
                 <EditText
                     android:id="@+id/edit_firstName"
                     android:layout_width="match_parent"
@@ -48,10 +49,10 @@
                     android:layout_marginTop="@dimen/margin_dp25"
                     android:layout_marginRight="@dimen/margin_dp40"
                     android:background="@android:color/transparent"
-                    android:hint="First Name"
+                    android:hint="@string/first_name_r"
                     android:imeOptions="actionNext"
                     android:inputType="text"
-                    android:textColor="@color/colorTextGreen"
+                    android:textColor="@color/colorTextGrey"
                     android:textColorHint="@color/colorTextGreen"
                     android:textSize="@dimen/textsize_sp17" />
 
@@ -74,10 +75,10 @@
                     android:layout_marginTop="@dimen/margin_dp20"
                     android:layout_marginRight="@dimen/margin_dp40"
                     android:background="@android:color/transparent"
-                    android:hint="Last Name"
+                    android:hint="@string/last_name_r"
                     android:imeOptions="actionNext"
                     android:inputType="text"
-                    android:textColor="@color/colorTextGreen"
+                    android:textColor="@color/colorTextGrey"
                     android:textColorHint="@color/colorTextGreen"
                     android:textSize="@dimen/textsize_sp17" />
 
@@ -100,10 +101,10 @@
                     android:layout_marginTop="@dimen/margin_dp20"
                     android:layout_marginRight="@dimen/margin_dp40"
                     android:background="@android:color/transparent"
-                    android:hint="Email"
+                    android:hint="@string/email_r"
                     android:imeOptions="actionNext"
                     android:inputType="textEmailAddress"
-                    android:textColor="@color/colorTextGreen"
+                    android:textColor="@color/colorTextGrey"
                     android:textColorHint="@color/colorTextGreen"
                     android:textSize="@dimen/textsize_sp17" />
 
@@ -118,18 +119,39 @@
                     android:background="@android:color/darker_gray" />
 
                 <EditText
+                    android:id="@+id/edit_countryCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/margin_dp45"
+                    android:background="@android:color/transparent"
+                    android:layout_below="@+id/view_s3"
+                    android:hint="+"
+                    android:drawablePadding="@dimen/padding_dp8"
+                    android:drawableRight="@drawable/arrow_drop"
+                    android:imeOptions="actionNext"
+                    android:inputType="none"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:textColor="@color/colorTextGrey"
+                    android:textColorHint="@color/colorTextGreen"
+                    android:textSize="@dimen/textsize_sp17"
+                    android:layout_marginLeft="@dimen/margin_dp40"
+                    android:layout_marginTop="@dimen/margin_dp20"/>
+
+                <EditText
                     android:id="@+id/edit_phone"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/margin_dp45"
                     android:layout_below="@+id/view_s3"
-                    android:layout_marginLeft="@dimen/margin_dp40"
+                    android:layout_toRightOf="@+id/edit_countryCode"
                     android:layout_marginTop="@dimen/margin_dp20"
                     android:layout_marginRight="@dimen/margin_dp40"
                     android:background="@android:color/transparent"
-                    android:hint="Phone"
+                    android:hint="@string/phone_r"
                     android:imeOptions="actionNext"
                     android:inputType="phone"
-                    android:textColor="@color/colorTextGreen"
+
+                    android:layout_marginLeft="@dimen/margin_dp10"
+                    android:textColor="@color/colorTextGrey"
                     android:textColorHint="@color/colorTextGreen"
                     android:textSize="@dimen/textsize_sp17" />
 
@@ -151,13 +173,16 @@
                     android:layout_marginLeft="@dimen/margin_dp40"
                     android:layout_marginTop="@dimen/margin_dp20"
                     android:layout_marginRight="@dimen/margin_dp40"
+                    android:gravity="center_vertical"
+                    android:inputType="none"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:imeOptions="actionNext"
                     android:background="@android:color/transparent"
                     android:drawableRight="@drawable/botton_icon"
-                    android:hint="Age or Birth Date"
-                    android:imeOptions="actionNext"
-                    android:inputType="text"
-                    android:textColor="@color/colorTextGreen"
+                    android:hint="@string/age_or_birth_date_r"
                     android:textColorHint="@color/colorTextGreen"
+                    android:textColor="@color/colorTextGrey"
                     android:textSize="@dimen/textsize_sp17" />
 
                 <View
@@ -180,11 +205,14 @@
                     android:layout_marginRight="@dimen/margin_dp40"
                     android:background="@android:color/transparent"
                     android:drawableRight="@drawable/botton_icon"
-                    android:hint="Gender"
+                    android:hint="@string/gender_r"
+                    android:inputType="none"
+                    android:clickable="true"
+                    android:focusable="false"
                     android:imeOptions="actionNext"
-                    android:inputType="text"
-                    android:textColor="@color/colorTextGreen"
                     android:textColorHint="@color/colorTextGreen"
+                    android:textColor="@color/colorTextGrey"
+                    android:gravity="center_vertical"
                     android:textSize="@dimen/textsize_sp17" />
 
                 <View
@@ -206,11 +234,14 @@
                     android:layout_marginTop="@dimen/margin_dp20"
                     android:layout_marginRight="@dimen/margin_dp40"
                     android:background="@android:color/transparent"
-                    android:hint="Address"
+                    android:hint="@string/address_r"
+                    android:gravity="center_vertical"
+                    android:inputType="none"
+                    android:clickable="true"
+                    android:focusable="false"
                     android:imeOptions="actionNext"
-                    android:inputType="text"
-                    android:textColor="@color/colorTextGreen"
                     android:textColorHint="@color/colorTextGreen"
+                    android:textColor="@color/colorTextGrey"
                     android:textSize="@dimen/textsize_sp17" />
 
                 <View
@@ -234,12 +265,15 @@
                     android:layout_marginRight="@dimen/margin_dp40"
                     android:background="@android:color/transparent"
                     android:drawableRight="@drawable/botton_icon"
-                    android:hint="Citizenship"
+                    android:hint="@string/citizenship_r"
+                    android:gravity="center_vertical"
+                    android:textSize="@dimen/textsize_sp17"
+                    android:inputType="none"
+                    android:clickable="true"
+                    android:focusable="false"
                     android:imeOptions="actionNext"
-                    android:inputType="text"
-                    android:textColor="@color/colorTextGreen"
                     android:textColorHint="@color/colorTextGreen"
-                    android:textSize="@dimen/textsize_sp17" />
+                    android:textColor="@color/colorTextGrey"/>
 
                 <View
                     android:id="@+id/view_s8"
@@ -263,13 +297,15 @@
                     android:layout_marginTop="@dimen/margin_dp35"
                     android:layout_marginBottom="@dimen/margin_dp25"
                     android:background="@drawable/gradient_button"
-                    android:text="Next"
+                    android:text="@string/next_r"
                     android:textColor="@color/colorTextWhite"
                     android:textSize="20sp"
                     tools:ignore="OnClick" />
 
 
             </RelativeLayout>
+
         </RelativeLayout>
+
     </ScrollView>
 </RelativeLayout>

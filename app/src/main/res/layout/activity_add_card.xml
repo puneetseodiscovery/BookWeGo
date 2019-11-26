@@ -17,7 +17,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:padding="@dimen/padding_dp15"
+            android:padding="@dimen/padding_dp10"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
             android:src="@drawable/back_btn" />
 
         <TextView
@@ -31,7 +33,7 @@
             android:gravity="center"
             android:text="@string/payment"
             android:textColor="@color/colorTextWhite"
-            android:textSize="@dimen/textsize_sp19" />
+            android:textSize="@dimen/textsize_sp17" />
 
     </RelativeLayout>
 
@@ -52,7 +54,7 @@
             android:hint="Card Holder Name"
             android:imeOptions="actionNext"
             android:inputType="text"
-            android:paddingLeft="@dimen/padding_dp15"
+            android:paddingLeft="@dimen/padding_dp10"
             android:paddingRight="@dimen/padding_dp25"
             android:textColor="@color/colorTextGreen"
             android:textColorHint="@color/colorTextGreen"
@@ -80,7 +82,7 @@
             android:hint="Card Number"
             android:imeOptions="actionNext"
             android:inputType="number"
-            android:paddingLeft="@dimen/padding_dp15"
+            android:paddingLeft="@dimen/padding_dp10"
             android:paddingRight="@dimen/padding_dp25"
             android:textColor="@color/colorTextGreen"
             android:textColorHint="@color/colorTextGreen"
@@ -125,7 +127,7 @@
                     android:hint="Month"
                     android:imeOptions="actionNext"
                     android:inputType="number"
-                    android:paddingLeft="@dimen/padding_dp15"
+                    android:paddingLeft="@dimen/padding_dp10"
                     android:paddingRight="@dimen/padding_dp25"
                     android:textColor="@color/colorTextGreen"
                     android:textColorHint="@color/colorTextGreen"
@@ -143,7 +145,7 @@
                     android:hint="Year"
                     android:imeOptions="actionNext"
                     android:inputType="number"
-                    android:paddingLeft="@dimen/padding_dp25"
+                    android:paddingLeft="@dimen/padding_dp10"
                     android:paddingRight="@dimen/padding_dp25"
                     android:textColor="@color/colorTextGreen"
                     android:textColorHint="@color/colorTextGreen"
@@ -156,11 +158,10 @@
                     android:layout_weight="1"
                     android:background="@android:color/transparent"
                     android:gravity="center"
+                    android:layout_gravity="center"
                     android:hint="CVV"
                     android:imeOptions="actionNext"
                     android:inputType="number"
-                    android:paddingLeft="@dimen/padding_dp25"
-                    android:paddingRight="@dimen/padding_dp25"
                     android:textColor="@color/colorTextGreen"
                     android:textColorHint="@color/colorTextGreen"
                     android:textSize="@dimen/textsize_sp15" />
@@ -173,8 +174,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/layout_carddetails"
-            android:layout_marginLeft="@dimen/margin_dp40"
-            android:layout_marginRight="@dimen/margin_dp40">
+            android:layout_marginLeft="@dimen/margin_dp25"
+            android:layout_marginRight="@dimen/margin_dp25">
 
             <LinearLayout
                 android:layout_width="match_parent"

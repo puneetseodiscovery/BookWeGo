@@ -9,7 +9,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bookwego.R;
+import com.bookwego.faqActivity.FAQActivity;
+import com.bookwego.faqActivity.responseModel.FAQResponseModel;
 import com.bookwego.utills.Utility;
+
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -18,14 +22,13 @@ public class FAQAdapter extends RecyclerView.Adapter<FAQAdapter.RecyclerViewHold
 
     Context context;
     LayoutInflater inflater;
-
-    public FAQAdapter(Context context) {
+    List<FAQResponseModel.Datum> data;
+    public FAQAdapter(Context context,List<FAQResponseModel.Datum> data) {
 
         this.context = context;
-
+        this.data=data;
         inflater = LayoutInflater.from(context);
     }
-
     @Override
     public RecyclerViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
@@ -36,7 +39,17 @@ public class FAQAdapter extends RecyclerView.Adapter<FAQAdapter.RecyclerViewHold
 
     @Override
     public void onBindViewHolder(final RecyclerViewHolder holder, final int position) {
+        holder.tv_bookwego.setText(data.get(position).getQuestion());
+        holder.tv_answer.setText(data.get(position).getAnswer());
+        if (position == 0){
+            holder.tv_answer.setVisibility(View.VISIBLE);
+            holder.img_down.setVisibility(View.INVISIBLE);
+            holder.img_up.setVisibility(View.INVISIBLE);
+            holder.view_faq.setVisibility(View.VISIBLE);
 
+        }else {
+
+        }
         holder.img_down.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -63,7 +76,7 @@ public class FAQAdapter extends RecyclerView.Adapter<FAQAdapter.RecyclerViewHold
     @Override
     public int getItemCount() {
 
-        return 4;
+        return data.size();
     }
 
     public class RecyclerViewHolder extends RecyclerView.ViewHolder {

@@ -11,13 +11,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_dp5">
-
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recycler_restaurants_categories"
             android:layout_width="match_parent"
             android:layout_height="@dimen/margin_dp50"
-            android:layout_centerVertical="true"
-            android:layoutAnimation="@anim/layout_animation_fall_down">
+            android:layout_centerVertical="true">
 
         </android.support.v7.widget.RecyclerView>
     </RelativeLayout>
@@ -27,15 +25,29 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/layout_main"
+        android:background="@color/colorGrey"
         android:layout_marginTop="@dimen/margin_dp8">
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/SwipeRefreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_restaurants_sub_categories"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:visibility="visible">
 
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/recycler_restaurants_sub_categories"
+            </android.support.v7.widget.RecyclerView>
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+        <RelativeLayout
+            android:id="@+id/layout_empty"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:layoutAnimation="@anim/layout_animation_fall_down">
-
-        </android.support.v7.widget.RecyclerView>
+            android:visibility="invisible">
+            <include
+                layout="@layout/layout_empty"></include>
+        </RelativeLayout>
     </RelativeLayout>
 </RelativeLayout>

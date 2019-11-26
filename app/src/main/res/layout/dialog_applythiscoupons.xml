@@ -111,7 +111,7 @@
                 android:textSize="@dimen/textsize_sp15" />
 
             <Button
-                android:id="@+id/btn_login"
+                android:id="@+id/btn_applyCoupon"
                 android:layout_width="match_parent"
                 android:layout_height="?android:attr/actionBarSize"
                 android:layout_below="@+id/tv_2"
@@ -122,7 +122,7 @@
                 android:layout_marginBottom="@dimen/margin_dp45"
                 android:background="@drawable/gradient_button"
                 android:gravity="center"
-                android:text="apply this coupon"
+                android:text="APPLY THIS COUPON"
                 android:textColor="@color/colorTextWhite"
                 android:textSize="@dimen/textsize_sp17" />
 

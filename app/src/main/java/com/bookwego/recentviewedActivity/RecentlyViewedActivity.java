@@ -1,17 +1,14 @@
 package com.bookwego.recentviewedActivity;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
-
 import com.bookwego.R;
 import com.bookwego.baseClass.BaseClass;
 import com.bookwego.recentviewedActivity.adapters.RestaurantsAdapter;
 import com.bookwego.recentviewedActivity.adapters.ServicesAdapter;
-
 import butterknife.BindView;
 import butterknife.ButterKnife;
 

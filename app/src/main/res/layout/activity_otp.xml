@@ -24,7 +24,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/img_applogo"
-            android:layout_marginLeft="@dimen/margin_dp15"
+            android:layout_marginLeft="@dimen/margin_dp10"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:padding="@dimen/padding_dp15"
             android:src="@drawable/back_btn" />
 
 
@@ -34,7 +37,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/img_back"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="@dimen/margin_dp25"
+            android:layout_marginTop="@dimen/margin_dp50"
             android:text="Verifying your number"
             android:textColor="@color/colorTextWhite"
             android:textSize="@dimen/textsize_sp19" />
@@ -57,56 +60,73 @@
             android:layout_below="@+id/tv_sendnumber"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="@dimen/margin_dp5"
-            android:text="+91-9816255767"
+            android:text=""
             android:textColor="@color/colorTextWhite"
             android:textSize="@dimen/textsize_sp19" />
 
-        <EditText
-            android:id="@+id/edit_otp"
-            android:layout_width="@dimen/margin_dp170"
+
+        <RelativeLayout
+            android:id="@+id/relative_otp"
+            android:layout_width="wrap_content"
             android:layout_height="@dimen/margin_dp50"
             android:layout_below="@+id/tv_mynumber"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="@dimen/margin_dp60"
-            android:background="@drawable/custom_otp_bg"
-            android:gravity="center"
-            android:hint="2 5 8 9"
-            android:imeOptions="actionNext"
-            android:inputType="text"
-            android:paddingLeft="@dimen/padding_dp15"
-            android:paddingRight="@dimen/padding_dp25"
-            android:textColor="@color/colorTextBlack"
-            android:textColorHint="@color/colorTextBlack"
-            android:textSize="@dimen/textsize_sp21" />
+            android:layout_marginTop="@dimen/margin_dp60">
 
-        <LinearLayout
-            android:layout_width="@dimen/margin_dp50"
-            android:layout_height="@dimen/margin_dp50"
-            android:layout_below="@+id/tv_mynumber"
-            android:layout_centerHorizontal="true"
-            android:layout_marginLeft="@dimen/margin_dp10"
-            android:layout_marginTop="@dimen/margin_dp60"
-            android:layout_toRightOf="@+id/edit_otp"
-            android:background="@drawable/custom_ovel"
-            android:gravity="center">
-
-            <ImageView
+            <com.chaos.view.PinView
+                android:id="@+id/edit_OTP"
+                style="@style/PinWidget.PinView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/img_nextarrow" />
-        </LinearLayout>
+                android:layout_centerHorizontal="true"
+                android:cursorVisible="true"
+                android:hint="*****"
+                android:inputType="text"
+                android:itemBackground="@drawable/custom_ovel"
+                android:paddingTop="@dimen/padding_dp5"
+                android:textColor="@color/colorTextGrey"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:cursorColor="@color/colorTextWhite"
+                app:cursorWidth="2dp"
+                app:hideLineWhenFilled="true"
+                app:itemCount="5"
+                app:itemHeight="45dp"
+                app:itemRadius="4dp"
+                app:itemSpacing="3dp"
+                app:itemWidth="45dp"
+                app:lineColor="@color/colorTextWhite"
+                app:lineWidth="2dp"
+                app:viewType="none" />
 
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_send_otp"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/margin_dp40"
+            android:layout_below="@+id/relative_otp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_dp25"
+            android:background="@drawable/custom_otp_bg"
+            android:gravity="center"
+            android:paddingLeft="@dimen/padding_dp35"
+            android:paddingRight="@dimen/padding_dp35"
+            android:text="Send OTP"
+            android:textColor="@drawable/green_color_selectors"
+            android:textSize="@dimen/textsize_sp15" />
 
         <TextView
             android:id="@+id/tv_resendotp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/edit_otp"
+            android:layout_below="@+id/tv_send_otp"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="@dimen/margin_dp45"
+            android:layout_marginTop="@dimen/margin_dp5"
+            android:padding="@dimen/padding_dp5"
             android:text="Resend OTP?"
-            android:textColor="@color/colorTextWhite"
-            android:textSize="@dimen/textsize_sp19" />
+            android:textColor="@drawable/grey_color_selectors"
+            android:textSize="@dimen/textsize_sp15" />
 
     </RelativeLayout>
 </RelativeLayout>

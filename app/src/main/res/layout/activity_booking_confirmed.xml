@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".bookingConfirmed.BookingConfirmedActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/img_happy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/thank_you"
+            android:layout_marginTop="@dimen/margin_dp50"/>
+
+        <TextView
+            android:id="@+id/tv_thankyou"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/img_happy"
+            android:text="Thanks"
+            android:textSize="@dimen/textsize_sp25"
+            android:layout_marginTop="@dimen/margin_dp25"/>
+
+        <TextView
+            android:id="@+id/tv_makingBooking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/tv_thankyou"
+            android:text="for making this Booking."
+            android:textSize="@dimen/textsize_sp22"
+            android:layout_marginTop="@dimen/margin_dp5"/>
+
+        <TextView
+            android:id="@+id/tv_Bookingconfirmed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/tv_makingBooking"
+            android:text="Yur Booking is confirmed."
+            android:textSize="@dimen/textsize_sp22"
+            android:layout_marginTop="@dimen/margin_dp5"/>
+
+        <Button
+            android:id="@+id/btn_ok"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:layout_below="@+id/tv_Bookingconfirmed"
+            android:layout_alignLeft="@+id/view_s1"
+            android:layout_alignRight="@+id/view_s1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="@dimen/margin_dp35"
+            android:layout_marginTop="35dp"
+            android:layout_marginRight="@dimen/margin_dp35"
+            android:background="@drawable/gradient_button"
+            android:gravity="center"
+            android:text="ok"
+            android:textColor="@color/colorTextWhite"
+            android:textSize="@dimen/textsize_sp19"
+            tools:ignore="OnClick" />
+
+    </RelativeLayout>
+</RelativeLayout>

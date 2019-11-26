@@ -70,7 +70,7 @@
             android:text="REORDER"
             android:gravity="center"
             android:background="@drawable/custom_reorder_bg"
-            android:textColor="@color/colorTextGreen"
+            android:textColor="@drawable/green_color_selectors"
             android:textSize="@dimen/textsize_sp12" />
 
         <TextView
@@ -82,7 +82,7 @@
             android:layout_marginTop="@dimen/margin_dp3"
             android:layout_marginRight="@dimen/margin_dp25"
             android:text="@string/track_order"
-            android:textColor="#56C3F3"
+            android:textColor="@drawable/track_selectors"
             android:textSize="@dimen/textsize_sp13" />
 
         <View

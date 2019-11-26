@@ -17,7 +17,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:padding="@dimen/padding_dp15"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:padding="@dimen/padding_dp10"
             android:src="@drawable/back_btn" />
 
         <ImageView
@@ -26,6 +28,8 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
             android:padding="@dimen/padding_dp15"
             android:src="@drawable/cart" />
 
@@ -40,13 +44,50 @@
             android:gravity="center"
             android:text="More Information"
             android:textColor="@color/colorTextWhite"
-            android:textSize="@dimen/textsize_sp19" />
+            android:textSize="@dimen/textsize_sp17" />
 
     </RelativeLayout>
 
-    <ScrollView
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/layout_shimmer"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_below="@+id/layout_actionbar"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:visibility="visible"
+        app:shimmer_duration="1200">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/restautrants_placeholder_item" />
+
+            <include layout="@layout/restautrants_placeholder_item3" />
+
+            <include layout="@layout/restautrants_placeholder_item3" />
+
+            <include layout="@layout/restautrants_placeholder_item3" />
+
+            <include layout="@layout/restautrants_placeholder_item3" />
+
+            <include layout="@layout/restautrants_placeholder_item3" />
+
+            <include layout="@layout/restautrants_placeholder_item3" />
+
+            <include layout="@layout/restautrants_placeholder_item3" />
+
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+    <ScrollView
+        android:id="@+id/layout_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
         android:layout_below="@+id/layout_actionbar">
 
         <RelativeLayout
@@ -62,8 +103,7 @@
                     android:id="@+id/img_resturant"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/margin_dp220"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/banner" />
+                    android:scaleType="fitXY" />
 
 
                 <RelativeLayout
@@ -73,12 +113,16 @@
                     android:layout_marginBottom="@dimen/margin_dp15">
 
                     <TextView
-                        android:id="@+id/tv_orderName"
+                        android:id="@+id/tv_restaurantName"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/margin_dp15"
                         android:layout_marginTop="@dimen/margin_dp5"
-                        android:text="Drinkery 51"
+                        android:shadowColor="#A90A0A0A"
+                        android:shadowDx="2"
+                        android:shadowDy="2"
+                        android:shadowRadius="3"
+                        android:text=""
                         android:textColor="@color/colorTextWhite"
                         android:textSize="@dimen/textsize_sp19" />
 
@@ -86,10 +130,14 @@
                         android:id="@+id/tv_loaction"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/tv_orderName"
-                        android:layout_alignLeft="@+id/tv_orderName"
+                        android:layout_below="@+id/tv_restaurantName"
+                        android:layout_alignLeft="@+id/tv_restaurantName"
                         android:layout_toLeftOf="@+id/tv_totalrating"
-                        android:text="Bandra Kurla Complex - 6km"
+                        android:shadowColor="#A90A0A0A"
+                        android:shadowDx="2"
+                        android:shadowDy="2"
+                        android:shadowRadius="3"
+                        android:text=""
                         android:textColor="@color/colorTextWhite"
                         android:textSize="@dimen/textsize_sp15" />
 
@@ -101,10 +149,9 @@
                         android:layout_marginLeft="@dimen/margin_dp3"
                         android:layout_marginTop="@dimen/margin_dp5"
                         android:layout_marginRight="@dimen/margin_dp20"
-                        android:background="@drawable/custom_cart_bg"
                         android:gravity="center"
                         android:padding="@dimen/padding_dp5"
-                        android:text="4.6"
+                        android:text=""
                         android:textColor="@color/colorTextWhite"
                         android:textSize="@dimen/textsize_sp16" />
                 </RelativeLayout>
@@ -129,17 +176,9 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/tv_openingHours"
                         android:layout_marginTop="@dimen/margin_dp5"
-                        android:text="12:00 - 03:00"
+                        android:text=""
                         android:textColor="@color/colorTextGrey"
                         android:textSize="@dimen/textsize_sp17" />
-
-                    <View
-                        android:id="@+id/view_info1"
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/view_size_dp0.5"
-                        android:layout_below="@+id/tv_Hours"
-                        android:layout_marginTop="@dimen/margin_dp12"
-                        android:background="@color/colorTextGrey" />
 
                     <TextView
                         android:id="@+id/atmosphere"
@@ -157,18 +196,9 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/atmosphere"
                         android:layout_marginTop="@dimen/margin_dp5"
-                        android:text="Family Friendly"
+                        android:text=""
                         android:textColor="@color/colorTextGrey"
                         android:textSize="@dimen/textsize_sp17" />
-
-                    <View
-                        android:id="@+id/view_info2"
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/view_size_dp0.5"
-                        android:layout_below="@+id/tv_atmosphere"
-                        android:layout_marginTop="@dimen/margin_dp12"
-                        android:background="@color/colorTextGrey" />
-
 
                     <TextView
                         android:id="@+id/facilities_services"
@@ -186,17 +216,9 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/facilities_services"
                         android:layout_marginTop="@dimen/margin_dp5"
-                        android:text="Air-Conditions"
+                        android:text=""
                         android:textColor="@color/colorTextGrey"
                         android:textSize="@dimen/textsize_sp17" />
-
-                    <View
-                        android:id="@+id/view_info3"
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/view_size_dp0.5"
-                        android:layout_below="@+id/tv_facilities_services"
-                        android:layout_marginTop="@dimen/margin_dp12"
-                        android:background="@color/colorTextGrey" />
 
 
                     <TextView
@@ -215,17 +237,9 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/spoken_english"
                         android:layout_marginTop="@dimen/margin_dp5"
-                        android:text="English,Hindi"
+                        android:text=""
                         android:textColor="@color/colorTextGrey"
                         android:textSize="@dimen/textsize_sp17" />
-
-                    <View
-                        android:id="@+id/view_info4"
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/view_size_dp0.5"
-                        android:layout_below="@+id/tv_language"
-                        android:layout_marginTop="@dimen/margin_dp12"
-                        android:background="@color/colorTextGrey" />
 
                     <TextView
                         android:id="@+id/credit_card"
@@ -237,24 +251,16 @@
                         android:textColor="@color/colorTextDarkGrey"
                         android:textSize="@dimen/textsize_sp19" />
 
+
                     <TextView
                         android:id="@+id/tv_credit_card"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/credit_card"
                         android:layout_marginTop="@dimen/margin_dp5"
-                        android:text="Master Card,Visa"
+                        android:text=""
                         android:textColor="@color/colorTextGrey"
                         android:textSize="@dimen/textsize_sp17" />
-
-                    <View
-                        android:id="@+id/view_info5"
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/view_size_dp0.5"
-                        android:layout_below="@+id/tv_credit_card"
-                        android:layout_marginTop="@dimen/margin_dp12"
-                        android:background="@color/colorTextGrey" />
-
 
                     <TextView
                         android:id="@+id/others_miscinfo"
@@ -266,18 +272,62 @@
                         android:textColor="@color/colorTextDarkGrey"
                         android:textSize="@dimen/textsize_sp19" />
 
-                    <TextView
+                    <View
+                        android:id="@+id/view_info1"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_size_dp0.5"
+                        android:layout_below="@+id/tv_Hours"
+                        android:layout_marginTop="@dimen/margin_dp12"
+                        android:background="@color/colorTextGrey" />
+
+                    <View
+                        android:id="@+id/view_info2"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_size_dp0.5"
+                        android:layout_below="@+id/tv_atmosphere"
+                        android:layout_marginTop="@dimen/margin_dp12"
+                        android:background="@color/colorTextGrey" />
+
+                    <View
+                        android:id="@+id/view_info3"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_size_dp0.5"
+                        android:layout_below="@+id/tv_facilities_services"
+                        android:layout_marginTop="@dimen/margin_dp12"
+                        android:background="@color/colorTextGrey" />
+
+                    <View
+                        android:id="@+id/view_info4"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_size_dp0.5"
+                        android:layout_below="@+id/tv_language"
+                        android:layout_marginTop="@dimen/margin_dp12"
+                        android:background="@color/colorTextGrey" />
+
+
+                    <View
+                        android:id="@+id/view_info5"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_size_dp0.5"
+                        android:layout_below="@+id/tv_credit_card"
+                        android:layout_marginTop="@dimen/margin_dp12"
+                        android:background="@color/colorTextGrey" />
+
+                    <com.codesgood.views.JustifiedTextView
                         android:id="@+id/tv_others_miscinfo"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/others_miscinfo"
                         android:layout_marginTop="@dimen/margin_dp5"
-                        android:text="Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs"
+                        android:text=""
                         android:textColor="@color/colorTextGrey"
                         android:textSize="@dimen/textsize_sp15" />
 
                 </RelativeLayout>
             </RelativeLayout>
         </RelativeLayout>
+
     </ScrollView>
+
+
 </RelativeLayout>

@@ -13,7 +13,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="@dimen/margin_dp5"
-            android:text="Categories"
+            android:text=""
             android:layout_marginLeft="@dimen/margin_dp5"
             android:layout_marginRight="@dimen/margin_dp5"
             android:textColor="@color/colorTextGreen"
